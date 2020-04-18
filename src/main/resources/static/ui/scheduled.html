@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title>Application Path | Scheduled Jobs</title>
+        <script type="text/javascript">
+            //<![CDATA[
+            try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"87e617fe26d58954b6ac66b8a081629a",petok:"e79be0a3500182d166c1a08e6e8c0097ceba761a-1447830365-1800",zone:"adbee.technology",rocket:"0",apps:{"ga_key":{"ua":"UA-49262924-2","ga_bs":"2"}},sha2test:0}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="../ajax.cloudflare.com/cdn-cgi/nexp/dok3v%3d247a80cdfa/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
+            //]]>
+        </script>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/bootstrap/bootstrap.min.css"/>
+        <script src="./Libraries/js/demo-rtl.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/font-awesome.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/nanoscroller.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/custom.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/compiled/theme_styles.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/ns-default.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/ns-style-growl.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/ns-style-bar.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/ns-style-attached.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/ns-style-other.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/ns-style-theme.css"/>
+        <link type="image/x-icon" href="./Libraries/img/logo-small.png" rel="shortcut icon"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>-->
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-49262924-2']);
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+            
+            (function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+            /* ]]> */
+        </script>
+		<script src="./Libraries/js/snap.svg-min.js"></script>
+		<script src="./Libraries/js/modernizr.custom.js"></script>
+        <script src="./Libraries/js/notificationFx.js"></script>
+        <script src="./Libraries/js/demo-skin-changer.js"></script>  
+        <script src="./Libraries/js/jquery.js"></script>
+        <script src="./Libraries/js/bootstrap.js"></script>
+        <script src="./Libraries/js/jquery.nanoscroller.min.js"></script>
+        <script src="./Libraries/js/demo.js"></script>  
+        <script src="./Libraries/js/jquery.dataTables.js"></script>
+        <script src="./Libraries/js/dataTables.fixedHeader.js"></script>
+        <script src="./Libraries/js/dataTables.tableTools.js"></script>
+        <script src="./Libraries/js/jquery.dataTables.bootstrap.js"></script>        
+        <script src="./Libraries/js/classie.js"></script>
+        <script src="./Libraries/js/modalEffects.js"></script>
+        <script src="./Libraries/js/scripts.js"></script>
+        <script src="./Libraries/js/pace.min.js"></script>
+        <script src="parterIT/js/neon-custom-ajax.js"></script>		
+		<script src="./Libraries/js/common.js"></script>
+		<script src="./Libraries/js/pages/scheduled.js"></script>
+		<script>
+		if(!readCookie("TAaccess")) {
+			window.location.href = "login.html?msg=notauth";
+		}
+		</script>
+    </head>
+    <body class="theme-whbl">
+        <div id="theme-wrapper">
+            <header class="navbar" id="header-navbar"></header>	
+            <div id="page-wrapper" class="container">
+                <div class="row">
+                    <div id="nav-col"></div>
+					<div id="content-wrapper">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <ol class="breadcrumb">
+                                            <li><a href="#">Home</a></li>
+                                            <li><span>Reports</span></li>
+                                            <li class="active"><span>SCHEDULED JOBS</span></li>
+                                        </ol>
+                                        <h1>Scheduled Jobs</h1>
+                                    </div>
+                                </div>
+								<!--Ajax Modal-->
+								<div class="modal" id="modal_ajax">
+									<div class="modal-dialog">
+										<div class="modal-content">
+											<div class="modal-header">
+												<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+												<h4 class="modal-title"><b>GetAutomationDone </b></h4>
+											</div>
+											<div class="modal-body" style="height:500px; overflow:auto">
+												<style type="text/css">
+													.modal-dialog {
+													width: 95% !important;
+													height:600px;
+													}    .modal-body{
+													padding-top: 0px;
+													}
+													.panel-body,.panel-heading {
+													padding-top: 0px !important;
+													}
+													.panel-body{
+													padding: 10px;
+													padding-bottom: 0px;
+													}
+												</style>
+												<div id="page-wrapper" class="container">
+													<div class="panel-heading">
+														<div class="panel-title">
+															<h5><b>Scheduled Data</b><b class="runname"></b></h5>
+														</div>
+													</div>
+													<div class="panel-body">
+														<div class="main-box-body clearfix">
+															<div class="table-responsive">
+																<table id="table-example-modal" class="table table-hover">
+																	<thead>
+																		<tr>
+																			<th>Sr.No.</th>
+																			<th>Test Name</th>
+																			<th>Result</th>
+																			<th>Elapse Time</th>
+																			<th>Action</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="main-box clearfix">
+											<header class="main-box-header clearfix">
+												<br>
+												<div class="form-group form-group-select2">
+													<div style="float:left;margin-right:20px">
+														<select name="executed_testCases" id="execution_test_id" style="width:300px" class="form-control">
+															<option value="">---Select Execution Name---</option>
+														</select>
+													</div>
+													<div style="float:left">
+														<button class="btn btn-info" onclick="show_test_case(0,1);" id="showid">Show</button>&nbsp;&nbsp;
+														<button style="cursor:pointer;background-color: Gray" class="btn btn-info" onclick="window.location.reload();">
+														Refresh
+														</button>
+														<!--<button class="btn btn-danger dropdown-toggle" type="reset">Reset</button>-->
+													</div>
+												</div>
+											</header>
+											<div class="main-box-body clearfix">
+												<div id="executionReport"></div>
+												<div class="table-responsive" id="displayNoneMain" style="display:block">
+													<table id="table-example" class="table table-hover">
+														<thead>
+															<tr>
+																<th>Sr.No.</th>
+																<th>Run Name</th>
+																<th>Scheduled By</th>
+																<th>Scheduled Date Time</th>
+																<th>View</th>
+																<th>Download</th>
+																<th>Retry</th>
+																<th>Delete</th>
+															</tr>
+														</thead>
+														<tbody>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+                            </div>
+                        </div>
+                        <!----footer-min start********-->
+                        <footer id="footer-bar" class="row"></footer>
+                    </div>
+                </div>
+            </div>
+        </div>        
+	</body>
+</html>

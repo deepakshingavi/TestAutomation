@@ -1,0 +1,204 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title>GetAutomationDone | Login</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <script src="./Libraries/js/demo-rtl.js"></script>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/compiled/theme_styles.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/custom.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>-->
+        <link type="image/x-icon" href="./Libraries/img/logo-small.png" rel="shortcut icon"/>
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-49262924-2']);
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+            
+            (function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+            /* ]]> */
+        </script>
+    </head>
+    <body id="login-page-full">
+        <div id="login-full-wrapper">
+            <div class="container">
+                <div class="row">
+					<!-- (Ajax Modal)-->
+					<div class="modal fade" id="modal_ajax">
+						<div class="modal-dialog" >
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+									<h4 class="modal-title"><b>GetAutomationDone </b></h4>
+								</div>
+								<div class="modal-body" style="height:200px; overflow:auto;">
+									<form method="post" action="">
+										<div class="row">
+											<div class="col-md-8">
+												<div class="form-group">
+													<label for="exampleInputEmail1">User Name</label> <span style="color:red">*</span>
+													<input class="form-control" id="user_name" value="" required="" name="user_name" placeholder="Enter Username" type="text">
+												</div>
+												<div class="form-group">
+													<button type="button" name="forgotPassword" class="btn btn-primary">Reset Password</button>
+												</div>
+												<div class="icons"><span style="color:green;text-transform:capitalize;font-size:14px">We are preparing an email with password...</span></div>
+
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="col-xs-12">
+                        <div id="login-box">
+                            <div id="login-box-holder">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <header id="login-header">
+                                            <div id="login-logo">
+                                                <img src="logo.png" alt=""/>
+                                            </div>
+                                        </header>
+                                        <div id="login-box-inner">
+                                            <center>
+                                                <div id="res"></div>
+                                            </center>
+                                            <br>
+                                            <form role="form" method="post" action="dashboard.html">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                                    <input class="form-control" name="username" id="loginEmail" type="text" placeholder="Username">
+                                                </div>
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="fa fa-key"></i></span>
+                                                    <input type="password" class="form-control" name="password" id="loginPassword" placeholder="Password">
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-xs-12">
+                                                        <button type="button" id="loginSubmit" class="btn btn-success col-xs-12">Login</button>
+                                                    </div>
+                                                </div>
+                                                <div id="remember-me-wrapper">
+                                                    <div class="row">
+														<a onclick="showModal();" class="col-xs-12">
+                                                        <i class="fa fa-plus-circle fa-lg"></i> Forgot password?
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./Libraries/js/demo-skin-changer.js"></script> 
+        <script src="./Libraries/js/jquery.js"></script>
+        <script src="./Libraries/js/jquery.cookie.js"></script>
+        <script src="./Libraries/js/bootstrap.js"></script>
+        <script src="./Libraries/js/jquery.nanoscroller.min.js"></script>
+        <script src="./Libraries/js/demo.js"></script>   
+        <script src="./Libraries/js/scripts.js"></script>
+        <script src="./Libraries/js/common.js"></script>
+        <script type="text/javascript">
+            if(window.location.search.substr(1)!=="")
+            {
+            	var arr = window.location.search.substr(1).split("=");
+            	if(arr[1] == "notauth"){
+            		eraseCookie("TAaccess");
+            		eraseCookie("TAuid");
+            		eraseCookie("TAuname");
+            		eraseCookie("TAurole");
+            		$('#res').html("<h5><span style='color:green;text-transform:capitalize;font-size:14px'>Booh! You are not authorized..</span></h5>");
+            	}
+            }
+			function showModal() {
+				// LOADING THE AJAX MODAL
+				$('#modal_ajax').modal('show', {
+					backdrop: 'true'
+				});
+				$("input[name=user_name]").val("");
+				$(".icons").hide();
+				$("button[name=forgotPassword]").removeAttr("disabled", "disabled");
+				$(".modal-body form").submit(function(){ 
+					$("button[name=forgotPassword]").trigger("click");
+				});
+				$("button[name=forgotPassword]").click(function(){
+					//e.eventPreventDefault();
+					if($("input[name=user_name]").val()==""){
+						alert("Please enter your username");
+						return false;
+					}
+					$("button[name=forgotPassword]").attr("disabled", "disabled");
+					$(".icons").show();
+					$.ajax({
+						url: base_url+"/ui/forgotPassword/"+$("input[name=user_name]").val(),
+						success: function(response) {
+							$('#modal_ajax').modal('hide');
+							$('#res').html("<h5><span style='color:green;text-transform:capitalize;font-size:14px'>Password sent to your registered email</span></h5>");
+						}
+					});
+				});
+			}
+            $(document).ready(function() {
+            	$('#loginPassword').keydown(function(event){    
+            		   if(event.keyCode==13){
+            			  $('#loginSubmit').trigger('click');
+            		   }
+            	   });
+            	$('#loginSubmit').click(function(){
+            	  // alert("hello");
+            		$('#res').html("<img width='20' src='./Libraries/img/loader.GIF'>");
+            		$loginEmail = $('#loginEmail').val();
+            		$loginPassword = $('#loginPassword').val();
+            		if($loginEmail == '' || $loginPassword == '')
+            		{
+            			$('#res').html("<span style='color:red;text-transform:capitalize;font-size:14px'>Enter Login Details..!</span>");
+            			return false;
+            		}
+               
+            		$.ajax({
+            			type : "POST",
+            			url : "./login",
+            			data : { username:$loginEmail,password:$loginPassword},
+            			success: function (response) {  
+            				$('#res').html("<h5><span style='color:green;text-transform:capitalize;font-size:14px'>Login Success..!</span><br><img width='20' src='Libraries/img/loader.GIF'><br><span style='font-size:14px'>Redirecting.....</span></h5>");				
+            				createCookie("TAaccess", response.id, 60);
+            				createCookie("TAuid", response.userId, 60);
+            				createCookie("TAuname", response.username, 60);
+            				createCookie("TAurole", response.authorities[0].authority, 60);
+            				window.location.href = "./dashboard.html";
+            			},
+            			statusCode: statuscode 
+            		});
+            	});
+            });
+            
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UInium</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Favicon-->
+	<link rel="icon" href="img/favicon-16x16.png">
+
+	<!--Styles-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--Custom style link-->
+	<link rel="stylesheet" href="css/custom.css">
+	<style>
+		.bucketcheck label {
+			    padding-left: 5px;
+                margin-bottom: 15px;
+		}
+
+		.submodeldiv {
+			background-color: #f7f9fa;
+		}
+	</style>
+</head>
+<body>
+	<!--Header Start-->
+	<header class="navbar navbar-expand-lg">
+		<!--Logo Start-->
+		<a id="logo" class="navbar-brand text-center" href="#">
+			<img src="img/4317-converted.png">
+		</a>
+		<!--Logo End-->
+		<!--Navbar Toggle Start-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa fa-bars"></span>
+		</button>
+		<!--Navbar Toggle End-->
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="dashboard.html"><img src="img/insert-chart-outlined-24-px.png"> Monitor App</a></li>
+				<li class="nav-item"><a class="nav-link" href="users.html"><img src="img/person-outline-24-px-1.png"> Subscribers</a></li>
+				<li class="nav-item"><a class="nav-link" href="setup.html"><img src="img/settings-24-px.png"> AppSettings</a></li>
+				<li class="nav-item"><a class="nav-link" href="testmanagement.html"><img src="img/assignment-24-px.png"> Test Management</a></li>
+				<li class="nav-item"><a class="nav-link" href="runtest.html"><img src="img/play-arrow-24-px.png"> Run Tests</a></li>
+				<li class="nav-item"><a class="nav-link" href="testbucketenviroment.html"><img src="img/subtitles-24-px.png"> Test Bucket</a></li>
+				<li class="nav-item active"><a class="nav-link" href="reports.html"><img src="img/pie-chart-24-px.png"> Reports</a></li>
+				<!-- <li class="nav-item"><a class="nav-link" href="subscription.html">Subscriptions</a></li> -->
+			</ul>
+
+			<!--User Menu Start-->
+				<div id="userMenu" class="dropdown">
+					<!-- <a href="#"><i class="fa fa-user-o"></i> User</a> -->
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/account-circle-24-px.png"> <span>User</span></a>
+					<div class="dropdown-menu">
+				      <a class="dropdown-item" href="profile.html">Profile</a>
+				      <a class="dropdown-item" href="login.html">Logout</a>
+				    </div>
+				</div>
+			<!--User Menu End-->
+		</div>
+	</header>
+	<!--Header End-->
+
+	<!--Sidebar Start-->
+	<aside class="sidebar pull-left">
+		<ul>
+			<!-- <li><a href="#"><img src="img/add-24-px.png"></a></li>
+			<li><a href="#"><i class="fa fa-plus"></i></a></li> -->
+			<li><a href="#"><img src="img/apps-24-px.png"></a></li>
+			<li><a href="#"><img src="img/add-24-px.png"></a></li>
+		</ul>
+	</aside>
+	<!--Sidebar End-->
+
+	<!--Main Contebt Start-->
+	<div id="main-content" class="container-fluid pull-right">
+		<!--Page Title-->
+		<!-- <h1 id="page-title">Reports</h1> -->
+        
+        <!--for Table-->
+		<div class="card">
+			<div class="card-body">
+				<form>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+							<!--Page subtitle-->
+							<label class="subtitle">Execution Reports</label>
+							<!--Delete row-->
+							<button class="btn btn-primary float-right buttonlink" id="deleteRow"><img src="img/delete-24-px.png">DELETE</button>
+						</div>
+					</div>
+					<div class="row selectdiv" style="overflow-x: auto;">
+						<table id="bucketList" class="table selectdiv1 reporttable">
+						  <thead>
+						    <tr>
+						      <th scope="col" class="bucketcheck">
+						      	<label class="main mainCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </th>
+					          <th scope="col"></th>
+						      <th scope="col">RUN NAME <i class="fa fa-angle-down" aria-hidden="true"></i>  <img src="img/search-24-px.png" alt="Imgsearch" class="searchtext"></th>
+						      <th scope="col">EXECUTED BY <img src="img/search-24-px.png" alt="Imgsearch" class="searchtext"></th>
+						      <th scope="col">EXECUTION PROGRESS</th>
+						      <th scope="col">ACTIONS</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						  	<tr style="display: none;">
+							<td></td>
+							<td></td>
+							<td><input type="text" id="f1" class="form-control border" name="" placeholder="Search Run Test name"></td>
+							<td><input type="text" id="f2" class="form-control border" name="" placeholder="Search Role name"></td>
+							<td></td>
+							<td></td>
+							</tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="hundred">100</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgtime" data-toggle="modal" data-target="#myModal" title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh" title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload" title="Download">
+						      <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div> 
+						     </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td><img src="img/access-time-24-px.png" alt="Imgtime"></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="zero">0</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+                              <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div> 
+						      </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="hundred">100</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+                              <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div> 
+						      </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td><img src="img/access-time-24-px.png" alt="Imgtime"></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="zero">0</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+                              <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="hundred">100</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+                              <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td><img src="img/access-time-24-px.png" alt="Imgtime"></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="zero">0</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+						      <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td><img src="img/access-time-24-px.png" alt="Imgtime"></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="hundred">100</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+						      <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="zero">0</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+						      <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div>
+						      </td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+					<div class="row paginate">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="pagination">
+								  <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+								  <a href="#"><strong>Previous</strong></a>
+								  <a href="#" class="active">1</a>
+								  <a href="#">2</a>
+								  <a href="#">3</a>
+								  <a href="#">4</a>
+								  <a href="#">5</a>
+								  <a href="#">...</a>
+								  <a href="#">10</a>
+								  <a href="#"><strong>Next</strong></a>
+								  <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+								</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- The Modal 1-->
+		  <div class="modal fade model1" id="myModal">
+		    <div class="modal-dialog model_dialog">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header">
+		          <h5 class="modal-title"></h5>
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        </div>
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body">
+		          <div class="row">
+		          	<div class="col-md-12">
+		          		<div class="row">
+				          	<div class="col-md-6 textrow">
+				          		<p><strong>Execution Result : cbowenahs_12_27_2018_12_43_43</strong></p>
+				          	</div>
+				          	<div class="col-md-6 textrow">
+				          		<canvas id="pie-chart" style="display: inline-block; float: left !important;"></canvas>
+				          		<table class="tablespace">
+				          			<thead>
+				          				<tr>
+					          				<th>TOTAL</th>
+					          				<th>PASSED</th>
+					          				<th>FAILED</th>
+					          				<th>QUEQUD</th>
+				          				</tr>
+				          			</thead>
+				          			<tbody>
+				          				<tr>
+					          				<td >102</td>
+					          				<td >52</td>
+					          				<td >30</td>
+					          				<td >20</td>
+					          			</tr>
+				          			</tbody>
+				          		</table>
+				          	</div>
+		          		</div>
+		          		<div class="Reportmodel" style="overflow-x: auto;">
+		          			<table class="table mb-0 reportmodeltable">
+							  <thead>
+							    <tr>
+							      <th scope="col">SR. NO.</th>
+							      <th scope="col">BUCKET NAME</th>
+							      <th scope="col">ENVIRONMENT</th>
+							      <th scope="col">USER ROLE</th>
+							      <th scope="col">ACTION</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td scope="col">1</td>
+							      <td>SmartTI_CreateNewIncident</td>
+							      <td class="passed"><span>Passed</span></td>
+							      <td>128</td>
+							      <td class="selectmodeldiv"><img src="img/down-arrow.png" alt="Imgdownload"><a href="#">Download Log</a><i class="fa fa-angle-down showdet" aria-hidden="true"></i>
+							      <div class="submodeldiv" style="display: none;">
+							      	<table>
+							      		<thead>
+							      			<tr>
+							      				<th scope="col">ROW NO.</th>
+											    <th scope="col">RESULT</th>
+											    <th scope="col">OUTPUT</th>
+											    <th scope="col">REASON</th>
+											    <th scope="col">ELAPSE TIME</th>
+							      			</tr>
+							      		</thead>
+							      		<tbody>
+							      			<tr>
+							      				<td>1.1</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>128</td>
+							      			</tr>
+							      			<tr>
+							      				<td>1.2</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>122</td>
+							      			</tr>
+							      		</tbody>
+							      	</table>
+							      </div>
+							     </td>
+							    </tr>
+							    <tr>
+							      <td scope="col">2</td>
+							      <td>SmartTI_CreateNewIncidentWithCI</td>
+							      <td class="passed"><span>Passed</span></td>
+							      <td>138</td>
+							      <td class="selectmodeldiv"><img src="img/down-arrow.png" alt="Imgdownload"><a href="#">Download Log</a><i class="fa fa-angle-down  showdet" aria-hidden="true"></i>
+							      <div class="submodeldiv" style="display: none;">
+							      	<table>
+							      		<thead>
+							      			<tr>
+							      				<th scope="col">ROW NO.</th>
+											    <th scope="col">RESULT</th>
+											    <th scope="col">OUTPUT</th>
+											    <th scope="col">REASON</th>
+											    <th scope="col">ELAPSE TIME</th>
+							      			</tr>
+							      		</thead>
+							      		<tbody>
+							      			<tr>
+							      				<td>1.1</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>128</td>
+							      			</tr>
+							      			<tr>
+							      				<td>1.2</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>122</td>
+							      			</tr>
+							      		</tbody>
+							      	</table>
+							      </div>
+							     </td>
+							    </tr>
+							    <tr>
+							      <td scope="col">3</td>
+							      <td>SmartTI_CreateNewWorkOrder</td>
+							      <td class="passed"><span>Passed</span></td>
+							      <td>45</td>
+							      <td class="selectmodeldiv"><img src="img/down-arrow.png" alt="Imgdownload"><a href="#">Download Log</a><i class="fa fa-angle-down  showdet" aria-hidden="true"></i>
+							      <div class="submodeldiv" style="display: none;">
+							      	<table>
+							      		<thead>
+							      			<tr>
+							      				<th scope="col">ROW NO.</th>
+											    <th scope="col">RESULT</th>
+											    <th scope="col">OUTPUT</th>
+											    <th scope="col">REASON</th>
+											    <th scope="col">ELAPSE TIME</th>
+							      			</tr>
+							      		</thead>
+							      		<tbody>
+							      			<tr>
+							      				<td>1.1</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>128</td>
+							      			</tr>
+							      			<tr>
+							      				<td>1.2</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>122</td>
+							      			</tr>
+							      		</tbody>
+							      	</table>
+							      </div>
+							     </td>
+							    </tr>
+							    <tr>
+							      <td scope="col">4</td>
+							      <td>SmartTI_globalSearchVerification</td>
+							      <td class="passed"><span>Passed</span></td>
+							      <td>102</td>
+							      <td class="selectmodeldiv"><img src="img/down-arrow.png" alt="Imgdownload"><a href="#">Download Log</a><i class="fa fa-angle-down  showdet" aria-hidden="true"></i>
+							      <div class="submodeldiv" style="display: none;">
+							      	<table>
+							      		<thead>
+							      			<tr>
+							      				<th scope="col">ROW NO.</th>
+											    <th scope="col">RESULT</th>
+											    <th scope="col">OUTPUT</th>
+											    <th scope="col">REASON</th>
+											    <th scope="col">ELAPSE TIME</th>
+							      			</tr>
+							      		</thead>
+							      		<tbody>
+							      			<tr>
+							      				<td>1.1</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>128</td>
+							      			</tr>
+							      			<tr>
+							      				<td>1.2</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>122</td>
+							      			</tr>
+							      		</tbody>
+							      	</table>
+							      </div>
+							      </td>
+							    </tr>
+							    <tr>
+							      <td scope="col">5</td>
+							      <td>SmartTI_CreateNewIncident</td>
+							      <td class="passed"><span>Passed</span></td>
+							      <td>67</td>
+							      <td class="selectmodeldiv"><img src="img/down-arrow.png" alt="Imgdownload"><a href="#">Download Log</a><i class="fa fa-angle-down  showdet" aria-hidden="true"></i>
+							      <div class="submodeldiv" style="display: none;">
+							      	<table>
+							      		<thead>
+							      			<tr>
+							      				<th scope="col">ROW NO.</th>
+											    <th scope="col">RESULT</th>
+											    <th scope="col">OUTPUT</th>
+											    <th scope="col">REASON</th>
+											    <th scope="col">ELAPSE TIME</th>
+							      			</tr>
+							      		</thead>
+							      		<tbody>
+							      			<tr>
+							      				<td>1.1</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>128</td>
+							      			</tr>
+							      			<tr>
+							      				<td>1.2</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>122</td>
+							      			</tr>
+							      		</tbody>
+							      	</table>
+							      </div>
+							     </td>
+							    </tr>
+							    <tr>
+							      <td scope="col">6</td>
+							      <td>SmartTI_CreateNewIncident</td>
+							      <td class="passed"><span>Passed</span></td>
+							      <td>67</td>
+							      <td class="selectmodeldiv"><img src="img/down-arrow.png" alt="Imgdownload"><a href="#">Download Log</a><i class="fa fa-angle-down  showdet" aria-hidden="true"></i>
+							      <div class="submodeldiv" style="display: none;">
+							      	<table>
+							      		<thead>
+							      			<tr>
+							      				<th scope="col">ROW NO.</th>
+											    <th scope="col">RESULT</th>
+											    <th scope="col">OUTPUT</th>
+											    <th scope="col">REASON</th>
+											    <th scope="col">ELAPSE TIME</th>
+							      			</tr>
+							      		</thead>
+							      		<tbody>
+							      			<tr>
+							      				<td>1.1</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>128</td>
+							      			</tr>
+							      			<tr>
+							      				<td>1.2</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>122</td>
+							      			</tr>
+							      		</tbody>
+							      	</table>
+							      </div>
+							     </td>
+							    </tr>
+							    <tr>
+							      <td scope="col">7</td>
+							      <td>SmartTI_LoginAndLogout</td>
+							      <td class="failed" data-toggle="modal" data-target="#myModal1"><span>Failed</span></td>
+							      <td>138</td>
+							      <td class="selectmodeldiv"><img src="img/down-arrow.png" alt="Imgdownload"><a href="#">Download Log</a><i class="fa fa-angle-down  showdet" aria-hidden="true"></i>
+							      <div class="submodeldiv" style="display: none;">
+							      	<table>
+							      		<thead>
+							      			<tr>
+							      				<th scope="col">ROW NO.</th>
+											    <th scope="col">RESULT</th>
+											    <th scope="col">OUTPUT</th>
+											    <th scope="col">REASON</th>
+											    <th scope="col">ELAPSE TIME</th>
+							      			</tr>
+							      		</thead>
+							      		<tbody>
+							      			<tr>
+							      				<td>1.1</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>128</td>
+							      			</tr>
+							      			<tr>
+							      				<td>1.2</td>
+							      				<td class="passed"><span>Passed</span></td>
+							      				<td>Test Output-test name</td>
+							      				<td>Test Reason-test name</td>
+							      				<td>122</td>
+							      			</tr>
+							      		</tbody>
+							      	</table>
+							      </div>
+							     </td>
+							    </tr>
+							  </tbody>
+							</table>
+		          		</div>
+		          	</div>
+		          </div>
+		        </div>
+		        
+		        <!-- Modal footer -->
+		        <div class="modal-footer btnfooter">
+		        	<button type="button" class="btn btn-dark" data-dismiss="modal">CLOSE</button>
+		        </div>
+		        
+		      </div>
+		    </div>
+		  </div>
+		  <!-- End of Modal 1-->
+
+		  <!-- The Modal 1-->
+		  <div class="modal fade model1" id="myModal1">
+		    <div class="modal-dialog model_dialog">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header">
+		          <h5 class="modal-title"></h5>
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        </div>
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body failed_model">
+		          <div class="row">
+		          	<div class="model-form-data col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center failedmodel_subdiv">
+                      <p><img src="img/logo1.png">bmc <span>helix</span></p>
+                      <p>Remedy Single Sign-On</p>
+                        <form action="" class="justify-content-center">
+	                        <div class="form-group inputIcon">
+	                            <i class="fa fa-user"></i> <input type="text" class="form-control" value="Test_Auromation1">
+	                        </div>
+	                        <div class="form-group inputIcon">
+	                            <i class="fa fa-lock"></i> <input type="password" class="form-control" placeholder="Password"> <span id="showPWD">Show</span>
+	                        </div>
+	                        	<button type="submit" class="form-control btn btn-danger mb-4 btn-size"><i class="fa fa-exclamation-triangle"></i>  <span>Incorrect username or password</span></button>
+	                            <button type="submit" class="form-control btn btn-success mb-4 btn-size"><span>Log In</span></button>
+	                    </form>
+		          	</div>
+		          </div>
+		          <div class="row model-bottomsection">
+		          	<div class="col-md-10">
+		          		© Copyright 1997 -2019 BMC Software, Inc.<br> All Right Reserved BMC, BMC Software, the BMC logo and the BMC Software logo are the exclusive properties of BMC Software, inc are registered with<br> the U.S. Patent and Trademark Office, and may be registered or pending registration in other countries.
+		          	</div>
+		          	<div class="col-md-2 model-rightbox">
+		          		<img src="img/bmchelixlogo">
+		          	</div>
+		          </div>
+		        </div>
+		        
+		        <!-- Modal footer -->
+		        <div class="modal-footer btnfooter">
+		        	<button type="button" class="btn btn-dark" data-dismiss="modal">CLOSE</button>
+		        </div>
+		        
+		      </div>
+		    </div>
+		  </div>
+		  <!-- End of Modal 1-->
+
+		   <!-- The Modal 2-->
+				<div class="modal fade model1" id="myModal2">
+				    <div class="modal-dialog">
+				      <div class="modal-content">
+				      
+				        <!-- Modal Header -->
+				        <div class="modal-header">
+				          <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        </div>
+				        
+				        <!-- Modal body -->
+				        <div class="modal-body model_body">
+				          	 <h4>Delete Test Bucket</h4>
+				             <p>Do you want to delete Test Bucket?</p>
+				             <p id="deletedItem"></p>
+				        </div>
+				        
+				        <!-- Modal footer -->
+				        <div class="modal-footer btnfooter">
+				        	<button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+				        	<button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess">YES</button>
+				        </div>
+						        
+				      </div>
+				    </div>
+				</div>
+				<!-- End of Modal 2-->
+
+				<!-- The Modal Success 1-->
+				  <div class="modal fade" id="myModalSucess">
+				    <div class="modal-dialog modal-dialog-centered">
+				      <div class="modal-content">
+				      
+				        <!-- Modal Header -->
+				        <div class="modal-header model_head">
+				          <h4 class="modal-title"></h4>
+				          <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        </div>
+				        
+				        <!-- Modal body -->
+				        <div class="modal-body model_body">
+				          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+				          <p>Test Bucket deleted Successfully.</p>
+				        </div>
+				        
+				        <!-- Modal footer -->
+				        <div class="modal-footer btnfooter">
+				          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+				        </div>
+				        
+				      </div>
+				    </div>
+				  </div>
+				<!-- End of Modal Success 1-->
+
+	</div>
+	<!--Main Content End-->
+
+	<!--Footer Start-->
+	<footer id="footer" class="container-fluid pull-right">
+		<div class="pull-left footer-logo"><img src="img/logo-11.png"></div>
+		<div class="pull-right footer-text">
+			<!-- &copy <script>document.write((new Date()).getFullYear());</script>   -->
+			Copyright @ 2020 UInium(“UI automation Studio”). All Rights Reserved.
+		</div>
+	</footer>
+    <!--Footer End-->
+	<!-- For sidebar toggle -->
+	<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+
+	<!--Scripts-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<script>
+		new Chart(document.getElementById("pie-chart"), {
+		    type: 'pie',
+		    data: {
+		      // labels: ["TOTAL", "PASSED", "FAILED", "QUEQUD"],
+		      datasets: [{
+		        // label: "Population (millions)",
+		        backgroundColor: ["#2e8009", "#dbaf11","#bb2424"],
+		        data: [50,20,30]
+		      }]
+		    }
+		});
+	</script>
+	<script>
+		$(function(){
+			/*---Jquery for search table column---*/
+
+			$(".searchtext").click(function(e){
+				e.preventDefault();
+			    $("#bucketList tbody tr:first-child").toggle();
+			});
+
+			$(".mainCB input[type=checkbox]").click(function(){
+				if($(this).prop("checked")==true)
+				{	$(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", true);	}
+				else
+				{	$(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", false);	}
+			});
+
+			/*---Jquery for delete row---*/
+
+			$("#deleteRow").click(function(e){
+				e.preventDefault();
+				var str = '';
+				$("table tbody .subCB input:checked").each(function(){
+				if(str!='')
+					str += ", "+$(this).closest("tr").find("td:nth-child(3)").text();
+				else
+					str += $(this).closest("tr").find("td:nth-child(3)").text();
+				});
+
+				$("#deletedItem").text(str);
+				$("#myModal2").modal();
+			});
+
+			$(document).on("click", "#yesbtn", function(){
+				$("table tbody .subCB input:checked").each(function(){
+					$(this).closest("tr").remove();
+				});	    
+			});
+            
+            /*---Jquery for icon pdf excel toggle---*/
+
+            $(".Imgdownload").click(function(){
+                 $(this).closest('td').find(".showicons").toggle();
+            });
+
+            /*---Jquery for toggle section on click angle-down icon---*/
+
+			$(".selectmodeldiv i.showdet").click(function(){
+				$(".submodeldiv").width($("table.reportmodeltable").width());
+				$(this).closest(".selectmodeldiv").find(".submodeldiv").slideToggle();
+				$(this).toggleClass("caret-rev");
+			});
+
+            /*---Jquery for toggle section on click caret-down icon---*/
+
+			$(".submodeldiv i.showbtndiv").click(function(){
+				$(this).closest("li").find(".hidediv").slideToggle();
+				$(this).toggleClass("caret-rev");
+			});
+
+			$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+
+			$(window).resize(function(){
+				$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+			});
+
+
+			$("span#showPWD").click(function(){
+				if($(this).text()=="Show")
+				{ 
+					$(this).text("Hide");
+					$(this).closest(".inputIcon").find("input").attr("type", "text");
+				}
+				else
+				{ 
+					$(this).text("Show");
+					$(this).closest(".inputIcon").find("input").attr("type", "password");
+				}
+			});
+
+			// For sidebar toggle
+			if($(window).width() < 730)
+			{
+				$("#sidebarToggle").click(function(e){
+					e.preventDefault();
+					$("aside.sidebar").toggleClass("showSB");
+					$(this).toggleClass("toggleIcon");
+				});
+			}
+		});
+	</script>
+</body>
+</html>

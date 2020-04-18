@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UInium</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Favicon-->
+  <link rel="icon" href="img/favicon-16x16.png">
+
+  <!--Styles-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!--Datepicker style link-->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!--Custom style link-->
+  <link rel="stylesheet" href="css/custom.css">
+  <style>
+    .bucketcheck label {
+      padding-left: 5px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!--Header Start-->
+  <header class="navbar navbar-expand-lg">
+    <!--Logo Start-->
+    <a id="logo" class="navbar-brand text-center" href="#">
+      <img src="img/4317-converted.png">
+    </a>
+    <!--Logo End-->
+    <!--Navbar Toggle Start-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars"></span>
+    </button>
+    <!--Navbar Toggle End-->
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="dashboard1.html"><img src="img/insert-chart-outlined-24-px.png"> Monitor App</a></li>
+				<li class="nav-item"><a class="nav-link" href="subscription.html"><img src="img/stars-24-px.png"> Subscriptions</a></li>
+				<li class="nav-item"><a class="nav-link" href="emailcofiguration.html"><img src="img/email-24-px.png"> Email Configuration</a></li>
+				<li class="nav-item"><a class="nav-link" href="managetestcase.html"><img src="img/assignment-24-px.png"> Manage Test Cases</a></li>
+      </ul>
+
+      <!--User Menu Start-->
+      <div id="userMenu" class="dropdown">
+        <!-- <a href="#"><i class="fa fa-user-o"></i> User</a> -->
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/account-circle-24-px.png"> <span>User</span></a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="profile.html">Profile</a>
+          <a class="dropdown-item" href="login.html">Logout</a>
+        </div>
+      </div>
+      <!--User Menu End-->
+    </div>
+  </header>
+  <!--Header End-->
+
+  <!--Sidebar Start-->
+  <aside class="sidebar pull-left">
+    <ul>
+      <!-- <li><a href="#"><img src="img/add-24-px.png"></a></li>
+        <li><a href="#"><i class="fa fa-plus"></i></a></li> -->
+        <li><a href="#"><img src="img/apps-24-px.png"></a></li>
+        <li><a href="#"><img src="img/add-24-px.png"></a></li>
+      </ul>
+    </aside>
+    <!--Sidebar End-->
+
+    <!--Main Content Start-->
+    <div id="main-content" class="container-fluid pull-right">
+      <!--Page Title-->
+      <!-- <h1 id="page-title">Subscriptions</h1> -->
+
+      <div class="card border_card">
+        <div class="card-body tabs">
+         <ul id="tabs" class="nav nav-tabs">
+          <li class="nav-item"><a href="" data-target="#subscription" data-toggle="tab" class="nav-link small text-uppercase active">Subscriptions</a></li>
+          <li class="nav-item"><a href="" data-target="#application" data-toggle="tab" class="nav-link small text-uppercase">Applications</a></li>
+          <li class="nav-item"><a href="" data-target="#applicationpaths" data-toggle="tab" class="nav-link small text-uppercase">Application Paths</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="tabsContent" class="tab-content">
+      <div id="subscription" class="tab-pane fade active show">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+                <!--Page subtitle-->
+                <!-- <label class="subtitle">Subscription</label> -->
+                <!--Delete row-->
+                <a href=""><button class="btn btn-primary float-right buttonlink" id="deleteRow"><img src="img/delete-24-px.png">DELETE</button></a>
+                <a href="#" class="addusetbtn"><button class="btn btn-primary float-right buttonlink"  data-toggle="modal" data-target="#myModal1"><img src="img/add-24-px-2.png">ADD</button></a>
+              </div>
+            </div>
+
+            <div class="row selectdiv" style="overflow-x: auto;">
+              <table id="subscriptionsList" class="subscriptionTable table selectdiv1">
+                <thead>
+                  <tr>
+                    <th scope="col" class="bucketcheck">
+                      <label class="main mainCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </th>
+                    <th scope="col" class="Username">NAME <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+                    <th scope="col">EMAIL</th>
+                    <th scope="col">START DATE</th>
+                    <th scope="col">END DATE</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="col" class="bucketcheck">
+                      <label class="main subCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </td>
+                    <td data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">cbowen john</td>
+                    <td >cbowen@partneritsm.com</td>
+                    <td >17-02-2020</td>
+                    <td >17-02-2020</td>
+                  </tr>
+                  <tr>
+                    <td scope="col" class="bucketcheck">
+                      <label class="main subCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </td>
+                    <td data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">QA</td>
+                    <td >cbowen@partneritsm</td>
+                    <td >16-02-2020</td>
+                    <td >16-02-2020</td>
+                  </tr>
+                  <tr>
+                    <td scope="col" class="bucketcheck">
+                      <label class="main subCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </td>
+                    <td data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">DEV</td>
+                    <td >cbowen@partneritsm</td>
+                    <td >14-02-2020</td>
+                    <td >14-02-2020</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row paginate">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="pagination">
+                  <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+                  <a href="#"><strong>Previous</strong></a>
+                  <a href="#" class="active">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">...</a>
+                  <a href="#">10</a>
+                  <a href="#"><strong>Next</strong></a>
+                  <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Subscription Add Modal-->
+      <div class="modal fade model1" id="myModal1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title pl-3">Add</h4>
+              <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+              <div class="col-md-12 addusermodel">
+                <form>
+                  <div class="row">
+                    <div class="col-md-6 mb-2">
+                      <label class="required">Name</label>
+                      <input type="text" id="name" class="form-control border" name="name" placeholder="Enter First Name" required>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                      <label class="required" >Username</label>
+                      <input type="text" id="f2" class="form-control border" name="username" placeholder="Enter Username" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-2">
+                      <label class="required" >Password</label>
+                      <input type="password" class="form-control border" name="password" placeholder="Enter Password" required>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                      <label class="required" >Confirm Password</label>
+                      <input type="password" class="form-control border" name="confirmpassword" placeholder="Enter Confirm Password" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-2">
+                      <label class="required" >Email</label>
+                      <input type="email" id="email" class="form-control border" name="email" placeholder="Enter Email" required>
+                    </div>
+                    <div class="col-md-6 mb-2 envlist">
+                      <label class="required" >Testing Environment</label>
+                      <input type="text" class="form-control testing_inv border" name="testEnvSelect" required><i class="fa fa-angle-down testDetBtn" aria-hidden="true"></i>
+
+                      <div class="submaindiv" style="width: 100%; height: auto;">
+                        <ul>
+                          <li>
+                            <label class="main subCB">Window10_Crome 
+                                <input type="checkbox" name="testEnv[]" value="Window10_Crome" checked="checked"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Window10_Firefox 
+                                <input type="checkbox" name="testEnv[]" value="Window10_Firefox" checked="checked"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Window10_Crome 
+                                <input type="checkbox" name="testEnv[]" value="Window10_Crome"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Window10_Firefox 
+                                <input type="checkbox" name="testEnv[]" value="Window10_Firefox"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Window10_IE 
+                                <input type="checkbox" name="testEnv[]" value="Window10_IE"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Linux_Crome 
+                                <input type="checkbox" name="testEnv[]" value="Linux_Crome"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Window10_IE 
+                                <input type="checkbox" name="testEnv[]" value="Window10_IE"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Linux_Crome 
+                                <input type="checkbox" name="testEnv[]" value="Linux_Crome"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-2 datepick1">
+                      <label class="required" >Start Date</label>
+                      <input type="text" class="form-control datePicker border" id="startdate" name="startdate" placeholder="Enter Start Date" required><img src="img/shape.png" alt="1">
+                    </div>
+                    <div class="col-md-6 mb-2 datepick1">
+                      <label class="required" >End Date</label>
+                      <input type="text" class="form-control datePicker border" id="enddate" name="enddate" placeholder="Enter End Date" required><img src="img/shape.png" alt="1">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="required" >Remind Before</label>
+                      <select class="form-control border" name="remind_before" id="remind_before" required>
+                        <option value="10 Days">10 Days</option>
+                        <option value="9 Days">9 Days</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="required" >No Of Threads</label>
+                      <select class="form-control border" name="environment" id="environment" required>
+                        <option value="0">Select No Of Threads</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer btnfooter">
+              <button type="button" class="btn btn-dark" data-dismiss="modal"><img src="img/close-24-px.png">CANCEL</button>
+              <button type="button" id="saveRec" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess1"><img src="img/save-24-px-1.png">SAVE</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <!-- End of Subscription Add Modal-->
+
+      <!-- The Subscription Add Modal Success-->
+      <div class="modal fade" id="myModalSucess1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header model_head">
+              <h4 class="modal-title"></h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body model_body">
+              <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+              <p>The Subscription Added Successfully.</p>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer btnfooter">
+              <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- End of Subscription Add Modal Success-->
+
+
+      <!-- The Edit Subscription Modal -->
+      <div class="modal fade model1" id="editmyModal1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title pl-3">Edit</h4>
+              <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+              <div class="col-md-12 updatescriptmodel">
+                <form>
+                  <div class="row">
+                    <input type="hidden" name="uprowid" id="uprowid">
+                    <div class="col-md-6 mb-2">
+                      <label class="required">Name</label>
+                      <input type="text" class="form-control border" name="name1" id="name1"  readonly>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                      <label class="required" >Username</label>
+                      <input type="text" id="f2" class="form-control border" name="username" value="abhisheksunon21" readonly>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-2">
+                      <label class="required" >Password</label>
+                      <input type="password" class="form-control border" name="password1" id="password1" placeholder="Enter Password" required>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                      <label class="required" >Confirm Password</label>
+                      <input type="password" class="form-control border" name="confirmpassword1" id="confirmpassword1" placeholder="Enter Confirm Password" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-2">
+                      <label class="required" >Email</label>
+                      <input type="email" class="form-control border" name="email1" id="email1" required>
+                    </div>
+                    <div class="col-md-6 mb-2 envlist">
+                      <label class="required" >Testing Environment</label>
+                      <input type="text" class="form-control testing_inv border" name="testEnvSelect" required><i class="fa fa-angle-down testDetBtn" aria-hidden="true"></i>
+                      <div class="submaindiv" style="width: 100%; height: auto;">
+                        <ul>
+                          <li>
+                            <label class="main subCB">Window10_Crome 
+                                <input type="checkbox" name="testEnv[]" value="Window10_Crome" checked="checked"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Window10_Firefox 
+                                <input type="checkbox" name="testEnv[]" value="Window10_Firefox" checked="checked"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Window10_Crome 
+                                <input type="checkbox" name="testEnv[]" value="Window10_Crome"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Window10_Firefox 
+                                <input type="checkbox" name="testEnv[]" value="Window10_Firefox"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Window10_IE 
+                                <input type="checkbox" name="testEnv[]" value="Window10_IE"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Linux_Crome 
+                                <input type="checkbox" name="testEnv[]" value="Linux_Crome"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Window10_IE 
+                                <input type="checkbox" name="testEnv[]" value="Window10_IE"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                          <li>
+                            <label class="main subCB">Linux_Crome 
+                                <input type="checkbox" name="testEnv[]" value="Linux_Crome"> 
+                                <span class="geekmark"></span> 
+                            </label>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-2 datepick1">
+                      <label class="required" >Start Date</label>
+                      <input type="text" class="form-control datePicker border" id="startdate1" name="startdate1" placeholder="Enter Start Date" required><img src="img/shape.png" alt="1">
+                    </div>
+                    <div class="col-md-6 mb-2 datepick1">
+                      <label class="required" >End Date</label>
+                      <input type="text" class="form-control datePicker border" id="enddate1" name="enddate1" placeholder="Enter End Date" required><img src="img/shape.png" alt="1">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="required" >Remind Before</label>
+                      <select class="form-control border" name="remind_before1" id="remind_before1">
+                        <option value="10 Days">10 Days</option>
+                        <option value="9 Days">9 Days</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6">
+                      <label >No Of Threads</label>
+                      <select class="form-control border" name="no_of_threads1" id="no_of_threads1">
+
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer btnfooter">
+              <button type="button" class="btn btn-dark" data-dismiss="modal"><img src="img/close-24-px.png">CANCEL</button>
+              <button type="button" class="btn btn-primary updatesubscriptBtn" data-toggle="modal" data-dismiss="modal" data-target="#editmyModalSucess1"><img src="img/save-24-px-1.png">SAVE</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- End Edit Subscription Modal-->
+
+      <!-- The Edit Subscription Modal Success-->
+      <div class="modal fade" id="editmyModalSucess1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header model_head">
+              <h4 class="modal-title"></h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body model_body">
+              <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+              <p>The Subscription Updated Successfully.</p>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer btnfooter">
+              <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- End Edit Subscription Modal Success-->
+
+
+      <!-- The Row Delete Subscription Modal -->
+      <div class="modal fade model1" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body model_body">
+             <h4>Delete Subscription</h4>
+             <p>Do you want to delete Subscription</p>
+             <p id="deletedItem"></p>
+           </div>
+
+           <!-- Modal footer -->
+           <div class="modal-footer btnfooter">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+            <button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess">YES</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End of Subscription Modal -->
+
+
+    <!-- The Row Delete Modal Subscription Success -->
+    <div class="modal fade" id="myModalSucess">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header model_head">
+            <h4 class="modal-title"></h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body model_body">
+            <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+            <p>Subscription deleted Successfully.</p>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer btnfooter">
+            <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End of Row Delete Modal Subscription Success -->
+
+
+    <div id="application" class="tab-pane fade">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+              <!--Page subtitle-->
+              <!-- <label class="subtitle">Applications</label> -->
+              <!--Delete row-->
+              <button class="btn btn-primary float-right buttonlink" id="deleteRow1"><img src="img/delete-24-px.png">DELETE</button>
+              <a href="#" class="addusetbtn addRowBtn"><button class="btn btn-primary float-right buttonlink"><img src="img/add-24-px-2.png">ADD</button></a>
+            </div>
+          </div>
+
+          <div class="row addRowData mb-1" style="display: none;">
+            <div class="col-md-4 rowadjust">
+              <label>Company Name</label>
+              <select class="form-control border" name="company_name" id="company_name">
+                <option value="Select Company Name">Select Company Name</option>
+                <option value="SocioMotif LLC">SocioMotif LLC</option>
+                <option value="Sagitech Solution">Sagitech Solution</option>
+                <option value="Infosys">Infosys</option>
+                <option value="Test Pvt Ltd">Test Pvt Ltd</option>
+              </select>
+            </div>
+            <div class="col-md-4 rowadjust">
+              <label>Application Name</label>
+              <input type="text" class="form-control border" name="application_name" id="application_name" placeholder="Enter Application Name">
+            </div>
+            <div class="col-md-3 buttonlink1 btnpadding">
+              <button class="btn btn-primary buttonlink1 addAppBtn"><img src="img/add-24-px-2.png">ADD</button>
+              <button class="btn btn-primary buttonlink1 btn-dark cancelRow"><img src="img/close-24-px.png">CANCEL</button>
+            </div>
+          </div>
+
+          <div class="row selectdiv" style="overflow-x: auto;">
+            <table id="bucketList" class="table selectdiv1 Apptable">
+              <thead>
+                <tr>
+                  <th scope="col" class="bucketcheck">
+                    <label class="main mainCB">
+                      <input type="checkbox"> 
+                      <span class="geekmark"></span> 
+                    </label>
+                  </th>
+                  <th scope="col" class="Username">COMPANY <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+                  <th scope="col">APPLICATION</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="col" class="bucketcheck">
+                    <label class="main subCB">
+                      <input type="checkbox"> 
+                      <span class="geekmark"></span> 
+                    </label>
+                  </td>
+                  <td >Sagitech Solution</td>
+                  <td >IYSM</td>
+                </tr>
+                <tr>
+                  <td scope="col" class="bucketcheck">
+                    <label class="main subCB">
+                      <input type="checkbox"> 
+                      <span class="geekmark"></span> 
+                    </label>
+                  </td>
+                  <td >Infosys</td>
+                  <td >SmartIT</td>
+                </tr>
+                <tr>
+                  <td scope="col" class="bucketcheck">
+                    <label class="main subCB">
+                      <input type="checkbox"> 
+                      <span class="geekmark"></span> 
+                    </label>
+                  </td>
+                  <td >Test Pvt Ltd</td>
+                  <td >IYSM</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row paginate">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="pagination">
+                <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+                <a href="#"><strong>Previous</strong></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">...</a>
+                <a href="#">10</a>
+                <a href="#"><strong>Next</strong></a>
+                <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- The Row Delete Application Modal-->
+    <div class="modal fade model1" id="myModalAppdlt">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body model_body">
+            <h4>Delete Application</h4>
+            <p>Do you want to delete Application?</p>
+            <p id="deletedItem1"></p>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer btnfooter">
+            <button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+            <button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalAppSucess">YES</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End of Row Delete Modal -->
+
+    <!-- The Row Delete Application Success -->
+    <div class="modal fade" id="myModalAppSucess">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header model_head">
+            <h4 class="modal-title"></h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body model_body">
+            <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+            <p>Application deleted Successfully.</p>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer btnfooter">
+            <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End of Row Delete Modal Application Success -->
+
+    <div id="applicationpaths" class="tab-pane fade">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+              <!--Page subtitle-->
+              <!-- <label class="subtitle">Application Paths</label> -->
+              <!--Delete row-->
+              <button class="btn btn-primary float-right buttonlink" id="deleteRow2"><img src="img/delete-24-px.png">DELETE</button>
+              <a href="#" class="addusetbtn addRowBtn"><button class="btn btn-primary float-right buttonlink"><img src="img/add-24-px-2.png">ADD</button></a>
+            </div>
+          </div>
+
+          <div class="rowhide">
+            <div class="row addRowData mb-2" style="display: none;">
+              <div class="col-md-4 rowadjust">
+                <label>Company</label>
+                <select class="form-control border" name="company_nm" id="company_nm">
+                  <option value="Select Company">Select Company</option>
+                  <option value="SocioMotif LLC">SocioMotif LLC</option>
+                  <option value="Sagitech Solution">Sagitech Solution</option>
+                  <option value="Infosys">Infosys</option>
+                  <option value="Test Pvt Ltd">Test Pvt Ltd</option>
+                </select>
+              </div>
+              <div class="col-md-4 rowadjust">
+                <label>Selenium Home</label>
+                <input type="text" class="form-control border" name="selenium_home" id="selenium_home" placeholder="Enter Selenium Home">
+              </div>
+              <div class="col-md-4 rowadjust">
+                <label>Screen shot Home</label>
+                <input type="text" class="form-control border" name="screen_shot_home" id="screen_shot_home" placeholder="Screen shot Home">
+              </div>
+            </div>
+            <div class="row addRowData mb-2" style="display: none;">
+              <div class="col-md-4 rowadjust">
+                <label>Logs Home</label>
+                <input type="text" class="form-control border" name="logs_home" id="logs_home" placeholder="Enter Logs Home">
+              </div>
+              <div class="col-md-4 rowadjust">
+                <label>Test Data Home</label>
+                <input type="text" class="form-control border" name="test_data_home" id="test_data_home" placeholder="Enter Test Data Home">
+              </div>
+              <div class="col-md-4 rowadjust">
+                <label>Batch File Home</label>
+                <input type="text" class="form-control border" name="batch_file_home" id="batch_file_home" placeholder="Enter Batch File Home">
+              </div>
+            </div>
+
+            <div class="row addRowData mb-1" style="display: none;">
+              <div class="col-md-12 buttonlink1 btnpadding text-right">
+                <button class="btn btn-primary buttonlink1 addApppathBtn"><img src="img/add-24-px-2.png">ADD</button>
+                <button class="btn btn-primary buttonlink1 btn-dark cancelRow"><img src="img/close-24-px.png">CANCEL</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="rowhide">
+            <div class="row updateRowData mb-2" style="display: none;">
+              <input type="hidden" name="uprowid" id="uprowid">
+              <div class="col-md-4 rowadjust">
+                <label>Company</label>
+                <select class="form-control border" name="company_nm1" id="company_nm1">
+                  <option value="Select Company">Select Company</option>
+                  <option value="SocioMotif LLC">SocioMotif LLC</option>
+                  <option value="Sagitech Solution">Sagitech Solution</option>
+                  <option value="Infosys">Infosys</option>
+                  <option value="Test Pvt Ltd">Test Pvt Ltd</option>
+                </select>
+              </div>
+              <div class="col-md-4 rowadjust">
+                <label>Selenium Home</label>
+                <input type="text" class="form-control border" name="selenium_home1" id="selenium_home1" placeholder="Enter Selenium Home">
+              </div>
+              <div class="col-md-4 rowadjust">
+                <label>Screen shot Home</label>
+                <input type="text" class="form-control border" name="screen_shot_home1" id="screen_shot_home1" placeholder="Screen shot Home">
+              </div>
+            </div>
+            <div class="row updateRowData mb-2" style="display: none;">
+              <div class="col-md-4 rowadjust">
+                <label>Logs Home</label>
+                <input type="text" class="form-control border" name="logs_home1" id="logs_home1" placeholder="Enter Logs Home">
+              </div>
+              <div class="col-md-4 rowadjust">
+                <label>Test Data Home</label>
+                <input type="text" class="form-control border" name="test_data_home1" id="test_data_home1" placeholder="Enter Test Data Home">
+              </div>
+              <div class="col-md-4 rowadjust">
+                <label>Batch File Home</label>
+                <input type="text" class="form-control border" name="batch_file_home1" id="batch_file_home1" placeholder="Enter Batch File Home">
+              </div>
+            </div>
+
+            <div class="row updateRowData mb-1" style="display: none;">
+              <div class="col-md-12 buttonlink1 btnpadding text-right">
+                <button class="btn btn-primary buttonlink1 updatepathBtn"><img src="img/save-24-px-1.png">SAVE</button>
+                <button class="btn btn-primary buttonlink1 btn-dark updatecancelRow"><img src="img/close-24-px.png">CANCEL</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row selectdiv" style="overflow-x: auto;">
+            <table id="bucketList" class="table selectdiv1 apppathtable">
+              <thead>
+                <tr>
+                  <th scope="col" class="bucketcheck">
+                    <label class="main mainCB">
+                      <input type="checkbox"> 
+                      <span class="geekmark"></span> 
+                    </label>
+                  </th>
+                  <th scope="col" class="Username">COMPANY <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+                  <th scope="col">SELENIUM HOME</th>
+                  <th scope="col">TEST DATA HOME</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="col" class="bucketcheck">
+                    <label class="main subCB">
+                      <input type="checkbox"> 
+                      <span class="geekmark"></span> 
+                    </label>
+                  </td>
+                  <td ><span class="updtRow">Sagitech Solution</span></td>
+                  <td >IYSM</td>
+                  <td>Data Home- 1</td>
+                </tr>
+                <tr>
+                  <td scope="col" class="bucketcheck">
+                    <label class="main subCB">
+                      <input type="checkbox"> 
+                      <span class="geekmark"></span> 
+                    </label>
+                  </td>
+                  <td ><span class="updtRow">Infosys</span></td>
+                  <td >SmartIT</td>
+                  <td>Data Home- 2</td>
+                </tr>
+                <tr>
+                  <td scope="col" class="bucketcheck">
+                    <label class="main subCB">
+                      <input type="checkbox"> 
+                      <span class="geekmark"></span> 
+                    </label>
+                  </td>
+                  <td ><span class="updtRow">Test Pvt Ltd</span></td>
+                  <td >IYSM</td>
+                  <td>Data Home- 3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row paginate">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="pagination">
+                <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+                <a href="#"><strong>Previous</strong></a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">...</a>
+                <a href="#">10</a>
+                <a href="#"><strong>Next</strong></a>
+                <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+  <!--for Table-->
+
+
+  <!-- The Row Delete Access Role Modal 1-->
+  <div class="modal fade model1" id="myModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body model_body">
+         <h4>Delete Application Paths</h4>
+         <p>Do you want to delete Application Paths?</p>
+         <p id="deletedItem2"></p>
+       </div>
+
+       <!-- Modal footer -->
+       <div class="modal-footer btnfooter">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+        <button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess2">YES</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- End of Row Delete Modal 1-->
+
+<!-- The Row Delete Modal Access Role Success 1-->
+<div class="modal fade" id="myModalSucess2">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header model_head">
+        <h4 class="modal-title"></h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body model_body">
+        <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+        <p>Application Paths deleted Successfully.</p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer btnfooter">
+        <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- End of Row Delete Modal Success 1-->
+
+
+
+
+
+
+</div>
+<!--Main Content End-->
+
+<!--Footer Start-->
+  <footer id="footer" class="container-fluid pull-right">
+    <div class="pull-left footer-logo"><img src="img/logo-11.png"></div>
+    <div class="pull-right footer-text">
+      <!-- &copy <script>document.write((new Date()).getFullYear());</script>   -->
+      Copyright @ 2020 UInium(“UI automation Studio”). All Rights Reserved.
+    </div>
+  </footer>
+<!--Footer End-->
+<!-- For sidebar toggle -->
+<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+
+<!--Scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/custom.js"></script>
+<!--Datepicker js link-->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $(function(){
+    
+    /*---Jquery for Testing Environment select---*/
+
+    $(".envlist").click(function(){
+      $(this).find(".submaindiv").slideToggle();
+      $(this).find("i.testDetBtn").toggleClass("caret-rev");
+    });
+
+    $(".main, .subCB").click(function(e){
+      e.stopPropagation();
+    });
+
+    $(".envlist .subCB input[name='testEnv[]']").click(function(){
+      var count = $(".envlist .subCB input[name='testEnv[]']:checked").length;
+      if(count > 1)
+      $("input[name='testEnvSelect']").val($(".envlist .subCB input[name='testEnv[]']:checked:first-child").val()+" (+"+(count-1)+")");
+      else
+      $("input[name='testEnvSelect']").val($(".envlist .subCB input[name='testEnv[]']:checked:first-child").val());
+    });
+    
+    /*---Jquery for Add row---*/
+
+    $("a.addRowBtn").click(function(e){
+      e.preventDefault();
+
+      $(this).closest(".card-body").find(".addRowData").slideToggle();
+
+      $(this).css("pointer-events", "none");
+      $(this).css("opacity", ".65");
+      $("#deleteRow").attr("disabled", true);
+      $("#deleteRow1").attr("disabled", true);
+      $("#deleteRow2").attr("disabled", true);
+    });
+
+    /*---Jquery for datepicker---*/
+
+    $("input.datePicker").datepicker({
+      dateFormat: 'dd-mm-yy'
+    });
+    
+    /*---Jquery for update Application Paths---*/
+
+    $("table.apppathtable span.updtRow").click(function(){
+      $(this).closest(".card-body").find(".updateRowData").slideToggle();
+
+      $(".updateRowData #uprowid").val($(this).closest("tr").index()+1);
+      $(".updateRowData #company_nm1").val($(this).closest("tr").find("td:nth-child(2)").text());
+      $(".updateRowData #selenium_home1").val($(this).closest("tr").find("td:nth-child(3)").text());  
+      $(".updateRowData #test_data_home1").val($(this).closest("tr").find("td:nth-child(4)").text());      
+
+      $("a.addRowBtn").css("pointer-events", "none");
+      $("a.addRowBtn").css("opacity", ".65");
+      $("#deleteRow").attr("disabled", true);
+      $("#deleteRow1").attr("disabled", true);
+      $("#deleteRow2").attr("disabled", true);
+    });
+
+    /*---Jquery for Update row---*/
+
+    $("table.subscriptionTable tbody tr td:nth-child(2)").click(function(){
+      $("#editmyModal1").modal();
+
+          $(".updatescriptmodel #uprowid").val($(this).closest("tr").index()+1);
+          $(".updatescriptmodel #name1").val($(this).closest("tr").find("td:nth-child(2)").text());
+          $(".updatescriptmodel #email1").val($(this).closest("tr").find("td:nth-child(3)").text()); 
+          $(".updatescriptmodel #startdate1").val($(this).closest("tr").find("td:nth-child(4)").text());
+          $(".updatescriptmodel #enddate1").val($(this).closest("tr").find("td:last-child").text());   
+      });
+
+    /*---Jquery for Update Save---*/
+
+    $("button.updatesubscriptBtn").click(function(){
+      var rowIndx = $("#uprowid").val();
+      var dataname = $("#name1").val();
+      var dataemail = $("#email1").val();
+      var datastartdt = $("#startdate1").val();
+      var dataenddt = $("#enddate1").val();
+
+
+      $(".subscriptionTable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(2)").html('<span class="updtRow">'+dataname+'</span>');
+      $(".subscriptionTable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(3)").text(dataemail);
+      $(".subscriptionTable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(4)").text(datastartdt);
+      $(".subscriptionTable tbody tr:nth-child("+rowIndx+")").find("td:last-child").text(dataenddt);
+
+      $("#editmyModal1").modal();
+    });
+
+    /*---Jquery for save Subscription ---*/
+
+    $("button#saveRec").click( function(){
+      var startdate = $("#startdate").val();
+      var enddate = $("#enddate").val();
+      var dt = new Date();
+      var date = dt.getDate()+"-"+('0'+(dt.getMonth()+1)).slice(-2)+"-"+dt.getFullYear();
+
+      var savestr = `<tr>
+      <td scope="col" class="bucketcheck">
+      <label class="main subCB">
+      <input type="checkbox"> 
+      <span class="geekmark"></span> 
+      </label>
+      </td>
+      <td>`+$("#name").val()+`</td>
+      <td>`+$("#email").val()+`</td>
+      <td>`+startdate+`</td>
+      <td>`+enddate+`</td>
+      </tr>`;
+          // $("#bucketList tbody tr:first-child").before();
+          $("#subscriptionsList tbody tr:first-child").before(savestr);            
+      });
+    
+    /*---Jquery for update Application Paths---*/
+
+    $("button.updatepathBtn").click(function(){
+      var rowIndx = $("#uprowid").val();
+      var dataCompanynm = $("#company_nm1").val();
+      var dataSeleniumhome = $("#selenium_home1").val();
+      var dataTestdata = $("#test_data_home1").val();
+
+      $(".apppathtable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(2)").html('<span class="updtRow">'+dataCompanynm+'</span>');
+      $(".apppathtable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(3)").text(dataSeleniumhome);
+      $(".apppathtable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(4)").text(dataTestdata);
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow1").attr("disabled", false);
+      $("#deleteRow").attr("disabled", false);
+       $("#deleteRow2").attr("disabled", false);
+      $(this).closest(".rowhide").slideUp();
+    });
+
+    /*---Jquery for Save Application---*/
+
+    $("button.addAppBtn").click(function(){
+      var datacompnay = $("#company_name").val();
+      var dataAppname = $("#application_name").val();
+
+      var str = `<tr>
+      <td scope="col" class="bucketcheck">
+      <label class="main subCB">
+      <input type="checkbox"> 
+      <span class="geekmark"></span> 
+      </label>
+      </td>
+      <td >`+datacompnay+`</td>
+      <td >`+dataAppname+`</td>
+      </tr>`;
+
+      $("table.Apptable tbody").prepend(str);
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow2").attr("disabled", false);
+      $("#deleteRow").attr("disabled", false);
+      $("#deleteRow1").attr("disabled", false);
+      $(this).closest(".addRowData").slideUp();
+    });
+    
+    /*---Jquery for Save Application Paths---*/
+
+    $("button.addApppathBtn").click(function(){
+      var dataCompnany     = $("#company_nm").val();
+      var dataSelenium     = $("#selenium_home").val();
+      var dataTestdata     = $("#test_data_home").val();
+
+      var str = `<tr>
+      <td scope="col" class="bucketcheck">
+      <label class="main subCB">
+      <input type="checkbox"> 
+      <span class="geekmark"></span> 
+      </label>
+      </td>
+      <td >`+dataCompnany+`</td>
+      <td >`+dataSelenium+`</td>
+      <td >`+dataTestdata+`</td>
+      </tr>`;
+
+      $("table.apppathtable tbody").prepend(str);
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow").attr("disabled", false);
+      $("#deleteRow1").attr("disabled", false);
+      $("#deleteRow2").attr("disabled", false);
+      $(this).closest(".rowhide").slideUp();
+    });
+
+
+    /*---Jquery for Cancel row---*/
+
+    $("button.cancelRow").click(function(){
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow").attr("disabled", false);
+      $("#deleteRow1").attr("disabled", false);
+      $("#deleteRow2").attr("disabled", false);
+      $(this).closest(".addRowData").slideUp();
+      $(this).closest(".rowhide").slideUp();
+    });
+
+    $("button.updatecancelRow").click(function(){
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow").attr("disabled", false);
+      $("#deleteRow1").attr("disabled", false);
+      $(this).closest(".updateRowData").slideUp();
+      $(this).closest(".rowhide").slideUp();
+    });
+
+
+    $(".mainCB input[type=checkbox]").click(function(){
+      if($(this).prop("checked")==true)
+        { $(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", true); }
+      else
+        { $(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", false);  }
+    });
+
+    /*---Jquery for delete Subscription row---*/
+
+    $("#deleteRow").click(function(e){
+      e.preventDefault();
+      var str = '';
+      $("table tbody .subCB input:checked").each(function(){
+        if(str!='')
+          str += ", "+$(this).closest("tr").find("td:nth-child(2)").text();
+        else
+          str += $(this).closest("tr").find("td:nth-child(2)").text();
+      });
+
+      $("#deletedItem").text(str);
+      $("#myModal").modal();
+    });
+
+    $(document).on("click", "#yesbtn", function(){
+      $("table tbody .subCB input:checked").each(function(){
+        $(this).closest("tr").remove();
+      });     
+    });
+
+    /*---Jquery for delete Application row---*/
+
+    $("#deleteRow1").click(function(e){
+      e.preventDefault();
+      var str = '';
+      $("table tbody .subCB input:checked").each(function(){
+        if(str!='')
+          str += ", "+$(this).closest("tr").find("td:nth-child(2)").text();
+        else
+          str += $(this).closest("tr").find("td:nth-child(2)").text();
+      });
+
+      $("#deletedItem1").text(str);
+      $("#myModalAppdlt").modal();
+    });
+
+    $(document).on("click", "#yesbtn", function(){
+      $("table tbody .subCB input:checked").each(function(){
+        $(this).closest("tr").remove();
+      });     
+    });
+
+    /*---Jquery for delete Application Paths row---*/
+
+    $("#deleteRow2").click(function(e){
+      e.preventDefault();
+      var str = '';
+      $("table tbody .subCB input:checked").each(function(){
+        if(str!='')
+          str += ", "+$(this).closest("tr").find("td:nth-child(2)").text();
+        else
+          str += $(this).closest("tr").find("td:nth-child(2)").text();
+      });
+
+      $("#deletedItem2").text(str);
+      $("#myModal2").modal();
+    });
+
+    $(document).on("click", "#yesbtn", function(){
+      $("table tbody .subCB input:checked").each(function(){
+        $(this).closest("tr").remove();
+      });     
+    });
+
+    /*---Jquery for toggle section on click caret-down icon---*/
+
+    $(".submaindiv i.showbtndiv").click(function(){
+      $(this).closest("li").find(".hidediv").slideToggle();
+      $(this).toggleClass("caret-rev");
+    });
+
+    $("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+
+    $(window).resize(function(){
+      $("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+    });
+
+      // For sidebar toggle
+      if($(window).width() < 730)
+      {
+        $("#sidebarToggle").click(function(e){
+          e.preventDefault();
+          $("aside.sidebar").toggleClass("showSB");
+          $(this).toggleClass("toggleIcon");
+        });
+      }
+    });
+  </script>
+</body>
+</html>

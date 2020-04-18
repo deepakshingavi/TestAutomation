@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+        <title>Performance Suite | Company Admin</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <script src="./Libraries/js/demo-rtl.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/font-awesome.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/nanoscroller.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/custom.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/compiled/theme_styles.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/ns-default.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/ns-style-growl.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/ns-style-bar.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/ns-style-attached.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/ns-style-other.css"/>
+        <link rel="stylesheet" type="text/css" href="./Libraries/css/libs/ns-style-theme.css"/>
+        <link type="image/x-icon" href="./Libraries/img/logo-small.png" rel="shortcut icon"/>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>-->
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            /* <![CDATA[ */
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-49262924-2']);
+            _gaq.push(['_trackPageview']);
+            
+            (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+            
+            (function(b){(function(a){"__CF"in b&&"DJS"in b.__CF?b.__CF.DJS.push(a):"addEventListener"in b?b.addEventListener("load",a,!1):b.attachEvent("onload",a)})(function(){"FB"in b&&"Event"in FB&&"subscribe"in FB.Event&&(FB.Event.subscribe("edge.create",function(a){_gaq.push(["_trackSocial","facebook","like",a])}),FB.Event.subscribe("edge.remove",function(a){_gaq.push(["_trackSocial","facebook","unlike",a])}),FB.Event.subscribe("message.send",function(a){_gaq.push(["_trackSocial","facebook","send",a])}));"twttr"in b&&"events"in twttr&&"bind"in twttr.events&&twttr.events.bind("tweet",function(a){if(a){var b;if(a.target&&a.target.nodeName=="IFRAME")a:{if(a=a.target.src){a=a.split("#")[0].match(/[^?=&]+=([^&]*)?/g);b=0;for(var c;c=a[b];++b)if(c.indexOf("url")===0){b=unescape(c.split("=")[1]);break a}}b=void 0}_gaq.push(["_trackSocial","twitter","tweet",b])}})})})(window);
+            /* ]]> */
+        </script>
+        <script src="./Libraries/js/common.js"></script>
+        <script>
+            if(!readCookie("TAaccess")) {
+            	window.location.href = "login.html?msg=notauth";
+            }
+        </script>
+		<script src="./Libraries/js/demo-skin-changer.js"></script>  
+        <script src="./Libraries/js/jquery.js"></script>
+        <script src="./Libraries/js/bootstrap.js"></script>
+        <script src="./Libraries/js/jquery.nanoscroller.min.js"></script>
+        <script src="./Libraries/js/demo.js"></script>  
+        <script src="./Libraries/js/moment.min.js"></script>
+        <script src="./Libraries/js/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="./Libraries/js/jquery-jvectormap-world-merc-en.js"></script>
+        <script src="./Libraries/js/gdp-data.js"></script>
+        <script src="./Libraries/js/flot/jquery.flot.min.js"></script>
+        <script src="./Libraries/js/flot/jquery.flot.resize.min.js"></script>
+        <script src="./Libraries/js/flot/jquery.flot.time.min.js"></script>
+        <script src="./Libraries/js/flot/jquery.flot.threshold.js"></script>
+        <script src="./Libraries/js/flot/jquery.flot.axislabels.js"></script>
+        <script src="./Libraries/js/jquery.sparkline.min.js"></script>
+        <script src="./Libraries/js/pace.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+        <script src="./Libraries/js/skycons.js"></script>
+        <script src="./Libraries/js/scripts.js"></script>
+        <script src="./Libraries/js/common.js"></script>
+        <script src="./Libraries/js/pages/performancesuite.js"></script>
+    </head>
+    <body class="theme-whbl">
+        <div id="theme-wrapper">
+            <header class="navbar" id="header-navbar"></header>
+            <div id="page-wrapper" class="container">
+                <div class="row">
+                    <div id="nav-col"></div>
+					<div id="content-wrapper">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <ol class="breadcrumb">
+                                            <li><a href="#">Home</a></li>
+                                            <li class="active"><span>Performance Suite</span></li>
+                                        </ol>
+                                        <h1>Performance Suite</h1>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="main-box">
+                                            <header class="main-box-header clearfix">
+												<br>
+												<div class="form-group form-group-select2">
+													<div style="float:left;margin-right:20px">
+														<label for="exampleInputEmail1">Select Suite 1</label>
+														<select name="suite1" required id="suite1" style="width:300px" class="form-control">
+															<option value="">---Select Suite---</option>
+														</select>
+														<span class="errmsg"></span>
+													</div>
+													<div style="float:left;margin-right:20px">
+														<label for="exampleInputEmail1">Select Suite 2</label>
+														<select name="suite2" required id="suite2" style="width:300px" class="form-control"></select>
+														<span class="errmsg"></span>
+													</div>
+													<div style="float:left">
+														<button class="btn btn-info" style="margin-top: 22px;" id="showid">View</button>&nbsp;&nbsp;
+													</div>
+												</div>
+											</header>
+                                            <div class="main-box-body clearfix">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+														<div class="main-box-body clearfix">
+															<div class="table-responsive">
+																<table id="suite1Tbl" class="table table-hover tbls">
+																	<thead>
+																		<tr>
+																			<th>TestCase:&nbsp;&nbsp;<span class="suite1Val"></span></th>
+																			<th>Elapsed Time</th>
+																		</tr>
+																	</thead>
+																	<tbody></tbody>
+																</table>
+															</div>
+														</div>
+                                                    </div>
+                                                    <div class="col-md-6">
+														<div class="main-box-body clearfix">
+															<div class="table-responsive">
+																<table id="suite2Tbl" class="table table-hover tbls">
+																	<thead>
+																		<tr>
+																			<th>TestCase:&nbsp;&nbsp;<span class="suite2Val"></span></th>
+																			<th>Elapsed Time</th>
+																		</tr>
+																	</thead>
+																	<tbody></tbody>
+																</table>
+															</div>
+														</div>
+                                                    </div>
+                                                </div>
+												<div class="row">
+													<div class="col-md-12">
+														<div class="main-box">
+															<table id="chartTbl" class="table table-hover tbls">
+																<tbody></tbody>
+															</table>
+														</div>
+													</div>
+												</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								
+                                
+							</div>
+                        </div>
+                        <footer id="footer-bar" class="row"></footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

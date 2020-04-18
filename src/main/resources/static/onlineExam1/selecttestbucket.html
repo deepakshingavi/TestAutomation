@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UInium</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Favicon-->
+	<link rel="icon" href="img/favicon-16x16.png">
+
+	<!--Styles-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--Custom style link-->
+	<link rel="stylesheet" href="css/custom.css">
+	<style>
+		.bucketcheck label {
+			    padding-left: 5px;
+                margin-bottom: 15px;
+		}
+
+		.modeltable thead tr, .modeltable tbody tr {
+			font-size: 12px;
+		}
+
+		.modeltable thead th, .modeltable tbody td {
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	<!--Header Start-->
+	<header class="navbar navbar-expand-lg">
+		<!--Logo Start-->
+		<a id="logo" class="navbar-brand text-center" href="#">
+			<img src="img/4317-converted.png">
+		</a>
+		<!--Logo End-->
+		<!--Navbar Toggle Start-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa fa-bars"></span>
+		</button>
+		<!--Navbar Toggle End-->
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="dashboard.html">Monitor App</a></li>
+				<li class="nav-item"><a class="nav-link" href="users.html">Subscribers</a></li>
+				<li class="nav-item"><a class="nav-link" href="setup.html">AppSettings</a></li>
+				<li class="nav-item"><a class="nav-link" href="testmanagement.html">Test Management</a></li>
+				<li class="nav-item"><a class="nav-link" href="runtest.html">Run Tests</a></li>
+				<li class="nav-item active"><a class="nav-link" href="testbucketenviroment.html">Test Bucket</a></li>
+				<li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+				<!-- <li class="nav-item"><a class="nav-link" href="subscription.html">Subscriptions</a></li> -->
+			</ul>
+
+			<!--User Menu Start-->
+			<div id="userMenu" class="dropdown">
+				<!-- <a href="#"><i class="fa fa-user-o"></i> User</a> -->
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/user-icon.png"> <span>User</span></a>
+				<div class="dropdown-menu">
+			      <a class="dropdown-item" href="profile.html">Profile</a>
+			      <a class="dropdown-item" href="login.html">Logout</a>
+			    </div>
+			</div>
+			<!--User Menu End-->
+		</div>
+	</header>
+	<!--Header End-->
+
+	<!--Sidebar Start-->
+	<aside class="sidebar pull-left">
+		<ul>
+			<!-- <li><a href="#"><img src="img/add-24-px.png"></a></li>
+			<li><a href="#"><i class="fa fa-plus"></i></a></li> -->
+			<li><a href="#"><img src="img/apps-24-px.png"></a></li>
+			<li><a href="#"><img src="img/add-24-px.png"></a></li>
+		</ul>
+	</aside>
+	<!--Sidebar End-->
+
+	<!--Main Contebt Start-->
+	<div id="main-content" class="container-fluid pull-right">
+		<!--Page Title-->
+		<!-- <h1 id="page-title">Test Bucket</h1> -->
+		
+		<!--Pages Tabs-->
+		<div class="card">
+			<div class="card-body tabsHeader">
+				<span class="active activetab"><i class="fa fa-check"></i> Select Environment</span>
+				<span class="active activetab"><i>2</i> Select Test Bucket</span>
+				<span><i>3</i> Finalize</span>
+			</div>
+		</div>
+        
+        <!--for Table-->
+		<div class="card">
+			<div class="card-body">
+				<form>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+							<!--Page subtitle-->
+							<label class="subtitle">Execution Name</label>
+							<!--Delete row-->
+							<button class="btn btn-primary float-right buttonlink" id="deleteRow"><img src="img/delete-24-px.png">DELETE</button>
+						</div>
+					</div>
+					<div class="row selectdiv" style="overflow-x: auto;">
+						<table id="bucketList" class="table selectdiv1">
+						  <thead>
+						    <tr>
+						      <th scope="col" class="bucketcheck">
+						      	<label class="main mainCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </th>
+						      <th scope="col">BUCKET NAME</th>
+						      <th scope="col">ENVIRONMENT</th>
+						      <th scope="col">USER ROLE</th>
+						      <th scope="col">ACTIONS</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+						      <td>Test Bucket - 1</td>
+						      <td>DEV</td>
+						      <td>Test_Automation2-StanderedStaff</td>
+						      <td><img src="img/flip.png" alt="1" class="addrow" title="Clone"> <img src="img/visibility-24-px.png" alt="1" data-toggle="modal" data-target="#myModal1" title="View"></td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+						      <td>Test Bucket - 1</td>
+						      <td>DEV</td>
+						      <td>Test_Automation2-StanderedStaff</td>
+						      <td><img src="img/flip.png" alt="2" class="addrow" title="Clone"> <img src="img/visibility-24-px.png" alt="2" data-toggle="modal" data-target="#myModal1" title="View"></td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+						      <td>Test Bucket - 1</td>
+						      <td>DEV</td>
+						      <td>Test_Automation2-StanderedStaff</td>
+						      <td><img src="img/flip.png" class="addrow" alt="3" title="Clone"> <img src="img/visibility-24-px.png" alt="3" data-toggle="modal" data-target="#myModal1" title="View"></td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</form>
+				<div class="row paginate">
+					<div class="col-md-12 col-sm-12 col-xs-12">
+						<div class="pagination">
+							  <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+							  <a href="#"><strong>Previous</strong></a>
+							  <a href="#" class="active">1</a>
+							  <a href="#">2</a>
+							  <a href="#">3</a>
+							  <a href="#">4</a>
+							  <a href="#">5</a>
+							  <a href="#">...</a>
+							  <a href="#">10</a>
+							  <a href="#"><strong>Next</strong></a>
+							  <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+        
+        <!-- The Modal 1-->
+		<div class="modal fade model1" id="myModal">
+		    <div class="modal-dialog">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        </div>
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body model_body">
+		          	 <h4>Delete Test Bucket</h4>
+		             <p>Do you want to delete Test Bucket?</p>
+		             <p id="deletedItem"></p>
+		        </div>
+		        
+		        <!-- Modal footer -->
+		        <div class="modal-footer btnfooter">
+		        	<button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+		        	<button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess">YES</button>
+		        </div>
+				        
+		      </div>
+		    </div>
+		</div>
+		<!-- End of Modal 1-->
+
+		<!-- The Modal Success 1-->
+		  <div class="modal fade" id="myModalSucess">
+		    <div class="modal-dialog modal-dialog-centered">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header model_head">
+		          <h4 class="modal-title"></h4>
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        </div>
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body model_body">
+		          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+		          <p>Test Bucket deleted Successfully.</p>
+		        </div>
+		        
+		        <!-- Modal footer -->
+		        <div class="modal-footer btnfooter">
+		          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+		        </div>
+		        
+		      </div>
+		    </div>
+		  </div>
+		<!-- End of Modal Success 1-->
+
+		<!-- The Modal 2-->
+		  <div class="modal fade model1" id="myModal1">
+		    <div class="modal-dialog">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header">
+		          <h4 class="modal-title">View Bucket</h4>
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        </div>
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body">
+		          <div class="row">
+		          	<div class="col-md-12">
+		          		<div class="row">
+				          	<div class="col-md-5">
+				          		<label class="col-md-12">Bucket Name</label>
+				          		<label class="col-md-12">Environment</label>
+				          		<label class="col-md-12">User Role</label>
+				          	</div>
+				          	<div class="col-md-7">
+				          		<label class="col-md-12">: Test-Bucket-1</label>
+				          		<label class="col-md-12">: QA</label>
+				          		<label class="col-md-12">: Test_Automation2-StandardSupportStaff</label>
+				          	</div>
+		          		</div>
+		          		<div class="Testcasemodel">
+		          			<div class="col-md-12 Testheading">
+		          				<h5>Test Cases</h5>
+		          			</div>
+		          			<div class="col-md-12 test_cases">
+		          				<label>ITSM</label>
+								<i class="fa fa-angle-down testDetBtn" aria-hidden="true"></i>
+								<div class="col-md-12 col-sm-12 col-xs-12 submaindiv">
+								 	<ul>
+								 		<li>
+								 			<label>ITSM_CreateNewIncident</label>
+								 		</li>
+								 		<li>
+								 			<label>ITSM_CreateNewIncidentWithoutCI</label>
+								 		</li>
+								 		<li>
+								 			<label>TSM_SearchAndModifyIncident</label>
+								 		</li>
+								 		<li>
+								 			<label>ITSM_CreateNewIncidentWithTypeUserServiceRegistration</label>
+								 		</li>
+								 		<li>
+								 			<label>ITSM_CreateNewIncidentWithTypeUserServiceRequest</label>
+								 		</li>
+								 	</ul>
+								</div>
+		          			</div>
+		          			<div class="col-md-12 test_cases">
+		          				<label>SmartIT</label>
+								<i class="fa fa-angle-down testDetBtn" aria-hidden="true"></i>
+								<div class="col-md-12 col-sm-12 col-xs-12 submaindiv">
+								 	<ul>
+								 		<li>
+								 			<label>ITSM_CreateNewIncident</label>
+								 		</li>
+								 		<li>
+								 			<label>ITSM_CreateNewIncidentWithoutCI</label>
+								 		</li>
+								 		<li>
+								 			<label>TSM_SearchAndModifyIncident</label>
+								 		</li>
+								 		<li>
+								 			<label>ITSM_CreateNewIncidentWithTypeUserServiceRegistration</label>
+								 		</li>
+								 		<li>
+								 			<label>ITSM_CreateNewIncidentWithTypeUserServiceRequest</label>
+								 		</li>
+								 	</ul>
+								</div>
+		          			</div>
+		          			<div class="col-md-12 test_cases">
+		          				<label>MyIT</label>
+								<i class="fa fa-angle-down testDetBtn" aria-hidden="true"></i>
+								<div class="col-md-12 col-sm-12 col-xs-12 submaindiv">
+								 	<ul>
+								 		<li>
+								 			<label>ITSM_CreateNewIncident</label>
+								 		</li>
+								 		<li>
+								 			<label>ITSM_CreateNewIncidentWithoutCI</label>
+								 		</li>
+								 		<li>
+								 			<label>TSM_SearchAndModifyIncident</label>
+								 		</li>
+								 		<li>
+								 			<label>ITSM_CreateNewIncidentWithTypeUserServiceRegistration</label>
+								 		</li>
+								 		<li>
+								 			<label>ITSM_CreateNewIncidentWithTypeUserServiceRequest</label>
+								 		</li>
+								 	</ul>
+								</div>
+		          			</div>
+		          		</div>
+		          	</div>
+		          </div>
+		        </div>
+		        
+		        <!-- Modal footer -->
+		        <div class="modal-footer btnfooter">
+		        	<button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+		        </div>
+		        
+		      </div>
+		    </div>
+		  </div>
+		  <!-- End of Modal 2-->
+
+		  <!-- The Modal 3-->
+		  <div class="modal fade model1" id="myModal2">
+		    <div class="modal-dialog">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header">
+		          <h4 class="modal-title">Summary Of Execution</h4>
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        </div>
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body">
+		          <div class="row">
+		          	<div class="col-md-12">
+		          		<div class="row">
+				          	<div class="col-md-5">
+				          		<label class="col-md-12">Execution Name</label>
+				          		<label class="col-md-12">Testing Environment</label>
+				          		<label class="col-md-12">Schedule Tests</label>
+				          	</div>
+				          	<div class="col-md-7">
+				          		<label class="col-md-12">: rahulahs23_01_2020_22_56</label>
+				          		<label class="col-md-12">: Enternet Explorer</label>
+				          		<label class="col-md-12">: 30-10-2019 14:40</label>
+				          	</div>
+		          		</div>
+		          		<div class="Testcasemodel" style="overflow-x: auto;">
+		          			<table class="table mb-0 selectdiv1 modeltable">
+							  <thead>
+							    <tr>
+							      <th scope="col" class="bucketcheck">
+							      	<label class="main mainCB">
+								        <input type="checkbox"> 
+								        <span class="geekmark"></span> 
+								    </label>
+						          </th>
+							      <th scope="col">BUCKET NAME</th>
+							      <th scope="col">ENVIRONMENT</th>
+							      <th scope="col">USER ROLE</th>
+							      <th scope="col">ACTIONS</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td scope="col" class="bucketcheck">
+							      	<label class="main subCB">
+								        <input type="checkbox"> 
+								        <span class="geekmark"></span> 
+								    </label>
+						          </td>
+							      <td>Test Bucket - 1</td>
+							      <td>DEV</td>
+							      <td>Test_Automation2-StanderedStaff</td>
+							      <td><img src="img/visibility-24-px.png" alt="1" data-toggle="modal" data-target="#myModal1" title="View"></td>
+							    </tr>
+							    <tr>
+							      <td scope="col" class="bucketcheck">
+							      	<label class="main subCB">
+								        <input type="checkbox"> 
+								        <span class="geekmark"></span> 
+								    </label>
+						          </td>
+							      <td>Test Bucket - 1</td>
+							      <td>DEV</td>
+							      <td>Test_Automation2-StanderedStaff</td>
+							      <td><img src="img/visibility-24-px.png" alt="2" data-toggle="modal" data-target="#myModal1" title="View"></td>
+							    </tr>
+							    <tr>
+							      <td scope="col" class="bucketcheck">
+							      	<label class="main subCB">
+								        <input type="checkbox"> 
+								        <span class="geekmark"></span> 
+								    </label>
+						          </td>
+							      <td>Test Bucket - 1</td>
+							      <td>DEV</td>
+							      <td>Test_Automation2-StanderedStaff</td>
+							      <td><img src="img/visibility-24-px.png" alt="3" data-toggle="modal" data-target="#myModal1" title="View"></td>
+							    </tr>
+							  </tbody>
+							</table>
+		          		</div>
+		          	</div>
+		          </div>
+		        </div>
+		        
+		        <!-- Modal footer -->
+		        <div class="modal-footer btnfooter">
+		        	<button type="button" class="btn btn-dark" data-dismiss="modal">CANCEL</button>
+		            <button type="button" id="schedulebtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess1">SCHEDULE</button>
+		        </div>
+		        
+		      </div>
+		    </div>
+		  </div>
+		  <!-- End of Modal 3-->
+
+		  <!-- The Modal Success 2-->
+		  <div class="modal fade" id="myModalSucess1">
+		    <div class="modal-dialog modal-dialog-centered">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header model_head">
+		          <h4 class="modal-title"></h4>
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        </div>
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body model_body">
+		          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+		          <p>Test Bucket Schedule Successfully.</p>
+		        </div>
+		        
+		        <!-- Modal footer -->
+		        <div class="modal-footer btnfooter">
+		          <button type="button" id="redirect" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+		        </div>
+		        
+		      </div>
+		    </div>
+		  </div>
+		<!-- End of Modal Success 2-->
+
+		<div class="row btn-div">
+			<div class="col-md-12 col-sm-12 col-xs-12 text-center buttonlink">
+				<!--Back Button for go to previous page-->
+				<a href="testbucketenviroment.html"><button class="btn btn-dark buttonlink">BACK</button></a>
+				<!--Next Button for go to next page-->
+				<a href="#"><button class="btn btn-primary buttonlink" data-toggle="modal" data-target="#myModal2">NEXT</button></a>
+			</div>
+		</div>
+	</div>
+	<!--Main Content End-->
+
+	<!--Footer Start-->
+	<footer id="footer" class="container-fluid pull-right">
+		<div class="pull-left footer-logo"><img src="img/logo-11.png"></div>
+		<div class="pull-right footer-text">
+			<!-- &copy <script>document.write((new Date()).getFullYear());</script>   -->
+			Copyright @ 2020 UInium(“UI automation Studio”). All Rights Reserved.
+		</div>
+	</footer>
+    <!--Footer End-->
+	<!-- For sidebar toggle -->
+	<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+
+	<!--Scripts-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+		$(function(){
+			$(".test_cases").click(function(){
+				$(this).find(".submaindiv").slideToggle();
+				$(this).find("i.testDetBtn").toggleClass("caret-rev");
+			});
+
+			$(".main, .subCB").click(function(e){
+				e.stopPropagation();
+			});
+
+			$(".mainCB input[type=checkbox]").click(function(){
+				if($(this).prop("checked")==true)
+				{	$(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", true);	}
+				else
+				{	$(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", false);	}
+			});
+            
+            /*---Jquery for toggle section on click angle-down icon---*/
+
+			$(".selectdiv i.showdet").click(function(){
+				$(this).closest(".selectdiv").find(".submaindiv").slideToggle();
+				$(this).toggleClass("caret-rev");
+			});
+
+            /*---Jquery for add row---*/
+
+			$(".addrow").click(function(e){
+				e.preventDefault();
+				var str = `<tr>
+				<td></td>
+				<td><input type="text" id="f1" class="form-control border" name="" placeholder="Enter Execution Name"></td>
+				<td><select id="f2" class="form-control border" name="">
+						<option>QA</option>
+						<option>Dev</option>
+					</select></td>
+				<td><select id="f3" class="form-control border" name="">
+						<option>Test_Automation2-StanderedStaff</option>
+						<option>Test_Automation2-StanderedStaff</option>
+					</select></td>
+				<td><img src="img/save-24-px.png" alt="1" id="saveRec"> <img src="img/cancel-24-px.png" alt="1" id="cancelRec"></td>
+				</tr>`;				
+				$("#bucketList tbody").prepend(str);
+			});
+            
+            /*---Jquery for save row---*/
+			$(document).on("click", "#saveRec", function(){
+				var savestr = `<tr>
+			      <td scope="col" class="bucketcheck">
+			      	<label class="main subCB">
+				        <input type="checkbox"> 
+				        <span class="geekmark"></span> 
+				    </label>
+		          </td>
+			      <td>`+$("#f1").val()+`</td>
+			      <td>`+$("#f2").val()+`</td>
+			      <td>`+$("#f3").val()+`</td>
+			      <td><img src="img/flip.png" alt="1"> <img src="img/visibility-24-px.png" alt="1" data-toggle="modal" data-target="#myModal1"></td>
+			    </tr>`;
+			    $("#bucketList tbody tr:first-child").remove();
+			    $("#bucketList tbody").prepend(savestr);				    
+			});
+            
+            /*---Jquery for cancel row---*/
+
+			$(document).on("click", "#cancelRec", function(){
+				$(this).closest("tr").remove();		    
+			});
+
+            
+            /*---Jquery for delete row---*/
+
+			$("#deleteRow").click(function(e){
+				e.preventDefault();
+				var str = '';
+				$("table tbody .subCB input:checked").each(function(){
+				if(str!='')
+					str += ", "+$(this).closest("tr").find("td:nth-child(2)").text();
+				else
+					str += $(this).closest("tr").find("td:nth-child(2)").text();
+				});
+
+				$("#deletedItem").text(str);
+				$("#myModal").modal();
+			});
+
+			$(document).on("click", "#yesbtn", function(){
+				$("table tbody .subCB input:checked").each(function(){
+					$(this).closest("tr").remove();
+				});	    
+			});
+
+			$("#redirect").click(function(){
+				window.location.href = "testbucketenviroment.html";
+			});
+            
+            /*---Jquery for toggle section on click caret-down icon---*/
+
+			$(".submaindiv i.showbtndiv").click(function(){
+				$(this).closest("li").find(".hidediv").slideToggle();
+				$(this).toggleClass("caret-rev");
+			});
+
+			$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+
+			$(window).resize(function(){
+				$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+			});
+
+			// For sidebar toggle
+			if($(window).width() < 730)
+			{
+				$("#sidebarToggle").click(function(e){
+					e.preventDefault();
+					$("aside.sidebar").toggleClass("showSB");
+					$(this).toggleClass("toggleIcon");
+				});
+			}
+		});
+	</script>
+</body>
+</html>

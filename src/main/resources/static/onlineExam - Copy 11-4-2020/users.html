@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Styles-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--Custom style link-->
+	<link rel="stylesheet" href="css/custom.css">
+	<style>
+		.bucketcheck label {
+			    padding-left: 5px;
+                margin-bottom: 15px;
+		}
+	</style>
+</head>
+<body>
+	<!--Header Start-->
+	<header class="navbar navbar-expand-lg"></header>
+	<!--Header End-->
+
+	<!--Sidebar Start-->
+	<aside class="sidebar pull-left"></aside>
+	<!--Sidebar End-->
+
+	<!--Main Contebt Start-->
+	<div id="main-content" class="container-fluid pull-right">
+		<!--Page Title-->
+		<!-- <h1 id="page-title">Users</h1> -->
+        
+        <!--for Table-->
+		<div class="card">
+			<div class="card-body">
+				<form>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+							<!--Page subtitle-->
+							<!-- <label class="subtitle">Users</label> -->
+							<!--Delete row-->
+							<button class="btn btn-primary float-right buttonlink" id="deleteRow">DELETE</button>
+							<a href="#" class="addusetbtn" data-toggle="modal" data-target="#myModal1"><button class="btn btn-primary float-right buttonlink">ADD</button></a>
+						</div>
+					</div>
+					<div class="row selectdiv" style="overflow-x: auto;">
+						<table id="bucketList" class="table selectdiv1 usertable">
+						  <thead>
+						    <tr>
+						      <th scope="col" class="bucketcheck">
+						      	<label class="main mainCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </th>
+						      <th scope="col" class="Username">NAME <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+						      <th scope="col">USERNAME</th>
+						      <th scope="col">EMAIL</th>
+						      <th scope="col">ADDED DATE</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+						      <td  data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">Ashish Kadam</td>
+						      <td  data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">ashishkadam45</td>
+						      <td  data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">ashishkadam45@gmail.com</td>
+						      <td  data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">17-02-2020 21:40</td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+						      <td  data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">Rahul Upadhya</td>
+						      <td  data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">rahulupadhya987657</td>
+						      <td  data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">rahul.upadhya21@gmail.com</td>
+						      <td  data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">10-02-2020 12:40</td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+						      <td  data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">Amit Singh</td>
+						      <td  data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">amitsingh25091991</td>
+						      <td  data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">singh.amit54@gmail.com</td>
+						      <td  data-toggle="modal" data-dismiss="modal" data-target="#editmyModal1">08-02-2020 20:50</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+					<div class="row paginate">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="pagination">
+								  <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+								  <a href="#"><strong>Previous</strong></a>
+								  <a href="#" class="active">1</a>
+								  <a href="#">2</a>
+								  <a href="#">3</a>
+								  <a href="#">4</a>
+								  <a href="#">5</a>
+								  <a href="#">...</a>
+								  <a href="#">10</a>
+								  <a href="#"><strong>Next</strong></a>
+								  <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+								</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- The Modal 2-->
+		  <div class="modal fade model1" id="myModal1">
+		    <div class="modal-dialog">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header">
+		          <h4 class="modal-title pl-3">Add</h4>
+		          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+		        </div>
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body">
+		          	<div class="col-md-12 addusermodel">
+		          		<form>
+		          			<div class="row">
+								<div class="col-md-6 mb-2">
+									<label class="required">First Name</label>
+									<input type="text" id="f1" class="form-control border" name="firstname" placeholder="Enter First Name" required>
+								</div>
+								<div class="col-md-6 mb-2">
+									<label class="required">Last Name</label>
+									<input type="text" class="form-control border" name="lastname" placeholder="Last Name" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 mb-2">
+									<label class="required" >Username</label>
+									<input type="text" id="f2" class="form-control border" name="username" placeholder="Enter Username" required>
+								</div>
+								<div class="col-md-6 mb-2">
+									<label class="required" >Email</label>
+									<input type="email" id="f3" class="form-control border" name="email" placeholder="Enter Email" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 mb-2">
+									<label class="required" >Password</label>
+									<input type="password" class="form-control border" name="password" placeholder="Enter Password" required>
+								</div>
+								<div class="col-md-6 mb-2">
+									<label class="required" >Confirm Password</label>
+									<input type="password" class="form-control border" name="confirmpassword" placeholder="Enter Confirm Password" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<label class="required" >Role</label>
+									<input type="text" id="f4" class="form-control border" name="role" placeholder="Enter Role" required>
+								</div>
+							</div>
+		          		</form>
+		          	</div>
+		        </div>
+		        
+		        <!-- Modal footer -->
+		        <div class="modal-footer btnfooter">
+		        	<button type="button" class="btn btn-dark" data-dismiss="modal">CANCEL</button>
+		            <button type="button" id="saveRec" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess1">SAVE</button>
+		        </div>
+		        
+		      </div>
+		    </div>
+		  </div>
+		  <!-- End of Modal 2-->
+
+		  <!-- The Row Delete Modal Success 1-->
+			  <div class="modal fade" id="myModalSucess1">
+			    <div class="modal-dialog modal-dialog-centered">
+			      <div class="modal-content">
+			      
+			        <!-- Modal Header -->
+			        <div class="modal-header model_head">
+			          <h4 class="modal-title"></h4>
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+			        
+			        <!-- Modal body -->
+			        <div class="modal-body model_body">
+			          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+			          <p>The User Added Successfully.</p>
+			        </div>
+			        
+			        <!-- Modal footer -->
+			        <div class="modal-footer btnfooter">
+			          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+			        </div>
+			        
+			      </div>
+			    </div>
+			  </div>
+			<!-- End of Row Delete Modal Success 1-->
+
+			<!-- The Edit Modal 1-->
+			  <div class="modal fade model1" id="editmyModal1">
+			    <div class="modal-dialog">
+			      <div class="modal-content">
+			      
+			        <!-- Modal Header -->
+			        <div class="modal-header">
+			          <h4 class="modal-title pl-3">Edit</h4>
+			          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+			        </div>
+			        
+			        <!-- Modal body -->
+			        <div class="modal-body">
+			          	<div class="col-md-12 updateusermodel">
+			          		<form>
+			          			<div class="row">
+									<div class="col-md-6 mb-2">
+										<label class="required">First Name</label>
+										<input type="text" id="f1" class="form-control border" name="firstname" value="Abhishek" required>
+									</div>
+									<div class="col-md-6 mb-2">
+										<label class="required">Last Name</label>
+										<input type="text" class="form-control border" name="lastname" value="Sunon" required>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 mb-2">
+										<label class="required" >Username</label>
+										<input type="text" id="f2" class="form-control border" name="username" placeholder="abhisheksunon1991" readonly>
+									</div>
+									<div class="col-md-6 mb-2">
+										<label class="required" >Email</label>
+										<input type="email" id="f3" class="form-control border" name="email" value="abhisheksunon1991@gmail.com" required>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 mb-2">
+										<label class="required" >Password</label>
+										<input type="password" class="form-control border" name="password" value="12345678" required>
+									</div>
+									<div class="col-md-6 mb-2">
+										<label class="required" >Confirm Password</label>
+										<input type="password" class="form-control border" name="confirmpassword" value="12345678" required>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<label class="required" >Role</label>
+										<input type="text" id="f4" class="form-control border" name="role" value="NewTest_Automation2-StandaredSupportStaff" required>
+									</div>
+								</div>
+			          		</form>
+			          	</div>
+			        </div>
+			        
+			        <!-- Modal footer -->
+			        <div class="modal-footer btnfooter">
+			        	<button type="button" class="btn btn-dark" data-dismiss="modal">CANCEL</button>
+			            <button type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#editmyModalSucess1">SAVE</button>
+			        </div>
+			        
+			      </div>
+			    </div>
+			  </div>
+			  <!-- End of Modal 2-->
+
+			  <!-- The Row Delete Modal Success 1-->
+			  <div class="modal fade" id="editmyModalSucess1">
+			    <div class="modal-dialog modal-dialog-centered">
+			      <div class="modal-content">
+			      
+			        <!-- Modal Header -->
+			        <div class="modal-header model_head">
+			          <h4 class="modal-title"></h4>
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+			        
+			        <!-- Modal body -->
+			        <div class="modal-body model_body">
+			          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+			          <p>The User Updated Successfully.</p>
+			        </div>
+			        
+			        <!-- Modal footer -->
+			        <div class="modal-footer btnfooter">
+			          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+			        </div>
+			        
+			      </div>
+			    </div>
+			  </div>
+			<!-- End of Row Delete Modal Success 1-->
+
+		  <!-- The Row Delete Modal 1-->
+			<div class="modal fade model1" id="myModal">
+			    <div class="modal-dialog">
+			      <div class="modal-content">
+			      
+			        <!-- Modal Header -->
+			        <div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+			        
+			        <!-- Modal body -->
+			        <div class="modal-body model_body">
+			          	 <h4>Delete User</h4>
+			             <p>Do you want to delete User?</p>
+			             <p id="deletedItem"></p>
+			        </div>
+			        
+			        <!-- Modal footer -->
+			        <div class="modal-footer btnfooter">
+			        	<button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+			        	<button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess">YES</button>
+			        </div>
+					        
+			      </div>
+			    </div>
+			</div>
+			<!-- End of Row Delete Modal 1-->
+
+			<!-- The Row Delete Modal Success 1-->
+			  <div class="modal fade" id="myModalSucess">
+			    <div class="modal-dialog modal-dialog-centered">
+			      <div class="modal-content">
+			      
+			        <!-- Modal Header -->
+			        <div class="modal-header model_head">
+			          <h4 class="modal-title"></h4>
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+			        
+			        <!-- Modal body -->
+			        <div class="modal-body model_body">
+			          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+			          <p>The User deleted Successfully.</p>
+			        </div>
+			        
+			        <!-- Modal footer -->
+			        <div class="modal-footer btnfooter">
+			          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+			        </div>
+			        
+			      </div>
+			    </div>
+			  </div>
+			<!-- End of Row Delete Modal Success 1-->
+
+	</div>
+	<!--Main Content End-->
+
+	<!--Footer Start-->
+	<footer id="footer" class="container-fluid pull-right"></footer>
+	<!--Footer End-->
+	<!-- For sidebar toggle -->
+	<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+
+	<!--Scripts-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+		$(function(){
+
+			$(".mainCB input[type=checkbox]").click(function(){
+				if($(this).prop("checked")==true)
+				{	$(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", true);	}
+				else
+				{	$(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", false);	}
+			});
+
+			/*---Jquery for save row---*/
+			$(document).on("click", "#saveRec", function(){
+				var savestr = '<tr>
+			      <td scope="col" class="bucketcheck">
+			      	<label class="main subCB">
+				        <input type="checkbox"> 
+				        <span class="geekmark"></span> 
+				    </label>
+		          </td>
+			      <td>'+$("#f1").val()+'</td>
+			      <td>'+$("#f2").val()+'</td>
+			      <td>'+$("#f3").val()+'</td>
+			      <td></td>
+			    </tr>';
+			    // $("#bucketList tbody tr:first-child").before();
+			    $("#bucketList tbody tr:first-child").before(savestr);				    
+			});
+
+			/*---Jquery for delete row---*/
+
+			$("#deleteRow").click(function(e){
+				e.preventDefault();
+				var str = '';
+				$("table tbody .subCB input:checked").each(function(){
+				if(str!='')
+					str += ", "+$(this).closest("tr").find("td:nth-child(2)").text();
+				else
+					str += $(this).closest("tr").find("td:nth-child(2)").text();
+				});
+
+				$("#deletedItem").text(str);
+				$("#myModal").modal();
+			});
+
+			$(document).on("click", "#yesbtn", function(){
+				$("table tbody .subCB input:checked").each(function(){
+					$(this).closest("tr").remove();
+				});	    
+			});
+            
+            /*---Jquery for toggle section on click caret-down icon---*/
+
+			$(".submaindiv i.showbtndiv").click(function(){
+				$(this).closest("li").find(".hidediv").slideToggle();
+				$(this).toggleClass("caret-rev");
+			});
+
+			$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+
+			$(window).resize(function(){
+				$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+			});
+
+			// For sidebar toggle
+			if($(window).width() < 730)
+			{
+				$("#sidebarToggle").click(function(e){
+					e.preventDefault();
+					$("aside.sidebar").toggleClass("showSB");
+					$(this).toggleClass("toggleIcon");
+				});
+			}
+		});
+	</script>
+</body>
+</html>

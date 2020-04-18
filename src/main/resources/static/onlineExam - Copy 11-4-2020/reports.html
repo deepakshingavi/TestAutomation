@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Styles-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--Custom style link-->
+	<link rel="stylesheet" href="css/custom.css">
+	<style>
+		.bucketcheck label {
+			    padding-left: 5px;
+                margin-bottom: 15px;
+		}
+	</style>
+</head>
+<body>
+	<!--Header Start-->
+	<header class="navbar navbar-expand-lg"></header>
+	<!--Header End-->
+
+	<!--Sidebar Start-->
+	<aside class="sidebar pull-left"></aside>
+	<!--Sidebar End-->
+
+	<!--Main Contebt Start-->
+	<div id="main-content" class="container-fluid pull-right">
+		<!--Page Title-->
+		<!-- <h1 id="page-title">Reports</h1> -->
+        
+        <!--for Table-->
+		<div class="card">
+			<div class="card-body">
+				<form>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+							<!--Page subtitle-->
+							<label class="subtitle">Execution Reports</label>
+							<!--Delete row-->
+							<button class="btn btn-primary float-right buttonlink" id="deleteRow">DELETE</button>
+						</div>
+					</div>
+					<div class="row selectdiv" style="overflow-x: auto;">
+						<table id="bucketList" class="table selectdiv1 reporttable">
+						  <thead>
+						    <tr>
+						      <th scope="col" class="bucketcheck">
+						      	<label class="main mainCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </th>
+					          <th scope="col"></th>
+						      <th scope="col">RUN NAME <i class="fa fa-angle-down" aria-hidden="true"></i>  <img src="img/search-24-px.png" alt="Imgsearch" class="searchtext"></th>
+						      <th scope="col">EXECUTED BY <img src="img/search-24-px.png" alt="Imgsearch" class="searchtext"></th>
+						      <th scope="col">EXECUTION PROGRESS</th>
+						      <th scope="col">ACTIONS</th>
+						    </tr>
+							<tr style="display: none;">
+								<td></td>
+								<td></td>
+								<td><input type="text" id="f1" class="form-control border searchboxes" name="" placeholder="Search Run Test name"></td>
+								<td><input type="text" id="f2" class="form-control border searchboxes" name="" placeholder="Search Role name"></td>
+								<td></td>
+								<td></td>
+							</tr>
+						  </thead>
+						  <tbody>						  	
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="hundred">100</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgtime" data-toggle="modal" data-target="#myModal" title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh" title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload" title="Download">
+						      <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div> 
+						     </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td><img src="img/access-time-24-px.png" alt="Imgtime"></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="zero">0</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+                              <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div> 
+						      </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="hundred">100</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+                              <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div> 
+						      </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td><img src="img/access-time-24-px.png" alt="Imgtime"></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="zero">0</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+                              <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="hundred">100</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+                              <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td><img src="img/access-time-24-px.png" alt="Imgtime"></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="zero">0</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+						      <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td><img src="img/access-time-24-px.png" alt="Imgtime"></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="hundred">100</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+						      <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div>
+						      </td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+					          <td></td>
+						      <td>cbowenahs_12_27_2018_12_43_43</td>
+						      <td>cbowen@partneritsm.com</td>
+						      <td><span id="zero">0</span>  2018-12-27 17:47:17</td>
+						      <td>
+						      	<img src="img/visibility-24-px.png" alt="Imgview" data-toggle="modal" data-target="#myModal"  title="View">  
+						      	<img src="img/refresh-24-px.png" alt="Imgrefresh"  title="Retry">  
+						      	<img src="img/down-arrow.png" class="Imgdownload" alt="Imgdownload"  title="Download">
+						      <div class="showicons" style="display: none;">
+						      	<img src="img/pdf-1.png" alt="Imgpdf">
+						      	<img src="img/excel.png" alt="Imgexcel">
+						      </div>
+						      </td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+					<div class="row paginate">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="pagination">
+								  <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+								  <a href="#"><strong>Previous</strong></a>
+								  <a href="#" class="active">1</a>
+								  <a href="#">2</a>
+								  <a href="#">3</a>
+								  <a href="#">4</a>
+								  <a href="#">5</a>
+								  <a href="#">...</a>
+								  <a href="#">10</a>
+								  <a href="#"><strong>Next</strong></a>
+								  <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+								</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- The Modal 1-->
+		  <div class="modal fade model1" id="myModal">
+		    <div class="modal-dialog model_dialog">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header">
+		          <h5 class="modal-title"></h5>
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        </div>
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body">
+		          <div class="row">
+		          	<div class="col-md-12">
+		          		<div class="row">
+				          	<div class="col-md-6 textrow runname">
+				          		<p><strong>Execution Result : cbowenahs_12_27_2018_12_43_43</strong></p>
+				          	</div>
+				          	<div class="col-md-6 textrow">
+				          		<canvas id="pie-chart" style="display: inline-block; float: left !important;"></canvas>
+				          		<table class="tablespace">
+				          			<thead>
+				          				<tr>
+					          				<th>TOTAL</th>
+					          				<th>PASSED</th>
+					          				<th>FAILED</th>
+					          				<th>QUEQUD</th>
+				          				</tr>
+				          			</thead>
+				          			<tbody>
+				          				<tr>
+					          				<td class="totalTC"></td>
+					          				<td class="totalPass"></td>
+					          				<td class="totalFail"></td>
+					          				<td class="totalQueue"></td>
+					          			</tr>
+				          			</tbody>
+				          		</table>
+				          	</div>
+		          		</div>
+		          		<div class="Reportmodel" style="overflow-x: auto;">
+		          			<table class="table mb-0 reportmodeltable">
+							  <thead>
+							    <tr>
+							      <th scope="col">SR. NO.</th>
+							      <th scope="col">BUCKET NAME</th>
+							      <th scope="col">ENVIRONMENT</th>
+							      <th scope="col">USER ROLE</th>
+							      <th scope="col">ACTION</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							  </tbody>
+							</table>
+		          		</div>
+		          	</div>
+		          </div>
+		        </div>
+		        
+		        <!-- Modal footer -->
+		        <div class="modal-footer btnfooter">
+		        	<button type="button" class="btn btn-dark" data-dismiss="modal">CLOSE</button>
+		        </div>
+		        
+		      </div>
+		    </div>
+		  </div>
+		  <!-- End of Modal 1-->
+
+		  <!-- The Modal 1-->
+		  <div class="modal fade model1" id="myModal1">
+		    <div class="modal-dialog model_dialog">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header">
+		          <h5 class="modal-title"></h5>
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        </div>
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body failed_model">
+		          <div class="row">
+		          	<div class="model-form-data col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center failedmodel_subdiv">
+                      <p><img src="img/logo1.png">bmc <span>helix</span></p>
+                      <p>Remedy Single Sign-On</p>
+                        <form action="" class="justify-content-center">
+	                        <div class="form-group inputIcon">
+	                            <i class="fa fa-user"></i> <input type="text" class="form-control" value="Test_Auromation1">
+	                        </div>
+	                        <div class="form-group inputIcon">
+	                            <i class="fa fa-lock"></i> <input type="password" class="form-control" placeholder="Password"> <span id="showPWD">Show</span>
+	                        </div>
+	                        	<button type="submit" class="form-control btn btn-danger mb-4 btn-size"><i class="fa fa-exclamation-triangle"></i>  <span>Incorrect username or password</span></button>
+	                            <button type="submit" class="form-control btn btn-success mb-4 btn-size"><span>Log In</span></button>
+	                    </form>
+		          	</div>
+		          </div>
+		          <div class="row model-bottomsection">
+		          	<div class="col-md-10">
+		          		© Copyright 1997 -2019 BMC Software, Inc.<br> All Right Reserved BMC, BMC Software, the BMC logo and the BMC Software logo are the exclusive properties of BMC Software, inc are registered with<br> the U.S. Patent and Trademark Office, and may be registered or pending registration in other countries.
+		          	</div>
+		          	<div class="col-md-2 model-rightbox">
+		          		<img src="img/bmchelixlogo">
+		          	</div>
+		          </div>
+		        </div>
+		        
+		        <!-- Modal footer -->
+		        <div class="modal-footer btnfooter">
+		        	<button type="button" class="btn btn-dark" data-dismiss="modal">CLOSE</button>
+		        </div>
+		        
+		      </div>
+		    </div>
+		  </div>
+		  <!-- End of Modal 1-->
+
+		   <!-- The Modal 2-->
+				<div class="modal fade model1" id="myModal2">
+				    <div class="modal-dialog">
+				      <div class="modal-content">
+				      
+				        <!-- Modal Header -->
+				        <div class="modal-header">
+				          <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        </div>
+				        
+				        <!-- Modal body -->
+				        <div class="modal-body model_body">
+				          	 <h4>Delete Test Bucket</h4>
+				             <p>Do you want to delete Test Bucket?</p>
+				             <p id="deletedItem"></p>
+				        </div>
+				        
+				        <!-- Modal footer -->
+				        <div class="modal-footer btnfooter">
+				        	<button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+				        	<button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess">YES</button>
+				        </div>
+						        
+				      </div>
+				    </div>
+				</div>
+				<!-- End of Modal 2-->
+
+				<!-- The Modal Success 1-->
+				  <div class="modal fade" id="myModalSucess">
+				    <div class="modal-dialog modal-dialog-centered">
+				      <div class="modal-content">
+				      
+				        <!-- Modal Header -->
+				        <div class="modal-header model_head">
+				          <h4 class="modal-title"></h4>
+				          <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        </div>
+				        
+				        <!-- Modal body -->
+				        <div class="modal-body model_body">
+				          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+				          <p>Test Bucket deleted Successfully.</p>
+				        </div>
+				        
+				        <!-- Modal footer -->
+				        <div class="modal-footer btnfooter">
+				          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+				        </div>
+				        
+				      </div>
+				    </div>
+				  </div>
+				<!-- End of Modal Success 1-->
+
+	</div>
+	<!--Main Content End-->
+
+	<!--Footer Start-->
+	<footer id="footer" class="container-fluid pull-right"></footer>
+	<!--Footer End-->
+	<!-- For sidebar toggle -->
+	<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+
+	<!--Scripts-->
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<!--<script src="js/Libraries/jquery.dataTables.js"></script>-->
+	<script src="js/Libraries/dataTables.fixedHeader.js"></script>
+    <script src="js/Libraries/dataTables.tableTools.js"></script>
+	<script src="js/Libraries/jquery.dataTables.bootstrap.js"></script>
+	<script src="js/Libraries/jquery.nanoscroller.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/pages/reports.js"></script>
+	<script src="js/Chart.min.js"></script>
+	<script>
+		
+	</script>
+	<script>
+		$(function(){
+
+			
+            /*---Jquery for toggle section on click caret-down icon---*/
+
+			$(".submodeldiv i.showbtndiv").click(function(){
+				$(this).closest("li").find(".hidediv").slideToggle();
+				$(this).toggleClass("caret-rev");
+			});
+
+			$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+
+			$(window).resize(function(){
+				$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+			});
+
+
+			$("span#showPWD").click(function(){
+				if($(this).text()=="Show")
+				{ 
+					$(this).text("Hide");
+					$(this).closest(".inputIcon").find("input").attr("type", "text");
+				}
+				else
+				{ 
+					$(this).text("Show");
+					$(this).closest(".inputIcon").find("input").attr("type", "password");
+				}
+			});
+
+			// For sidebar toggle
+			if($(window).width() < 730)
+			{
+				$("#sidebarToggle").click(function(e){
+					e.preventDefault();
+					$("aside.sidebar").toggleClass("showSB");
+					$(this).toggleClass("toggleIcon");
+				});
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UInium</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Favicon-->
+  <link rel="icon" href="img/favicon-16x16.png">
+
+  <!--Styles-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!--Custom style link-->
+  <link rel="stylesheet" href="css/custom.css">
+  <style>
+    .bucketcheck label {
+      padding-left: 5px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!--Header Start-->
+  <header class="navbar navbar-expand-lg">
+    <!--Logo Start-->
+    <a id="logo" class="navbar-brand text-center" href="#">
+      <img src="img/4317-converted.png">
+    </a>
+    <!--Logo End-->
+    <!--Navbar Toggle Start-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars"></span>
+    </button>
+    <!--Navbar Toggle End-->
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="dashboard1.html"><img src="img/insert-chart-outlined-24-px.png"> Monitor App</a></li>
+				<li class="nav-item"><a class="nav-link" href="subscription.html"><img src="img/stars-24-px.png"> Subscriptions</a></li>
+				<li class="nav-item"><a class="nav-link" href="emailcofiguration.html"><img src="img/email-24-px.png"> Email Configuration</a></li>
+				<li class="nav-item"><a class="nav-link" href="managetestcase.html"><img src="img/assignment-24-px.png"> Manage Test Cases</a></li>
+      </ul>
+
+      <!--User Menu Start-->
+      <div id="userMenu" class="dropdown">
+        <!-- <a href="#"><i class="fa fa-user-o"></i> User</a> -->
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/account-circle-24-px.png"> <span>User</span></a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="profile.html">Profile</a>
+          <a class="dropdown-item" href="login.html">Logout</a>
+        </div>
+      </div>
+      <!--User Menu End-->
+    </div>
+  </header>
+  <!--Header End-->
+
+  <!--Sidebar Start-->
+  <aside class="sidebar pull-left">
+    <ul>
+      <!-- <li><a href="#"><img src="img/add-24-px.png"></a></li>
+        <li><a href="#"><i class="fa fa-plus"></i></a></li> -->
+        <li><a href="#"><img src="img/apps-24-px.png"></a></li>
+        <li><a href="#"><img src="img/add-24-px.png"></a></li>
+      </ul>
+    </aside>
+    <!--Sidebar End-->
+
+    <!--Main Contebt Start-->
+    <div id="main-content" class="container-fluid pull-right">
+      <!--Page Title-->
+      <!-- <h1 id="page-title">Email Configuration</h1> -->
+
+      <div class="card border_card">
+        <div class="card-body tabs">
+         <ul id="tabs" class="nav nav-tabs">
+          <li class="nav-item"><a href="" data-target="#emailconfiguration" data-toggle="tab" class="nav-link small text-uppercase active">Email Configuration</a></li>
+          <li class="nav-item"><a href="" data-target="#tempconfig" data-toggle="tab" class="nav-link small text-uppercase">Template Configuration</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="tabsContent" class="tab-content">
+      <div id="emailconfiguration" class="tab-pane fade active show">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+                <!--Page subtitle-->
+                <!-- <label class="subtitle">Email Configuration</label> -->
+                <!--Delete row-->
+                <a href=""><button class="btn btn-primary float-right buttonlink" id="deleteRow"><img src="img/delete-24-px.png">DELETE</button></a>
+                <a href="#" class="addusetbtn addRowBtn"><button class="btn btn-primary float-right buttonlink"><img src="img/add-24-px-2.png">ADD</button></a>
+              </div>
+            </div>
+
+            <div class="row addRowData" style="display: none;">
+              <div class="col-md-4 rowadjust">
+                <label>Company</label>
+                <select class="form-control border" name="company_name" id="company_name">
+                  <option value="Select Company Name">Select Company Name</option>
+                  <option value="SocioMotif LLC">SocioMotif LLC</option>
+                  <option value="Sagitech Solution">Sagitech Solution</option>
+                  <option value="Infosys">Infosys</option>
+                  <option value="Test Pvt Ltd">Test Pvt Ltd</option>
+                </select>
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Hostname</label>
+                <input type="text" class="form-control border" name="hostname" id="hostname" placeholder="Enter Hostname">
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Email</label>
+                <input type="email" class="form-control border" name="email" id="email" placeholder="Enter Email">
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Port</label>
+                <input type="text" class="form-control border" name="port" id="port" placeholder="Enter Port">
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Security Protocol</label>
+                <input type="text" class="form-control border" name="security_protocol" id="security_protocol" placeholder="Enter Security Protocol">
+              </div>
+              <div class="col-md-3 mb-2 buttonlink1 btnpadding">
+                <button class="btn btn-primary buttonlink1 addemailBtn"><img src="img/add-24-px-2.png">ADD</button>
+                <button class="btn btn-primary buttonlink1 btn-dark cancelRow"><img src="img/close-24-px.png">CANCEL</button>
+              </div>
+            </div>
+
+            <div class="row updateRowData" style="display: none;">
+              <input type="hidden" name="uprowid" id="uprowid">
+              <div class="col-md-4 rowadjust">
+                <label>Company</label>
+                <select class="form-control border" name="company_name" id="company_name1">
+                  <option value="Select Company Name">Select Company Name</option>
+                  <option value="SocioMotif LLC">SocioMotif LLC</option>
+                  <option value="Sagitech Solution">Sagitech Solution</option>
+                  <option value="Infosys">Infosys</option>
+                  <option value="Test Pvt Ltd">Test Pvt Ltd</option>
+                </select>
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Hostname</label>
+                <input type="text" class="form-control border" name="hostname" id="hostname1" placeholder="Enter Hostname">
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Email</label>
+                <input type="email" class="form-control border" name="email" id="email1" placeholder="Enter Email">
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Port</label>
+                <input type="text" class="form-control border" name="port" id="port1" placeholder="Enter Port">
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Security Protocol</label>
+                <input type="text" class="form-control border" name="security_protocol" id="security_protocol1" placeholder="Enter Security Protocol">
+              </div>
+              <div class="col-md-3 mb-2 buttonlink1 btnpadding">
+                <button class="btn btn-primary buttonlink1 updateemailBtn"><img src="img/save-24-px-1.png">SAVE</button>
+                <button class="btn btn-primary buttonlink1 btn-dark updatecancelRow"><img src="img/close-24-px.png">CANCEL</button>
+              </div>
+            </div>
+
+            <div class="row selectdiv" style="overflow-x: auto;">
+              <table id="bucketList" class="emailconfigTable table selectdiv1">
+                <thead>
+                  <tr>
+                    <th scope="col" class="bucketcheck">
+                      <label class="main mainCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </th>
+                    <th scope="col" class="Username">COMPANY <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+                    <th scope="col">HOSTNAME</th>
+                    <th scope="col">EMAIL</th>
+                    <th scope="col">PORT</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="col" class="bucketcheck">
+                      <label class="main subCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </td>
+                    <td><span class="updtRow">Sagitech Solution</span></td>
+                    <td>Tenenatadmin</td>
+                    <td>tenenatadmin@gmail.com</td>
+                    <td>25:12</td>
+                  </tr>
+                  <tr>
+                    <td scope="col" class="bucketcheck">
+                      <label class="main subCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </td>
+                    <td ><span class="updtRow">Infosys</span></td>
+                    <td >Tenenatadmin</td>
+                    <td >tenenatadmin@gmail.com</td>
+                    <td>25:12</td>
+                  </tr>
+                  <tr>
+                    <td scope="col" class="bucketcheck">
+                      <label class="main subCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </td>
+                    <td ><span class="updtRow">Test Pvt Ltd</span></td>
+                    <td >Tenenatadmin</td>
+                    <td >tenenatadmin@gmail.com</td>
+                    <td>25:12</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row paginate">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="pagination">
+                  <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+                  <a href="#"><strong>Previous</strong></a>
+                  <a href="#" class="active">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">...</a>
+                  <a href="#">10</a>
+                  <a href="#"><strong>Next</strong></a>
+                  <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="tempconfig" class="tab-pane fade">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink legendstags">
+                
+                <!--Page subtitle-->
+                <!-- <label class="subtitle">Template Configuration</label> -->
+                <!--Delete row-->
+                <button class="btn btn-primary float-right buttonlink" id="deleteRow1"><img src="img/delete-24-px.png">DELETE</button>
+                <a href="#" class="addusetbtn addRowBtn"><button class="btn btn-primary float-right buttonlink"><img src="img/add-24-px-2.png">ADD</button></a>
+
+                <ul>
+                  <li><i></i><span>High</span></li>
+                  <li><i></i><span>Medium</span></li>
+                  <li><i></i><span>Low</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="row addRowData" style="display: none;">
+              <div class="col-md-5 mb-2 rowadjust">
+                <label>Company</label>
+                <select class="form-control border" name="application" id="application">
+                  <option value="Select Company">Select Company</option>
+                  <option value="Sociomotif LLC">Sociomotif LLC</option>
+                  <option value="Sagitech Solution">Sagitech Solution</option>
+                  <option value="Infosys">Infosys</option>
+                  <option value="Test Pvt Ltd">Test Pvt Ltd</option>
+                </select>
+              </div>
+              <div class="col-md-5 mb-2 rowadjust">
+                <label>Template Type</label>
+                <select class="form-control border" name="url_environment" id="url_environment">
+                  <option value="Select Template Type">Select Template Type</option>
+                  <option value="Trigger Execution">Trigger Execution</option>
+                  <option value="Tenenatadmin">Tenenatadmin</option>
+                </select>
+              </div>
+              <div class="col-md-5 mb-2 rowadjust">
+                <label>Text Area</label>
+                <textarea class="form-control border" name="class_name" id="class_name" rows="6" placeholder="Sample text here"></textarea>
+                <!-- <input type="text" class="form-control border" name="class_name" id="class_name" placeholder="Sample text here"> -->
+              </div>
+              <div class="col-md-3 mb-2 rowadjust">
+                <label>Legends of tags</label>
+                <select class="form-control border" name="legend_of_tag" id="legend_of_tag">
+                  <option value="Select Legends of tags">Select Legends of tags</option>
+                  <option class="highred" value="High">High</option>
+                  <option class="medyelllow" value="Medium">Medium</option>
+                  <option class="lowblue" value="Low">Low</option>
+                </select>
+              </div>
+              <div class="col-md-4 mb-2 buttonlink1 btnpadding">
+                <button class="btn btn-primary buttonlink1 addTempconfigBtn"><img src="img/add-24-px-2.png">ADD</button>
+                <button class="btn btn-primary buttonlink1 btn-dark cancelRow"><img src="img/close-24-px.png">CANCEL</button>
+              </div>
+            </div>
+
+            <div class="row updateRowData" style="display: none;">
+              <input type="hidden" name="uprowid" id="uprowid">
+              <div class="col-md-5 mb-2 rowadjust">
+                <label>Company</label>
+                <select class="form-control border" name="company_nm1" id="company_nm1">
+                  <option value="Select Company">Select Company</option>
+                  <option value="Sociomotif LLC">Sociomotif LLC</option>
+                  <option value="Sagitech Solution">Sagitech Solution</option>
+                  <option value="Infosys">Infosys</option>
+                  <option value="Test Pvt Ltd">Test Pvt Ltd</option>
+                </select>
+              </div>
+              <div class="col-md-5 mb-2 rowadjust">
+                <label>Template Type</label>
+                <select class="form-control border" name="template_type1" id="template_type1">
+                  <option value="Select Template Type">Select Template Type</option>
+                  <option value="Trigger Execution">Trigger Execution</option>
+                  <option value="Tenenatadmin">Tenenatadmin</option>
+                </select>
+              </div>
+              <div class="col-md-5 mb-2 rowadjust">
+                <label>Text Area</label>
+                <textarea class="form-control border" name="text_area1" id="text_area1" rows="6" placeholder="Sample text here"></textarea>
+                <!-- <input type="text" class="form-control border" name="text_area1" id="text_area1" placeholder="Sample text here"> -->
+              </div>
+              <div class="col-md-3 mb-2 rowadjust legendstags">
+                <label>Legends of tags</label>
+                <select class="form-control border" name="legends_of_tags1" id="legends_of_tags1">
+                  <option value="Select Legends of tags">Select Legends of tags</option>
+                  <option class="highred" value="High">High</option>
+                  <option class="medyelllow" value="Medium">Medium</option>
+                  <option class="lowblue" value="Low">Low</option>
+                </select>
+              </div>
+              <div class="col-md-4 mb-2 buttonlink1 btnpadding">
+                <button class="btn btn-primary buttonlink1 updatetempBtn"><img src="img/save-24-px-1.png">SAVE</button>
+                <button class="btn btn-primary buttonlink1 btn-dark updatecancelRow"><img src="img/close-24-px.png">CANCEL</button>
+              </div>
+            </div>
+
+            <div class="row selectdiv" style="overflow-x: auto;">
+              <table id="bucketList" class="table selectdiv1 Tempconfigtable">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th scope="col" class="bucketcheck">
+                      <label class="main mainCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </th>
+                    <th scope="col" class="Username">COMPANY <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+                    <th scope="col">TRIGGER EXECUTION</th>
+                    <th scope="col">EXECUTION COMPLETE</th>
+                    <th scope="col">FORGOT PASSWORD</th>
+                    <th scope="col">REPORT ISSUE</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><i class="High"></i></td>
+                    <td scope="col" class="bucketcheck">
+                      <label class="main subCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </td>
+                    <td ><span class="updtRow">Sagitech Solution</span></td>
+                    <td >Tenenatadmin</td>
+                    <td >Execution Complete</td>
+                    <td >-</td>
+                    <td >Report Issue</td>
+                  </tr>
+                  <tr>
+                    <td><i class="Medium"></i></td>
+                    <td scope="col" class="bucketcheck">
+                      <label class="main subCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </td>
+                    <td ><span class="updtRow">Infosys</span></td>
+                    <td >Tenenatadmin</td>
+                    <td >-</td>
+                    <td >Forgot Password</td>
+                    <td >Report Issue</td>
+                  </tr>
+                  <tr>
+                    <td><i class="Low"></i></td>
+                    <td scope="col" class="bucketcheck">
+                      <label class="main subCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </td>
+                    <td ><span class="updtRow">Test Pvt Ltd</span></td>
+                    <td >Tenenatadmin</td>
+                    <td >Execution Complete</td>
+                    <td >Forgot Password</td>
+                    <td >Report Issue</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row paginate">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="pagination">
+                  <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+                  <a href="#"><strong>Previous</strong></a>
+                  <a href="#" class="active">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">...</a>
+                  <a href="#">10</a>
+                  <a href="#"><strong>Next</strong></a>
+                  <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <!--for Table-->
+    
+
+    <!-- The Row Delete Execution Environment Modal 1-->
+    <div class="modal fade model1" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body model_body">
+           <h4>Delete Email Configuration</h4>
+           <p>Do you want to delete Email Configuration?</p>
+           <p id="deletedItem"></p>
+         </div>
+
+         <!-- Modal footer -->
+         <div class="modal-footer btnfooter">
+          <button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+          <button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess">YES</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End of Row Delete Modal 1-->
+
+
+  <!-- The Row Delete Modal Execution Environment Success -->
+  <div class="modal fade" id="myModalSucess">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header model_head">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body model_body">
+          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+          <p>Email Configuration deleted Successfully.</p>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer btnfooter">
+          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End of Row Delete Modal Success -->
+
+  <!-- The Row Delete Environment URL's Modal 1-->
+  <div class="modal fade model1" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body model_body">
+         <h4>Delete Template Configuration</h4>
+         <p>Do you want to delete Template Configuration?</p>
+         <p id="deletedItem1"></p>
+       </div>
+
+       <!-- Modal footer -->
+       <div class="modal-footer btnfooter">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+        <button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess1">YES</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- End of Row Delete Modal 1-->
+
+<!-- The Row Delete Modal Environment URL's Success 1-->
+<div class="modal fade" id="myModalSucess1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header model_head">
+        <h4 class="modal-title"></h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body model_body">
+        <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+        <p>Template Configuration deleted Successfully.</p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer btnfooter">
+        <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- End of Row Delete Modal Success 1-->
+
+</div>
+<!--Main Content End-->
+
+<!--Footer Start-->
+  <footer id="footer" class="container-fluid pull-right">
+    <div class="pull-left footer-logo"><img src="img/logo-11.png"></div>
+    <div class="pull-right footer-text">
+      <!-- &copy <script>document.write((new Date()).getFullYear());</script>   -->
+      Copyright @ 2020 UInium(“UI automation Studio”). All Rights Reserved.
+    </div>
+  </footer>
+<!--Footer End-->
+<!-- For sidebar toggle -->
+<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+
+<!--Scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/custom.js"></script>
+<script>
+  $(function(){
+
+    /*---Jquery for Add row---*/
+
+    $("a.addRowBtn").click(function(e){
+      e.preventDefault();
+
+      $(this).closest(".card-body").find(".addRowData").slideToggle();
+
+      $(this).css("pointer-events", "none");
+      $(this).css("opacity", ".65");
+      $("#deleteRow").attr("disabled", true);
+      $("#deleteRow1").attr("disabled", true);
+    });
+
+    /*---Jquery for Upadte Email Configuration---*/
+
+    $("table.emailconfigTable span.updtRow").click(function(){
+      $(this).closest(".card-body").find(".updateRowData").slideToggle();
+
+      $(".updateRowData #uprowid").val($(this).closest("tr").index()+1);
+      $(".updateRowData #company_name1").val($(this).closest("tr").find("td:nth-child(2)").text());
+      $(".updateRowData #hostname1").val($(this).closest("tr").find("td:nth-child(3)").text());  
+      $(".updateRowData #email1").val($(this).closest("tr").find("td:nth-child(4)").text());  
+      $(".updateRowData #port1").val($(this).closest("tr").find("td:last-child").text());    
+
+      $("a.addRowBtn").css("pointer-events", "none");
+      $("a.addRowBtn").css("opacity", ".65");
+      $("#deleteRow").attr("disabled", true);
+      $("#deleteRow1").attr("disabled", true);
+    });
+    
+    /*---Jquery for Upadte Template Configuration---*/
+
+    $("table.Tempconfigtable span.updtRow").click(function(){
+      $(this).closest(".card-body").find(".updateRowData").slideToggle();
+
+      $(".updateRowData #uprowid").val($(this).closest("tr").index()+1);
+      $(".updateRowData #company_nm1").val($(this).closest("tr").find("td:nth-child(3)").text());
+      $(".updateRowData #template_type1").val($(this).closest("tr").find("td:nth-child(4)").text());  
+      $(".updateRowData #text_area1").val($(this).closest("tr").find("td:nth-child(5)").text());  
+      $(".updateRowData #legends_of_tags1").val($(this).closest("tr").find("td:first-child i").attr('class'));    
+
+      $("a.addRowBtn").css("pointer-events", "none");
+      $("a.addRowBtn").css("opacity", ".65");
+      $("#deleteRow").attr("disabled", true);
+      $("#deleteRow1").attr("disabled", true);
+    });
+
+    /*---Jquery for Save Email Configuration---*/
+
+    $("button.addemailBtn").click(function(){
+      var dataCompanynm = $("#company_name").val();
+      var dataHostname = $("#hostname").val();
+      var dataEmail = $("#email").val();
+      var dataPort = $("#port").val();
+
+      var str = `<tr>
+      <td scope="col" class="bucketcheck">
+      <label class="main subCB">
+      <input type="checkbox"> 
+      <span class="geekmark"></span> 
+      </label>
+      </td>
+      <td ><span class="updtRow">`+dataCompanynm+`</span></td>
+      <td >`+dataHostname+`</td>
+      <td >`+dataEmail+`</td>
+      <td >`+dataPort+`</td>
+      </tr>`;
+
+      $("table.emailconfigTable tbody").prepend(str);
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow1").attr("disabled", false);
+      $("#deleteRow").attr("disabled", false);
+      $(this).closest(".addRowData").slideUp();
+    });
+
+    /*---Jquery for Upadte Email Configuration---*/
+
+    $("button.updateemailBtn").click(function(){
+      var rowIndx = $("#uprowid").val();
+      var dataCompanynm = $("#company_name1").val();
+      var dataHostname = $("#hostname1").val();
+      var dataEmail = $("#email1").val();
+      var dataPort = $("#port1").val();
+
+      $(".emailconfigTable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(2)").html('<span class="updtRow">'+dataCompanynm+'</span>');
+      $(".emailconfigTable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(3)").text(dataHostname);
+      $(".emailconfigTable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(4)").text(dataEmail);
+      $(".emailconfigTable tbody tr:nth-child("+rowIndx+")").find("td:last-child").text(dataPort);
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow1").attr("disabled", false);
+      $("#deleteRow").attr("disabled", false);
+      $(this).closest(".updateRowData").slideUp();
+    });
+
+    /*---Jquery for Save Template Configuration---*/
+
+    $("button.addTempconfigBtn").click(function(){
+      var dataAppl = $("#application").val();
+      var dataTags = $("#legend_of_tag").val();
+
+      var str = `<tr>
+      <td><i class="`+dataTags+`"></i></td>
+      <td scope="col" class="bucketcheck">
+      <label class="main subCB">
+      <input type="checkbox"> 
+      <span class="geekmark"></span> 
+      </label>
+      </td>
+      <td >`+dataAppl+`</td>
+      <td >Tenenatadmin</td>
+      <td >Execution Complete</td>
+      <td >Forgot Password</td>
+      <td >Report Issue</td>
+      </tr>`;
+
+      $("table.Tempconfigtable tbody").prepend(str);
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow1").attr("disabled", false);
+      $("#deleteRow").attr("disabled", false);
+      $(this).closest(".addRowData").slideUp();
+    });
+    
+    /*---Jquery for Update Template Configuration---*/
+
+    $("button.updatetempBtn").click(function(){
+      var rowIndx = $("#uprowid").val();
+      var datacompanynm = $("#company_nm1").val();
+      var datatemplatetype = $("#template_type1").val();
+      var datatextarea = $("#text_area1").val();
+      var datalegendsoftags = $("#legends_of_tags1").val();
+
+      $(".Tempconfigtable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(3)").html('<span class="updtRow">'+datacompanynm+'</span>');
+      $(".Tempconfigtable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(4)").text(datatemplatetype);
+      $(".Tempconfigtable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(5)").text(datatextarea);
+      $(".Tempconfigtable tbody tr:nth-child("+rowIndx+")").find("td:first-child").html('<i class="'+datalegendsoftags+'"></i>');
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow1").attr("disabled", false);
+      $("#deleteRow").attr("disabled", false);
+      $(this).closest(".updateRowData").slideUp();
+    });
+
+    
+    /*---Jquery for Cancel row---*/
+
+    $("button.cancelRow").click(function(){
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow").attr("disabled", false);
+      $("#deleteRow1").attr("disabled", false);
+      $(this).closest(".addRowData").slideUp();
+    });
+
+    $("button.updatecancelRow").click(function(){
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow").attr("disabled", false);
+      $("#deleteRow1").attr("disabled", false);
+      $(this).closest(".updateRowData").slideUp();
+    });
+
+
+    $(".mainCB input[type=checkbox]").click(function(){
+      if($(this).prop("checked")==true)
+        { $(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", true); }
+      else
+        { $(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", false);  }
+    });
+
+    /*---Jquery for delete Exicution Environment row---*/
+
+    $("#deleteRow").click(function(e){
+      e.preventDefault();
+      var str = '';
+      $("table tbody .subCB input:checked").each(function(){
+        if(str!='')
+          str += ", "+$(this).closest("tr").find("td:nth-child(2)").text();
+        else
+          str += $(this).closest("tr").find("td:nth-child(2)").text();
+      });
+
+      $("#deletedItem").text(str);
+      $("#myModal").modal();
+    });
+
+    $(document).on("click", "#yesbtn", function(){
+      $("table tbody .subCB input:checked").each(function(){
+        $(this).closest("tr").remove();
+      });     
+    });
+
+    /*---Jquery for delete Environment URL's row---*/
+
+    $("#deleteRow1").click(function(e){
+      e.preventDefault();
+      var str = '';
+      $("table tbody .subCB input:checked").each(function(){
+        if(str!='')
+          str += ", "+$(this).closest("tr").find("td:nth-child(2)").text();
+        else
+          str += $(this).closest("tr").find("td:nth-child(2)").text();
+      });
+
+      $("#deletedItem1").text(str);
+      $("#myModal1").modal();
+    });
+
+    $(document).on("click", "#yesbtn", function(){
+      $("table tbody .subCB input:checked").each(function(){
+        $(this).closest("tr").remove();
+      });     
+    });
+
+    /*---Jquery for toggle section on click caret-down icon---*/
+
+    $(".submaindiv i.showbtndiv").click(function(){
+      $(this).closest("li").find(".hidediv").slideToggle();
+      $(this).toggleClass("caret-rev");
+    });
+
+    $("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+
+    $(window).resize(function(){
+      $("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+    });
+
+      // For sidebar toggle
+      if($(window).width() < 730)
+      {
+        $("#sidebarToggle").click(function(e){
+          e.preventDefault();
+          $("aside.sidebar").toggleClass("showSB");
+          $(this).toggleClass("toggleIcon");
+        });
+      }
+    });
+  </script>
+</body>
+</html>

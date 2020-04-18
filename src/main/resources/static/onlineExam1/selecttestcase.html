@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UInium</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Favicon-->
+	<link rel="icon" href="img/favicon-16x16.png">
+
+	<!--Styles-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--Custom style link-->
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+	<!--Header Start-->
+	<header class="navbar navbar-expand-lg">
+		<!--Logo Start-->
+		<a id="logo" class="navbar-brand text-center" href="#">
+			<img src="img/4317-converted.png">
+		</a>
+		<!--Logo End-->
+		<!--Navbar Toggle Start-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa fa-bars"></span>
+		</button>
+		<!--Navbar Toggle End-->
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="dashboard.html">Monitor App</a></li>
+				<li class="nav-item"><a class="nav-link" href="users.html">Subscribers</a></li>
+				<li class="nav-item"><a class="nav-link" href="setup.html">AppSettings</a></li>
+				<li class="nav-item"><a class="nav-link" href="testmanagement.html">Test Management</a></li>
+				<li class="nav-item active"><a class="nav-link" href="runtest.html">Run Tests</a></li>
+				<li class="nav-item"><a class="nav-link" href="testbucketenviroment.html">Test Bucket</a></li>
+				<li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+				<!-- <li class="nav-item"><a class="nav-link" href="subscription.html">Subscriptions</a></li> -->
+			</ul>
+
+			<!--User Menu Start-->
+			<div id="userMenu" class="dropdown">
+				<!-- <a href="#"><i class="fa fa-user-o"></i> User</a> -->
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/user-icon.png"> <span>User</span></a>
+				<div class="dropdown-menu">
+			      <a class="dropdown-item" href="profile.html">Profile</a>
+			      <a class="dropdown-item" href="login.html">Logout</a>
+			    </div>
+			</div>
+			<!--User Menu End-->
+		</div>
+	</header>
+	<!--Header End-->
+
+	<!--Sidebar Start-->
+	<aside class="sidebar pull-left">
+		<ul>
+			<!-- <li><a href="#"><img src="img/add-24-px.png"></a></li>
+			<li><a href="#"><i class="fa fa-plus"></i></a></li> -->
+			<li><a href="#"><img src="img/apps-24-px.png"></a></li>
+			<li><a href="#"><img src="img/add-24-px.png"></a></li>
+		</ul>
+	</aside>
+	<!--Sidebar End-->
+
+	<!--Main Contebt Start-->
+	<div id="main-content" class="container-fluid pull-right">
+		<!--Page Title-->
+		<!-- <h1 id="page-title">Run Tests</h1> -->
+		
+		<!--Pages Tabs-->
+		<div class="card">
+			<div class="card-body tabsHeader">
+				<span class="activetab"><i class="fa fa-check"></i> Environment Details</span>
+				<span class="active activetab"><i>2</i> Select Test Cases</span>
+				<span><i>3</i> Finalize Execution</span>
+			</div>
+		</div>
+        
+        <!--Section for fill information-->
+		<div class="card">
+			<div class="card-body sel-content">
+				<form>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12 mb-2">
+							<!--Page subtitle-->
+							<label class="subtitle required">Select Test Cases</label>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="row btn-div">
+			<div class="col-md-12 col-sm-12 col-xs-12 text-center buttonlink">
+				<!--Back Button for go to previous page-->
+				<a href="runtest.html"><button class="btn btn-dark buttonlink">BACK</button></a>
+				<!--Next Button for go to next page-->
+				<a href="finalizeexecution.html"><button class="btn btn-primary buttonlink">NEXT</button></a>
+			</div>
+		</div>
+	</div>
+	<!--Main Content End-->
+
+	<!--Footer Start-->
+	<footer id="footer" class="container-fluid pull-right">
+		<div class="pull-left footer-logo"><img src="img/logo-11.png"></div>
+		<div class="pull-right footer-text">
+			<!-- &copy <script>document.write((new Date()).getFullYear());</script>   -->
+			Copyright @ 2020 UInium(“UI automation Studio”). All Rights Reserved.
+		</div>
+	</footer>
+    <!--Footer End-->
+	<!-- For sidebar toggle -->
+	<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+
+	<!--Scripts-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/Libraries/jquery.dataTables.js"></script>
+	<script src="js/Libraries/dataTables.fixedHeader.js"></script>
+    <script src="js/Libraries/dataTables.tableTools.js"></script>
+	<script src="js/Libraries/jquery.dataTables.bootstrap.js"></script>
+	<script src="js/Libraries/jquery.nanoscroller.min.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/pages/execution.js"></script>
+	<script>
+		$(function(){
+			$(".mainCB input[type=checkbox]").click(function(e){
+				e.stopPropagation();
+
+				if($(this).prop("checked")==true)
+				{	$(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", true);	}
+				else
+				{	$(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", false);	}
+			});
+			$(".mainCB, .subCB").click(function(e){
+				e.stopPropagation();
+			});
+
+            /*---Jquery for section display none/block on click icon file-text---*/
+            
+            $(".filetest").click(function(e){
+				e.stopPropagation();
+            	$('.subdiv').hide();
+            	$(this).closest(".selectdiv1").find(".subdiv").show();
+            	$(this).closest(".selectdiv").find(".submaindiv").slideUp();
+            });
+           
+           /*---Jquery for section display none on click icon cancel---*/
+
+           	$('.btncancel').click(function(e){
+				e.stopPropagation();
+			  $(this).closest('.subdiv').hide();
+			});
+            
+            /*---Jquery for toggle section on click angle-down icon---*/
+
+			$(".selectdiv i.showdet").click(function(e){
+				e.stopPropagation();
+				$(this).closest(".selectdiv").find(".submaindiv").slideToggle();
+				$(this).toggleClass("caret-rev");
+			});
+
+			$(".selectdiv1").click(function(){
+				$(this).find(".submaindiv").slideToggle();
+				$(this).find("i.showdet").toggleClass("caret-rev");
+			});
+            
+            /*---Jquery for toggle section on click caret-down icon---*/
+
+			$(".submaindiv i.showbtndiv").click(function(e){
+				e.stopPropagation();
+				$(this).closest("li").find(".hidediv").slideToggle();
+				$(this).toggleClass("caret-rev");
+			});
+
+			$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+
+			$(window).resize(function(){
+				$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+			});
+
+			// For sidebar toggle
+			if($(window).width() < 730)
+			{
+				$("#sidebarToggle").click(function(e){
+					e.preventDefault();
+					$("aside.sidebar").toggleClass("showSB");
+					$(this).toggleClass("toggleIcon");
+				});
+			}
+		});
+	</script>
+</body>
+</html>

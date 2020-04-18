@@ -1,0 +1,122 @@
+#ToolTables_table-example_0, .tbls{
+	display: none;
+}
+.right-align {
+	float: right;
+}
+.left-align {
+	float: left;
+}
+.zipLinks {
+	display: none;
+}
+.spanLinks {
+     cursor:pointer;
+     color:blue;
+     text-decoration:underline;
+}
+.tbl1{
+	margin-top:30%;
+}
+.pad25 {
+	padding-top:25px;
+}
+.mar5 {
+	margin-right:5px;
+}
+.mar10 {
+	margin-right:10px;
+}
+.marleft10 {
+	margin-left:10px;
+}
+#sidebar-nav ul.nav>li{
+	display:none;
+}
+#sidebar-nav ul.nav>li.all{
+	display:block;
+}
+.icons {
+	display:none;
+}
+.icons span {
+	padding-right: 5px;
+}
+.panel-collapse p:hover .icons {
+	display:block;
+}
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+	height: 200px;
+	overflow: auto;
+}
+td span.fa.fa-plus {
+	font-size:24px;
+}
+tr td.no-border {
+	border: 0px !important;
+}
+tr td.no-border table.in {
+	display: inline-table;
+}
+tr td.no-border table {
+	width: 100%;
+	border: 1px solid #e7ebee !important;
+}
+tr td.no-border table.in th {
+	border: 0px !important;
+}
+.table thead > tr > th {
+	font-size: 1em;
+	padding: 5px;
+}
+td.collapse {
+	display:none;
+}
+td.accordion-toggle.collapsed > span:before {
+	content: "+";
+	font-weight: bold;
+	float: left;
+	padding-right: 10px;
+}
+td.accordion-toggle > span:before {
+	content: "-";
+	font-weight: bold;
+	float: left;
+	padding-right: 10px;
+}
+
+.collapse table  tr  td, .collapse table  th  td {
+	/*font-size: 12px !important;
+	line-height: 0.8 !important;
+	padding: 5px !important;
+	font-weight: 500 !important;*/
+}
+.modal-open table  {
+	font-size: 13px !important;
+}
+.errmsg {
+	display: none;
+	color: Red; 
+	display: none; 
+	font-size:12px;
+	position:absolute;
+}
+#res {
+	display:block;
+	height:20px;
+}
+#res span {
+	display:none;
+	color:red;
+	text-transform:capitalize;
+	font-size:14px
+}
+#chartTbl tr td {
+	border: : 1px solid black !important;
+}
+.breadcrumb li.active {
+	text-transform: uppercase;
+}
+.highcharts-credits {
+	display: none;
+}

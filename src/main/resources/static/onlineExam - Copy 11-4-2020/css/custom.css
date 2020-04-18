@@ -1,0 +1,1462 @@
+/***************************Custom Styling*******************************/
+html, body {
+	background-color: #f7f9fa;
+}
+header, aside {
+	background-color: #011f35;
+}
+
+header.navbar {
+	padding: 0 0;
+	height: auto;
+}
+a#logo, button.navbar-toggler span, ul.navbar-nav li a, aside.sidebar ul li a {
+	color: #ffffff;
+}
+a#logo {
+	width: 45px;
+    line-height: 44px;
+    margin: 0 5px;
+    text-align: center;
+    font-weight: 600;
+}
+#logo img {
+	width: 100%;
+}
+ul.navbar-nav li a.nav-link {
+	padding-top: 15px;
+    padding-bottom: 15px;
+}
+ul.navbar-nav li {
+	position: relative;
+	margin: 0 10px;
+}
+ul.navbar-nav li:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	left: 0;
+	bottom: 0;
+	background-color: #0068ff;
+	transform: scaleX(0);
+	opacity: 0;
+	transition: all .3s linear;
+}
+ul.navbar-nav li:hover:after, ul.navbar-nav li.active:after {
+	transform: scaleX(1);
+	opacity: 1;
+}
+aside.sidebar {
+    width: 55px;
+    display: none;
+    padding: 15px 5px;
+    /*height: calc(100vh - 46px);*/
+}
+aside.sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+aside.sidebar ul li {
+	text-align: center;
+	margin: 16px 0;
+}
+#userMenu a {
+	color: #ffffff;
+	padding: 8px 20px;
+	border-left: 1px solid #ffffff;
+	text-decoration: none;
+}
+
+#userMenu span {
+    position: relative;
+    top: 2px;
+    left: 5px;
+}
+
+#main-content, footer#footer {
+	width: calc(100% - 55px);
+}
+#main-content {
+	padding: 30px 96px 30px 30px;
+	min-height: calc(100vh - 105px);
+}
+
+.card {
+	margin-top: 30px;
+}
+
+h1#page-title {
+	color: #001e34;
+	font-size: 36px;
+	font-weight: 700;
+	border: none;
+	line-height: 30px;
+	margin-bottom: 0
+}
+
+.tabsHeader {
+	display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    position: relative;
+}
+.tabsHeader:after {
+	content: "";
+	position: absolute;
+	width: 80%;
+	height: 1px;
+	background-color: #a6a6a6;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%);
+}
+.tabsHeader span {
+	display: inline-block !important;
+    flex: 0 1 auto;
+    width: 200px;
+    text-align: center;
+    font-weight: 600;
+    background-color: #ffffff;
+    z-index: 9;
+}
+.tabsHeader span i {
+	width: 26px;
+  	height: 26px;
+  	color: #ffffff;
+	text-align: center;
+	margin-right: 5px;
+	line-height: 24px;
+	border-radius: 50%;
+	display: inline-block;
+	font-style: normal;
+	background-color: #979797;
+}
+
+.tabsHeader span {
+	color: #979797;
+}
+
+.activetab {
+	color: #212529 !important
+}
+
+.main { 
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 1rem; 
+} 
+.test_cases .submaindiv label.main {
+	width: 100%;
+}
+#sidebarToggle {
+	display: none;
+	position: fixed;
+    left: 5px;
+    top: 500px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    transition: .3s linear;
+    padding: 2px;
+    border: 1px solid #011f35;
+}
+#sidebarToggle i {
+	width: 100%;
+    background: #011f35;
+    color: #fff;
+    padding-left: 2px;
+    border-radius: 50%;
+    font-size: 24px;
+}
+.toggleIcon {
+	transform: rotate(-180deg);
+}
+.showSB {
+	margin-left: 0 !important;
+}
+/* Hide the default checkbox */ 
+input[type=checkbox] { 
+    display: none;
+} 
+  
+/* Creating a custom checkbox 
+based on demand */ 
+.geekmark { 
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #ffffff;
+    border: 1px solid; 
+}
+
+/* Specify the background color to be 
+shown when checkbox is checked */ 
+.main input:checked ~ .geekmark { 
+    background-color: #0068ff; 
+}
+/* Checkmark to be shown in checkbox */ 
+/* It is not be shown when not checked */ 
+.geekmark:after { 
+    content: ""; 
+    position: absolute; 
+    display: none; 
+}
+
+/* Specify the background color to be 
+shown when checkbox is checked */ 
+.main input:checked ~ .geekmark { 
+    background-color: #0068ff; 
+} 
+  
+/* Display checkmark when checked */ 
+.main input:checked ~ .geekmark:after { 
+    display: block; 
+} 
+  
+/* Styling the checkmark using webkit */ 
+/* Rotated the rectangle by 45 degree and  
+showing only two border to make it look 
+like a tickmark */ 
+.main .geekmark:after { 
+    left: 5px;
+    bottom: 3px; 
+    width: 6px; 
+    height: 12px; 
+    border: solid white; 
+    border-width: 0 4px 4px 0; 
+    -webkit-transform: rotate(45deg); 
+    -ms-transform: rotate(45deg); 
+    transform: rotate(45deg); 
+}
+
+.fa-check {
+	width: 26px;
+  	height: 26px;
+  	color: #ffffff;
+	text-align: center;
+	margin-right: 5px;
+	line-height: 24px;
+	border-radius: 50%;
+	display: inline-block;
+	font-style: normal;
+	background-color: #0068ff  !important;
+}
+
+.tabsHeader span.active i {
+  	background-color: #0068ff;	
+}
+
+.btn-div {
+	margin-top: 30px;
+}
+.btn-div button {
+	margin: 0 15px;
+	/*padding: 5px 50px;*/
+}
+
+footer#footer {
+	color: #999999;
+	font-size: 14px;
+	/*margin-top: 31px;*/
+}
+
+.buttonlink a {
+	color: #ffffff !important;
+	text-decoration: none;
+}
+
+.buttonlink a:hover {
+	color: #ffffff !important;
+	text-decoration: none;
+}
+
+.buttonlink button {
+	width: 141px;
+	text-align: center;
+}
+
+.cancelbutton {
+	padding: 0px !important;
+}
+
+.footer-text {
+	margin-top: 0px;
+	margin-right: 0px;
+	line-height: 51px;
+}
+
+/***************************Run Test Enviroment Details*******************************/
+
+.border {
+	border: 0px !important;
+	border-bottom: 2px solid #212529 !important;
+	border-radius: 0px;
+}
+
+.form-control:focus{
+    box-shadow: none !important;
+}
+
+label {
+	color: #212529 !important;
+	font-weight: 600;
+}
+
+.required:after {
+    content:" *";
+    color:#212529 !important;
+}
+
+.form-control:disabled {
+	background-color: #ffffff !important;	
+}
+
+/*************************** Datepicker *******************************/
+
+.datepick label {
+	display: block;
+}
+
+.datepick input {
+	display: inline-block;
+	width: 40%;
+}
+
+.datepick span {
+	display: inline-block;
+}
+
+/***************************Run Test Select Test Case*******************************/
+
+
+.btnfooter {
+	justify-content: center !important;
+	border-top: 0px !important;
+}
+
+.btnfooter button{
+	width: 130px !important;
+}
+
+.model_head {
+	border-bottom: 0px !important;
+}
+
+.model_body {
+	text-align: center;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+.model_body p {
+   margin-top: 10px;
+}
+
+.model_body span{
+	text-align: center;
+	font-size: 20px;
+}
+
+.fa-check-circle {
+	color: green;
+    margin-right: 10px;
+    font-size: 20px
+}
+
+.testbucket {
+	margin-left: 12px;
+}
+
+.test_cases i {
+	float: right;
+	line-height: 22px;
+}
+
+.test_cases {
+    border: 1px solid #e2e2e2;
+    margin: 10px 0px;
+    padding: 5px 20px 5px 20px;
+}
+
+.modal-body p {
+	margin-bottom: 0px;
+}
+
+.modal-backdrop {
+	z-index: 9;
+}
+#myModal2 {
+	z-index: 10;
+}
+
+.Testcasemodel {
+	padding: 15px !important;
+}
+
+.Testheading {
+	padding: 0px !important;
+	margin-bottom: 10px !important;
+}
+
+
+.footer-logo img {
+	margin-left: 15px !important;
+}
+.subtitle {
+	font-size: 18px;
+}
+
+.selectdiv {
+	padding: 10px;
+	position: relative;
+}
+
+.selectdiv1 {
+    border: 1px solid rgba(58, 58, 58, 0.2);
+    padding: 10px 15px;
+}
+
+.selectdiv1 i {
+	float: right;
+	color: #0068ff;
+	padding: 4px 10px;
+	transition: .25s linear;
+}
+
+.subdiv, .subdiv1, .subdiv2 {
+    display: none;
+    width: 400px;
+    float: right;
+    position: absolute;
+    border: 1px solid #b0b0b0;
+    padding: 5px !important;
+    top: 30px;
+    right: -1px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    z-index: 10;
+}
+
+.hidediv button i {
+	float: left !important;
+}
+
+.subdiv a {
+   font-size: 14px;
+   padding-right: 20px;
+}
+
+ .subdiv1 a {
+   font-size: 14px;
+   padding-right: 20px;
+}
+
+.subdiv2 a {
+   font-size: 14px;
+   padding-right: 20px;
+}
+
+.subdiv p:nth-child(2) {
+  padding: 0px 10px;
+}
+
+.subdiv1 p:nth-child(2) {
+  padding: 0px 10px;
+}
+
+.subdiv2 p:nth-child(2) {
+  padding: 0px 10px;
+}
+
+.subdiv a:last-child{
+     color: #212529;
+     text-decoration: none;
+     float: right;
+}
+
+.subdiv1 a:last-child{
+     color: #212529;
+     text-decoration: none;
+     float: right;
+}
+
+.subdiv2 a:last-child{
+     color: #212529;
+     text-decoration: none;
+     float: right;
+}
+
+.fa-times {
+	color: #795548 !important;
+}
+
+.submaindiv {
+	padding-left: 0px;
+    padding-right: 0px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none; 
+    background: #ffffff;
+    z-index: 9;
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    height: 160px;
+    overflow-y: auto;
+}
+
+.submodeldiv {
+	padding-left: 0px;
+    padding-right: 0px;
+    position: absolute;
+    top: 44px; 
+    display: none;
+    background: #ffffff;
+    z-index: 9;
+    padding: 0px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    height: auto;
+    overflow-y: auto;
+    right: 0px;
+    max-width: 700px;
+    /* width: 100%; */
+}
+
+
+.submodeldiv table {
+	width: 100% !important;
+}
+
+.hidediv {
+	padding: 5px 10px 5px 10px;
+	display: none;
+}
+
+.hidediv button {
+	margin: 5px 5px;
+}
+
+.hidediv button i {
+	color: #ffffff;
+}
+
+.submaindiv ul {
+	padding-left: 0px;
+}
+
+.submaindiv ul li {
+	list-style-type: none;
+	margin-bottom: 10px;
+}
+
+.popupdivselect i {
+	float: right;
+}
+
+.popupdivselect {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.caret {
+	background: #ffffff !important;
+    padding: 0 !important;
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid #1d2124 !important;
+    color: #1d2124 !important;
+    border-radius: 50% !important;
+    text-align: center !important;
+    margin-right: 18px !important;
+    transition: all .2s linear;
+}
+
+.caret-rev {
+	transform: rotate(-180deg);
+}
+
+.btn-dark {
+	background-color: #011f35 !important;
+}
+
+.table td img:first-child {
+	margin-right: 5px !important;
+}
+
+.datepick img {
+	position: relative;
+    top: 4px;
+    right: 18px;
+    height: 20px;
+    text-align: center;
+    color: #5c8cd6;
+    font-size: 20px;
+}
+
+.datepick1 img {
+	position: absolute;
+    top: 44px;
+    right: 15px;
+    height: 20px;
+    text-align: center;
+    color: #5c8cd6;
+    font-size: 20px;
+}
+
+.table tr td #hundred {
+	padding: 5px 5px;
+    border-radius: 50%;
+    border: 2px solid #4f9513;
+    font-size: 12px;
+}
+
+.table tr td #zero {
+	padding: 5px 11px;
+    border-radius: 50%;
+    border: 2px solid #cbcbcb;
+    font-size: 12px;
+}
+
+.showicons {
+	position: absolute;
+    right: 30px;
+    padding: 5px;
+    background-color: #ffffff;
+    border: 1px solid #b0b0b0;
+    border-radius: 4px;
+}
+
+.showicons img:first-child {
+	display: block;
+	margin-bottom: 4px;
+}
+
+.selectmodeldiv .showdet {
+	float: right;
+	margin-top: 5px;
+}
+
+.selectmodeldiv a {
+	text-decoration: underline !important;
+}
+
+.textrow {
+	font-size: 13px;
+}
+
+.tablespace{
+   float: right;
+}
+
+.tablespace tr td:first-child, .tablespace tr th:first-child{
+	color: #001e34;
+}
+
+.tablespace tr td:nth-child(2), .tablespace tr th:nth-child(2){
+	color: #2e8009;
+}
+
+.tablespace tr td:nth-child(3), .tablespace tr th:nth-child(3){
+	color: #bb2424;
+}
+
+.tablespace tr td:last-child, .tablespace tr th:last-child{
+	color: #dbaf11;
+}
+
+.tablespace th, .tablespace td{
+     padding: 0px 5px; 
+}
+
+.reportmodeltable tbody tr .passed {
+	color: #2e8009;
+	font-weight: 600;
+}
+
+.reportmodeltable tbody tr .failed {
+	color: #a00e0e;
+	font-weight: 600;
+	text-decoration: underline;
+}
+
+.reportmodeltable tbody tr {
+	position: relative;
+}
+
+.reportmodeltable {
+   border: 1px solid #d8d8d8;
+}
+
+.reportmodeltable tbody tr td{
+	position: relative;
+}
+
+.Reportmodel {
+	font-size: 12px;
+	padding: 15px 0px 0px 0px !important;
+}
+
+.Reportmodel {
+	padding: 15px !important;
+}
+
+/*.modal-open .modal{
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}
+
+@media (max-width: 1024px){
+	.modal-open .modal{
+		padding-right: 0px !important;
+		padding-left: 0px !important;
+	}
+}*/
+
+.reporttable tr th:nth-child(3) {
+	border-bottom: 3px solid #007bff;
+}
+
+.reporttable tr th:nth-child(3) i {
+	margin: 0px 5px;
+}
+
+.reporttable i {
+    float: unset !important;
+    color: #0068ff;
+    padding: 4px 10px;
+    transition: .25s linear;
+}
+
+.reportmodeltable tbody tr td img, .reportmodeltable tbody tr td i, .reportmodeltable tbody tr td a {
+	display: inline-block;
+}
+
+.failed_model {
+	background-image: url("../img/background.jpg");
+	padding-top: 0px;
+	height: 446px;
+	margin: 0px 15px;
+}
+
+.failedmodel_subdiv {
+	background-color: #ffffff;
+}
+
+
+.inputIcon {
+	position: relative;
+}
+.inputIcon input {
+	padding-left: 30px;
+}
+.inputIcon i {
+	position: absolute;
+	width: 30px;
+	height: 38px;
+	left: 0;
+	top: 0;
+	line-height: 38px;
+	text-align: center;
+	color: #202020;
+}
+
+span#showPWD {
+	position: absolute;
+	line-height: 38px;
+	top: 0;
+	right: 15px;
+	cursor: pointer;
+	color: #007bff;
+}
+
+.pagination {
+  /*display: inline-block;*/
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.pagination .active {
+  background-color: #007bff;
+  color: white;
+  border-radius: 20px;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 20px;
+}
+
+.paginate {
+	text-align: center;
+}
+
+.model-form-data p:first-child {
+      text-align: left;
+      font-weight: 600;
+      font-size: 18px;
+}
+
+.model-form-data p:first-child img {
+      width: 20px;
+      height: 20px;
+}
+
+.model-form-data p:first-child span {
+	color: #007bff;
+}
+
+.model-form-data p:nth-child(2) {
+      text-align: left;
+      font-weight: 500;
+      margin-left: 20px;
+      font-size: 20px;
+      margin-bottom: 5px;
+      color: #ffa500;
+      margin-top: -5px;
+}
+
+.btn-size span {
+	font-size: 14px;
+}
+
+.btn-size i {
+	float: left;
+	margin-top: 4px;
+}
+
+.model-bottomsection {
+	position: absolute;
+    bottom: 0px;
+    font-size: 10px;
+    background-color: #607d8b;
+    width: 100%;
+    margin-left: -16px;
+    color: #ffffff;
+    padding: 5px 0px;
+}
+
+.model-rightbox img {
+    width: 100%;
+}
+
+canvas {
+    height: 50px !important;
+    width: 50px !important;
+    margin-top: -5px;
+}
+
+.bordersize {
+	border: 0px !important;
+	border-bottom: 2px solid #212529 !important;
+	border-radius: 0px;
+}
+
+/*------Setup------*/
+
+.tabs {
+	padding-left: 0px;
+}
+
+.tabs ul {
+    border-bottom: none;
+}
+
+.tabs ul li .nav-link {
+	border : none !important;
+	color: #212529 !important;
+	font-weight: 700;
+	font-size: 14px;
+}
+
+.tabs ul li .nav-link.active {
+	border-bottom : 3px solid #0065fa !important;
+	color: #212529 !important;
+	font-weight: 700;
+}
+
+.border_card {
+	border: none;
+}
+
+.btnpadding {
+	padding-top: 12px !important;
+}
+
+.rowadjust label {
+	font-size: 12px !important;
+    line-height: 10px !important;
+}
+
+.rowadjust input {
+	height: 34px !important;
+}
+
+.rowadjust select {
+	height: 34px !important;
+	font-size: 14px !important;
+}
+
+.buttonlink1 {
+	width: 100px;
+}
+
+/*------Users------*/
+
+.testmanagementtable i {
+    float: unset !important;
+    color: #0068ff;
+    padding: 4px 10px;
+    transition: .25s linear;
+}
+
+.testmanagementtable tbody tr td:nth-child(2){
+    text-decoration: underline;
+}
+
+.Username {
+	border-bottom: 3px solid #007bff !important;
+}
+
+.usertable tbody tr td:nth-child(3) {
+    text-decoration: underline;
+}
+
+.updateusermodel .required:after, .addusermodel .required:after {
+	color : #007bff !important;
+}
+
+.addusetbtn button {
+	margin-right: 5px;
+}
+
+/*-----Profile-----*/
+
+.radiobtn label, .radiobtn input {
+	margin-right: 15px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]+label:before {
+  content: "";
+  /* create custom radiobutton appearance */
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  margin-right: 3px;
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 2px solid #bbbbbb;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+/* appearance for checked radiobutton */
+input[type="radio"]:checked + label:before {
+  background-color: #007bff;
+  border: 2px solid #007bff;
+}
+
+#profileform .form-inline label {
+	justify-content: left;
+	font-weight: 600;
+	padding-left: 0px;
+}
+
+#profileform .form-inline input {
+	border : none;
+	font-weight: 500;
+}
+
+#profileform .form-inline {
+	border-bottom: 1px solid #d8d8d8;
+}
+
+.updateusermodel img {
+    padding: 10px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.updateusermodel .imgupload i {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+    height: 20px;
+    text-align: center;
+    color: #007bff;
+    font-size: 20px;
+}
+
+.dropdown-menu {
+	    position: absolute;
+	    left: 0;
+	    top: 38px;
+	    z-index: 1000;
+	    display: none;
+	    float: left;
+	    width: 100%;
+	    padding: 0.5rem 0;
+	    margin: 0.125rem 0 0;
+	    font-size: 1rem;
+	    color: #ffffff;
+	    text-align: left;
+	    list-style: none;
+	    background-color: #212529;
+	    background-clip: padding-box;
+	    border: 1px solid rgba(0, 0, 0, 0.15);
+	    border-radius: 0;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    border-left: none!important;
+}
+
+.dropdown-item:hover {
+	display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    border-left: none!important;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 1.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    position: relative;
+    top: 2px;
+}
+
+.checkcolor {
+	position: relative !important;
+    top: 0px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #ffffff;
+    border: 1px solid;
+}
+
+/*------Subscriptions------*/
+
+.subscriptionTable tbody tr td:nth-child(2) {
+    text-decoration: underline;
+}
+
+.apppathtable tbody tr td:nth-child(2) {
+    text-decoration: underline;
+}
+
+/*------ Manage Test Cases -----*/
+
+.Testmethodtable tbody tr td:nth-child(4) {
+    text-decoration: underline;
+}
+
+.complete {
+	color: green !important;
+	font-weight: 400;
+}
+
+.running {
+	color: #007bff !important;
+}
+
+/*------Email Configuration------*/
+
+.emailconfigTable tbody tr td:nth-child(2){
+    text-decoration: underline;
+}
+
+.Tempconfigtable tbody tr td:nth-child(2){
+    text-decoration: underline;
+}
+
+.legendstags ul {
+	display: inline-block;
+	position: relative;
+	float: right;
+    right: 20px;
+}
+
+.legendstags ul li {
+	display: inline-block;
+	padding: 0px 6px;
+}
+
+
+.legendstags ul li:nth-child(1) i{
+	  height: 10px;
+	  width: 10px;
+	  background-color: #F44336;
+	  border-radius: 50%;
+	  display: inline-block;
+	  margin: 0px 5px 0px;
+      vertical-align: middle;
+}
+
+.legendstags ul li:nth-child(2) i{
+	  height: 10px;
+	  width: 10px;
+	  background-color: #ffeb3b;
+	  border-radius: 50%;
+	  display: inline-block;
+	  margin: 0px 5px 0px;
+      vertical-align: middle;
+}
+
+.legendstags ul li:nth-child(3) i{
+	  height: 10px;
+	  width: 10px;
+	  background-color: #2196f3;
+	  border-radius: 50%;
+	  display: inline-block;
+	  margin: 0px 5px 0px;
+      vertical-align: middle;
+}
+
+.Tempconfigtable tbody tr td i {
+	height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: relative;
+    padding: 0;
+    margin-top: 9px;
+}
+.Tempconfigtable tbody tr td i.High {   background-color: #F44336;	}
+.Tempconfigtable tbody tr td i.Medium {   background-color: #ffeb3b;	}
+.Tempconfigtable tbody tr td i.Low {   background-color: #2196f3;	}
+
+.testing_inv {
+	border-bottom: 2px solid #212529 !important;
+}
+.envlist i {
+	line-height: 22px !important;
+    position: absolute;
+    top: 38px;
+    right: 20px;
+}
+/***************************Run Test Select Test Case*******************************/
+/*************************** Responsive menu *******************************/
+@media (max-width: 1200px){
+	#main-content {
+	    padding: 30px 30px 30px 30px;
+	}
+}
+
+@media (max-width: 1024px){
+ 	#navbarText {
+        margin-bottom: 0px;
+	    padding: 0px 15px 10px 15px;
+	    /*border-top: 2px solid #ffffff;*/
+ 	}
+
+ 	#userMenu a {
+	    color: #ffffff;
+	    padding: 0px;
+	    border-left: none;
+	    text-decoration: none;
+	}
+
+	#userMenu {
+		margin-top: 5px;
+	}
+}
+
+@media (max-width: 991px){
+ 	#navbarText {
+ 		padding: 10px 20px 20px 20px !important;
+ 	}
+
+ 	#userMenu {
+ 		margin-left: 10px !important;
+ 	}
+
+ 	.tabsHeader span {
+ 		z-index: 0;
+ 	}
+ 	.navbar-collapse {
+ 		position: absolute;
+	    background: rgb(1, 31, 53);
+	    right: 0px;
+	    top: 40px;
+	    width: 100%;
+    	z-index: 999;
+ 	}
+ 	.tabsHeader:after {
+ 		display: none;
+ 	}
+}
+
+@media (min-width: 576px){
+	.modal-dialog{
+      max-width: 660px !important;
+	}
+}
+
+@media (max-width: 778px){
+ 	.tabsHeader {
+ 		display: block !important;
+ 	}
+
+ 	.tabsHeader span {
+ 		text-align: left;
+ 		display: block !important;
+ 		padding: 5px 0px;
+ 	}
+
+ 	.datepick img {
+		position: relative;
+	    top: 4px;
+	    right: 18px;
+	    height: 20px;
+	    text-align: center;
+	    color: #5c8cd6;
+	    font-size: 20px;
+	}
+
+	.datepick1 img {
+		position: absolute;
+	    top: 44px;
+	    right: 15px;
+	    height: 20px;
+	    text-align: center;
+	    color: #5c8cd6;
+	    font-size: 20px;
+	}
+
+	.model-rightbox img {
+	    width: 50px;
+	}
+
+	.showicons {
+		position: relative;
+		right: 10px;
+		padding: 5px;
+		background-color: #ffffff;
+		border: 1px solid #b0b0b0;
+		border-radius: 4px;
+	}
+
+ 	/*.hidediv {
+ 		display: block !important;
+ 	}
+
+ 	.hidediv button {
+	    margin-right: 5px;
+	    display: block;
+	    margin-left: 26px !important;
+	    margin-bottom: 5px;
+	}
+
+	.hidediv button:first-child {
+	    margin-left: 26px !important;
+	}*/
+
+}
+
+@media (min-width: 768px){
+	.model_dialog {
+		max-width: 700px !important;
+	}
+}
+
+@media (max-width: 730px){
+	aside.sidebar {
+		margin-left: -55px;
+    	transition: .2s linear;
+    	position: absolute;
+    	z-index: 1;
+	}
+	#sidebarToggle {
+		display: block;
+		z-index: 9;
+	}
+	#main-content, footer#footer {
+	    width: 100%;
+	}
+	.submaindiv {
+	    width: 100%!important;
+	    left: 0 !important;
+	}
+
+	.submodeldiv {
+		 width: 100%!important;
+	    left: 0 !important;
+	}
+}
+
+@media (max-width: 576px){
+	#btncreate {
+		margin-top: 5px;
+	}
+}
+
+@media (max-width: 551px) {
+ 	.nextbtn, .buttonlink {
+ 		margin-top: 5px !important;
+ 	}
+
+ 	.datepick input {
+	    display: block !important;
+	    width: 100% !important;
+	}
+
+	.datepick1 input {
+	    display: block !important;
+	    width: 100% !important;
+	}
+
+	.subdiv, .subdiv1, .subdiv2{
+         width: 100%!important;
+	}
+
+	.subdiv a, .subdiv1 a, .subdiv2 a {
+		display: block !important;
+ 		padding-right: 9px !important;
+	}
+	
+ 	.footer-text {
+ 		float: left;
+ 		margin-left: 15px;
+ 	}
+ 	/*.submaindiv {
+	    width: 278px !important;
+	    left: -15px !important;
+ 	}*/
+ 	.submaindiv label {
+ 		width: 100%;
+ 	}
+ 	.hidediv button {
+ 		margin-left: 14px !important;
+ 	}
+ 	.subdiv a:nth-last-child(n), .subdiv1 a:nth-last-child(n), .subdiv2 a:nth-last-child(n) {
+ 		margin-left: 35px !important;
+ 	}
+
+ 	.addusetbtn button {
+		margin-right: auto;
+	}
+}
+
+@media (max-width: 480px) {
+	.footer-logo, .footer-text {
+		text-align: center;
+    	float: initial;
+	}
+
+	.datepick img {
+		position: absolute;
+	    top: 44px;
+	    right: 18px;
+	    height: 20px;
+	    text-align: center;
+	    color: #5c8cd6;
+	    font-size: 20px;
+	}
+
+	.datepick1 img {
+		position: absolute;
+	    top: 44px;
+	    right: 15px;
+	    height: 20px;
+	    text-align: center;
+	    color: #5c8cd6;
+	    font-size: 20px;
+	}
+
+	.showicons {
+		position: relative;
+		right: 10px;
+		padding: 5px;
+		background-color: #ffffff;
+		border: 1px solid #b0b0b0;
+		border-radius: 4px;
+	}
+}
+
+@media (min-width: 480px) {
+	#addrow {
+		margin-right: 5px;
+	}
+}
+
+@media (max-width: 360px){
+ 	.tabsHeader span {
+ 		width: auto !important;
+ 	}
+ 	.submaindiv {
+	    width: 278px !important;
+	    left: -40px !important;
+ 	}
+
+ 	.submodeldiv {
+        width: 278px !important;
+	    left: -40px !important;
+ 	}
+}
+
+@media (max-width: 320px) {
+	.submaindiv {
+	    width: 300px!important;
+    	left: -34px !important;
+	}
+
+	.submodeldiv {
+        width: 300px!important;
+    	left: -34px !important;
+ 	}
+
+	.testbucket {
+		margin-left: 0;
+		margin-top: 5px;
+	}
+	.buttonlink button {
+		display: block !important;
+		margin: 5px auto 0px;
+	}
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--Styles-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--Datepicker style link-->
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<!--Timepicker style link-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+	<!--Custom style link-->
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+	<!--Header Start-->
+	<header class="navbar navbar-expand-lg"></header>
+	<!--Header End-->
+
+	<!--Sidebar Start-->
+	<aside class="sidebar pull-left"></aside>
+	<!--Sidebar End-->
+
+	<!--Main Contebt Start-->
+	<div id="main-content" class="container-fluid pull-right">
+		<!--Page Title-->
+		<!-- <h1 id="page-title">Test Bucket</h1> -->
+		
+		<!--Pages Tabs-->
+		<div class="card">
+			<div class="card-body tabsHeader">
+				<span class="active activetab"><i>1</i> Select Environment</span>
+				<span><i>2</i> Select Test Bucket</span>
+				<span><i>3</i> Finalize</span>
+			</div>
+		</div>
+
+        <!--Section for fill information-->
+		<div class="card">
+			<div class="card-body">
+				<form>
+					<div class="row">
+						<div class="col-md-6 mb-4">
+							<label class="required" >Execution Name</label>
+							<input type="text" class="form-control border" name="execution_name" id="execution_name" placeholder="Enter Execution Name" required>
+						</div>
+						<div class="col-md-6 mb-4">
+							<label class="required" >Testing Environment</label>
+							<select class="form-control border" name="testing_environment" id="testing_environment" required>
+								<option value="Select Testing Environment">Select Testing Environment</option>
+								<option value="Internet Explorer">Internet Explorer</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-4 datepick">
+							<label>Schedule Tests</label>
+							<!--Datepicker for select date-->
+							<input type="text" class="form-control datePicker border" name="date" id="date" placeholder="Select a date"><img src="img/shape.png" alt="1">
+							<!--Timepicker for select time-->
+							<input type="text" class="form-control timePicker border" name="time" id="time" placeholder="Select time">
+							<span>hh:mm</span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="row btn-div">
+			<div class="col-md-12 col-sm-12 col-xs-12 text-center buttonlink">
+				<!--Back Button for go to previous page-->
+				<button class="btn btn-dark" disabled>BACK</button>
+				<!--Next Button for go to next page-->
+				<a href="selecttestbucket.html"><button class="btn btn-primary nextbtn">NEXT</button></a>
+			</div>
+		</div>
+	</div>
+	<!--Main Content End-->
+
+	<!--Footer Start-->
+	<footer id="footer" class="container-fluid pull-right"></footer>
+	<!-- For sidebar toggle -->
+	<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+	<!--Footer End-->
+
+	<!--Scripts-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!--Datepicker js link-->
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<!--Timepicker js link-->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+		$(function(){
+
+		  /*---Jquery for datepicker---*/
+
+			$("input.datePicker").datepicker({
+				dateFormat: 'dd-mm-yy'
+			});
+          
+          /*---Jquery for timepicker---*/
+
+			$('input.timePicker').timepicker({
+			    timeFormat: 'h:mm p',
+			    interval: 15,   
+			    /*minTime: '10',
+			    maxTime: '6:00pm',
+			    defaultTime: '11',
+			    startTime: '10:00',*/
+			    dynamic: true,
+			    dropdown: true,
+			    scrollbar: true
+			});
+
+			$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+
+			$(window).resize(function(){
+				$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+			});
+
+			// For sidebar toggle
+			if($(window).width() < 730)
+			{
+				$("#sidebarToggle").click(function(e){
+					e.preventDefault();
+					$("aside.sidebar").toggleClass("showSB");
+					$(this).toggleClass("toggleIcon");
+				});
+			}
+		});
+	</script>
+</body>
+</html>

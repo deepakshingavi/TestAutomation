@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UInium</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Favicon-->
+	<link rel="icon" href="img/favicon-16x16.png">
+
+	<!--Styles-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--Custom style link-->
+	<link rel="stylesheet" href="css/custom.css">
+	<style>
+		.card, .card-body, .section-box {
+			border: 0px !important;
+		}
+
+		.canvasjs-chart-credit {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<!--Header Start-->
+	<header class="navbar navbar-expand-lg">
+		<!--Logo Start-->
+		<a id="logo" class="navbar-brand text-center" href="#">
+			<img src="img/4317-converted.png">
+		</a>
+		<!--Logo End-->
+		<!--Navbar Toggle Start-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="fa fa-bars"></span>
+		</button>
+		<!--Navbar Toggle End-->
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="dashboard1.html"><img src="img/insert-chart-outlined-24-px.png"> Monitor App</a></li>
+				<li class="nav-item"><a class="nav-link" href="subscription.html"><img src="img/stars-24-px.png"> Subscriptions</a></li>
+				<li class="nav-item"><a class="nav-link" href="emailcofiguration.html"><img src="img/email-24-px.png"> Email Configuration</a></li>
+				<li class="nav-item"><a class="nav-link" href="managetestcase.html"><img src="img/assignment-24-px.png"> Manage Test Cases</a></li>
+			</ul>
+
+			<!--User Menu Start-->
+			<div id="userMenu" class="dropdown">
+				<!-- <a href="#"><i class="fa fa-user-o"></i> User</a> -->
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/account-circle-24-px.png"> <span>User</span></a>
+				<div class="dropdown-menu">
+			      <a class="dropdown-item" href="profile.html">Profile</a>
+			      <a class="dropdown-item" href="login.html">Logout</a>
+			    </div>
+			</div>
+			<!--User Menu End-->
+		</div>
+	</header>
+	<!--Header End-->
+
+	<!--Sidebar Start-->
+	<aside class="sidebar pull-left">
+		<ul>
+			<!-- <li><a href="#"><img src="img/add-24-px.png"></a></li>
+			<li><a href="#"><i class="fa fa-plus"></i></a></li> -->
+			<li><a href="#"><img src="img/apps-24-px.png"></a></li>
+			<li><a href="#"><img src="img/add-24-px.png"></a></li>
+		</ul>
+	</aside>
+	<!--Sidebar End-->
+
+	<!--Main Contebt Start-->
+	<div id="main-content" class="container-fluid pull-right">
+		<!--Page Title-->
+		<!-- <h1 id="page-title">Monitor App</h1> -->
+
+        <!--Section for fill information-->
+		<div class="card">
+			<div class="card-body">
+				<div class="row mt-4 section-box3">
+					<div class="col-md-12 stackcols">
+						<div class="col-md-12 col-sm-12 col-xs-12 mb-2">
+							<label class="subtitle">Stacked column chart</label>
+								<ul>
+				                  <li><i></i><span><strong>ITSM</strong></span></li>
+				                  <li><i></i><span><strong>SmartIT</strong></span></li>
+				                  <li><i></i><span><strong>MyIT</strong></span></li>
+				                </ul>
+							</div>
+	                    <div id="chartContainer" style="height: 300px; width: 100%;">
+						</div>
+					</div>
+			    </div>
+				<div class="row mt-4 section-box3">
+					<div class="col-md-12">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+						<label class="subtitle">Subscriber Table</label>
+					</div>
+                    <table id="" class="table tabledash">
+		                <thead>
+		                  <tr>
+		                    <th scope="col">SUBSCRIPTION</th>
+		                    <th scope="col">EXPIRY IN</th>
+		                    <th scope="col">NOTIFICATION</th>
+		                    <th scope="col">START DATE</th>
+		                    <th scope="col">END DATE</th>
+		                    <th scope="col">ACTIONS</th>
+		                  </tr>
+		                </thead>
+		                <tbody>
+		                  <tr>
+		                    <td >Sociomotif LLC</td>
+		                    <td class="expirydays">09 Days</td>
+		                    <td >10 Days</td>
+		                    <td >25-05-2019</td>
+		                    <td >25-05-2019</td>
+		                    <td ><img src="img/shapemail.png" alt="1" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess"></td>
+		                  </tr>
+		                  <tr>
+		                    <td >Sagitech Solution</td>
+		                    <td >25 Days</td>
+		                    <td >05 Days</td>
+		                    <td >20-12-2019</td>
+		                    <td >20-12-2019</td>
+		                    <td ><img src="img/shapemail.png" alt="1" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess"></td>
+		                  </tr>
+		                  <tr>
+		                    <td >Infosysy</td>
+		                    <td >125 Days</td>
+		                    <td >15 Days</td>
+		                    <td >12-02-2019</td>
+		                    <td >12-02-2019</td>
+		                    <td ><img src="img/shapemail.png" alt="1" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess"></td>
+		                  </tr>
+		                </tbody>
+		              </table>
+					</div>
+				</div>
+
+				<div class="modal fade" id="myModalSucess">
+				    <div class="modal-dialog modal-dialog-centered">
+				      <div class="modal-content">
+
+				        <!-- Modal Header -->
+				        <div class="modal-header model_head">
+				          <h4 class="modal-title"></h4>
+				          <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        </div>
+
+				        <!-- Modal body -->
+				        <div class="modal-body model_body">
+				          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+				          <p>The email sent successfully to subscriber.</p>
+				        </div>
+
+				        <!-- Modal footer -->
+				        <div class="modal-footer btnfooter">
+				          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+				        </div>
+
+				      </div>
+				    </div>
+				  </div>
+			</div>
+		</div>
+	</div>
+	<!--Main Content End-->
+
+	<!--Footer Start-->
+	<footer id="footer" class="container-fluid pull-right">
+		<div class="pull-left footer-logo"><img src="img/logo-11.png"></div>
+		<div class="pull-right footer-text">
+			<!-- &copy <script>document.write((new Date()).getFullYear());</script>   -->
+			Copyright @ 2020 UInium(“UI automation Studio”). All Rights Reserved.
+		</div>
+	</footer>
+   <!--Footer End-->
+	<!-- For sidebar toggle -->
+	<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+	<!--Footer End-->
+
+	<!--Scripts-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/custom.js"></script>
+	<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+<script type="text/javascript">
+  window.onload = function () {
+
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+      // text: "Coal Reserves of Countries"
+      },
+      axisY:{
+		title:"Test Case number",
+		valueFormatString: " ",
+	  },
+	  toolTip:{
+	  	shared: true,
+		content: toolTipContent
+	   // content:"{label},<br> x: {city},</br> y: {y}" ,
+	 },
+	  dataPointWidth: 50,
+      data: [
+      {
+        type: "stackedColumn",
+        showInLegend: true,
+        indexLabel: "{y}",
+        color:"#3ebbf6",
+        name: "Chicago",
+        dataPoints: [
+        {  y: 40, label: "Company A"},
+        {  y: 45, label: "Company B" },
+        {  y: 85, label: "Company C" },
+        {  y: 50, label: "Company D" },
+        {  y: 30, label: "Company E"},
+        {  y: 30, label: "Company F"},
+        {  y: 35, label: "Company G" },
+        {  y: 25, label: "Company H" },
+        {  y: 55, label: "Company I"},
+        {  y: 55, label: "Company J"}
+
+        ]
+      },  {
+        type: "stackedColumn",
+        showInLegend: true,
+        color:"#ffc637",
+        indexLabel: "{y}",
+        name: "Los Angeles",
+        dataPoints: [
+        {  y: 15, label: "Company A"},
+        {  y: 60, label: "Company B" },
+        {  y: 20, label: "Company C" },
+        {  y: 30, label: "Company D" },
+        {  y: 75, label: "Company E"},
+        {  y: 25, label: "Company F"},
+        {  y: 20, label: "Company G" },
+        {  y: 45, label: "Company H" },
+        {  y: 30, label: "Company I"},
+        {  y: 30, label: "Company J"}
+
+        ]
+      },  {
+        type: "stackedColumn",
+        showInLegend: true,
+        color:"#7933af",
+        indexLabel: "{y}",
+        name: "New York",
+        dataPoints: [
+        {  y: 36, label: "Company A"},
+        {  y: 28, label: "Company B" },
+        {  y: 18, label: "Company C" },
+        {  y: 75, label: "Company D" },
+        {  y: 30, label: "Company E"},
+        {  y: 75, label: "Company F"},
+        {  y: 35, label: "Company G" },
+        {  y: 20, label: "Company H" },
+        {  y: 20, label: "Company I"},
+        {  y: 72, label: "Company J"}
+
+        ]
+      }
+      ]
+    });
+
+    chart.render();
+
+    function toolTipContent(e) {
+		var str = "";
+		var total = 0;
+		var str2, str3;
+		for (var i = 0; i < e.entries.length; i++){
+			var  str1 = "<span style= \"color:"+e.entries[i].dataSeries.color + "\"> "+e.entries[i].dataSeries.name+"</span>: <strong>"+e.entries[i].dataPoint.y+"</strong><br/>";
+			total = e.entries[i].dataPoint.y + total;
+			str = str.concat(str1);
+		}
+		str2 = "<span style = \"color:#212529;\"><strong>"+(e.entries[0].dataPoint.label)+"</strong></span><br/>";
+		total = Math.round(total * 100) / 100;
+		str3 = "<span style = \"color:#212529\">Total:</span><strong> "+total+"</strong><br/>";
+		return (str2.concat(str)).concat(str3);
+	}
+
+  }
+  </script>
+</body>
+</html>

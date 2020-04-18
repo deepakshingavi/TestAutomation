@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UInium</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Favicon-->
+	<link rel="icon" href="img/favicon-16x16.png">
+
+	<!--Styles-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--Custom style link-->
+	<!-- <link rel="stylesheet" href="css/custom.css"> -->
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+	<!--Main Contebt Start-->
+	<div id="loginbox">
+        <!--Section for fill information-->
+		<div class="card">
+			<div class="card-body">
+				<!-- <form> -->
+					<div class="row">
+						<div class="col-md-6 side_img">
+							<img src="img/loginbackground.jpg" width="100%" height="100%">
+						</div>
+						<div class="col-md-6 login-section">							
+							<div class="col-md-12 mb-4 login-header">
+								<img src="img/group-64.png">
+							</div>
+							<div class="col-md-12 mb-2 login-header">
+								<p>Login</p>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="loginEmail" name="username" id="username" placeholder="Username">
+							</div>
+							<div class="form-group datepick">
+								<input type="password" class="form-control " name="password" id="loginPassword" placeholder="Password"><img id="passwordshow" src="img/shape-black.png">
+							</div>
+							<div class="form-group">
+								<input type="checkbox"><span> Keep me signed in</span>
+							</div>
+							<div class="form-group sign_btn">
+								<button class="btn btn-primary" id="loginSubmit">SIGN IN</button>
+							</div>							
+						</div>
+						<div class="col-md-12 forgotpass_link">
+							<span>So you can't get in to your account? Did you</span> <a href="forgot_password.html">forgot your password?</a>
+						</div>
+					</div>
+					<!-- <div class="row mt-4">
+						<div class="col-md-12 mb-4 form-group">
+							<label class="form-label" for="first">Username</label>
+							<input type="text" class="form-control border form-input" name="">
+						</div>
+					</div> -->
+					<!-- <div class="row">
+						<div class="col-md-12 mb-4 datepick form-group">
+							<label class="form-label" for="first">Password</label>
+							<input type="password" id="password" class="form-control border form-input" name=""><img id="passwordshow" src="img/shape-black.png">
+						</div>
+					</div> -->
+					<!-- <div class="row">
+						<div class="col-md-12 text-center buttonlink">
+							<a href="dashboard.html"><button class="btn btn-primary nextbtn">SIGN IN</button></a>
+							<p class="mt-2"><a href="#">Forgot your password?</a></p>
+						</div>
+					</div> -->
+				<!-- </form> -->
+			</div>
+		</div>
+	</div>
+	<!--Main Content End-->
+
+	<!--Footer Start-->
+	<footer id="footer" class="container-fluid pull-right">
+		<div class="pull-right footer-logo"><img src="img/logo-11.png"></div>
+	</footer>
+    <!--Footer End-->
+
+	<!--Scripts-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+		$("#passwordshow").click(function(){
+             if ($("#loginPassword").attr("type") === "password") {
+                $("#loginPassword").attr("type", "text");
+            } else {
+                $("#loginPassword").attr("type", "password");
+            }
+		});
+
+		$('input').focus(function(){
+		  $(this).parents('.form-group').addClass('focused');
+		});
+
+		$('input').blur(function(){
+		  var inputValue = $(this).val();
+		  if ( inputValue == "" ) {
+		    $(this).removeClass('filled');
+		    $(this).parents('.form-group').removeClass('focused');  
+		  } else {
+		    $(this).addClass('filled');
+		  }
+		}) ;
+		//Yogesh C Added this code while merging.
+		if(window.location.search.substr(1)!=="")
+		{
+			var arr = window.location.search.substr(1).split("=");
+			if(arr[1] == "notauth"){
+				eraseCookie("TAaccess");
+				eraseCookie("TAuid");
+				eraseCookie("TAuname");
+				eraseCookie("TAurole");
+				$('#res').html("<h5><span style='color:green;text-transform:capitalize;font-size:14px'>Booh! You are not authorized..</span></h5>");
+			}
+		}
+		/*function showModal() {
+			// LOADING THE AJAX MODAL
+			$('#modal_ajax').modal('show', {
+				backdrop: 'true'
+			});
+			$("input[name=user_name]").val("");
+			$(".icons").hide();
+			$("button[name=forgotPassword]").removeAttr("disabled", "disabled");
+			$(".modal-body form").submit(function(){ 
+				$("button[name=forgotPassword]").trigger("click");
+			});
+			$("button[name=forgotPassword]").click(function(){
+				//e.eventPreventDefault();
+				if($("input[name=user_name]").val()==""){
+					alert("Please enter your username");
+					return false;
+				}
+				$("button[name=forgotPassword]").attr("disabled", "disabled");
+				$(".icons").show();
+				$.ajax({
+					url: base_url+"/ui/forgotPassword/"+$("input[name=user_name]").val(),
+					success: function(response) {
+						$('#modal_ajax').modal('hide');
+						$('#res').html("<h5><span style='color:green;text-transform:capitalize;font-size:14px'>Password sent to your registered email</span></h5>");
+					}
+				});
+			});
+		}*/
+		$(document).ready(function() {
+			$('#loginPassword').keydown(function(event){    
+				   if(event.keyCode==13){
+					  $('#loginSubmit').trigger('click');
+				   }
+			   });
+			$('#loginSubmit').click(function(){
+				//$('#res').html("<img width='20' src='./Libraries/img/loader.GIF'>");
+				$loginEmail = $('#loginEmail').val();
+				$loginPassword = $('#loginPassword').val();
+				/*if($loginEmail == '' || $loginPassword == '')
+				{
+					$('#res').html("<span style='color:red;text-transform:capitalize;font-size:14px'>Enter Login Details..!</span>");
+					return false;
+				}*/
+		   
+				$.ajax({
+					type : "POST",
+					url : "./login",
+					data : { username:$loginEmail,password:$loginPassword},
+					success: function (response) {
+						$('#res').html("<h5><span style='color:green;text-transform:capitalize;font-size:14px'>Login Success..!</span><br><img width='20' src='Libraries/img/loader.GIF'><br><span style='font-size:14px'>Redirecting.....</span></h5>");				
+						createCookie("TAaccess", response.id, 60);
+						createCookie("TAuid", response.userId, 60);
+						createCookie("TAuname", response.username, 60);
+						createCookie("TAurole", response.authorities[0].authority, 60);
+						window.location.href = "./dashboard.html";
+					}
+				});
+			});
+		});	
+	</script>
+</body>
+</html>

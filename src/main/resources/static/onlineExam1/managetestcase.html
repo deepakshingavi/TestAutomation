@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UInium</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Favicon-->
+  <link rel="icon" href="img/favicon-16x16.png">
+
+  <!--Styles-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!--Custom style link-->
+  <link rel="stylesheet" href="css/custom.css">
+  <style>
+    .bucketcheck label {
+      padding-left: 5px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <!--Header Start-->
+  <header class="navbar navbar-expand-lg">
+    <!--Logo Start-->
+    <a id="logo" class="navbar-brand text-center" href="#">
+      <img src="img/4317-converted.png">
+    </a>
+    <!--Logo End-->
+    <!--Navbar Toggle Start-->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fa fa-bars"></span>
+    </button>
+    <!--Navbar Toggle End-->
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="dashboard1.html"><img src="img/insert-chart-outlined-24-px.png"> Monitor App</a></li>
+		<li class="nav-item"><a class="nav-link" href="subscription.html"><img src="img/stars-24-px.png"> Subscriptions</a></li>
+		<li class="nav-item"><a class="nav-link" href="emailcofiguration.html"><img src="img/email-24-px.png"> Email Configuration</a></li>
+		<li class="nav-item"><a class="nav-link" href="managetestcase.html"><img src="img/assignment-24-px.png"> Manage Test Cases</a></li>
+      </ul>
+
+      <!--User Menu Start-->
+      <div id="userMenu" class="dropdown">
+        <!-- <a href="#"><i class="fa fa-user-o"></i> User</a> -->
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/account-circle-24-px.png"> <span>User</span></a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="profile.html">Profile</a>
+          <a class="dropdown-item" href="login.html">Logout</a>
+        </div>
+      </div>
+      <!--User Menu End-->
+    </div>
+  </header>
+  <!--Header End-->
+
+  <!--Sidebar Start-->
+  <aside class="sidebar pull-left">
+    <ul>
+      <!-- <li><a href="#"><img src="img/add-24-px.png"></a></li>
+        <li><a href="#"><i class="fa fa-plus"></i></a></li> -->
+        <li><a href="#"><img src="img/apps-24-px.png"></a></li>
+        <li><a href="#"><img src="img/add-24-px.png"></a></li>
+      </ul>
+    </aside>
+    <!--Sidebar End-->
+
+    <!--Main Contebt Start-->
+    <div id="main-content" class="container-fluid pull-right">
+      <!--Page Title-->
+      <!-- <h1 id="page-title">Manage Test Cases</h1> -->
+
+      <div class="card border_card">
+        <div class="card-body tabs">
+         <ul id="tabs" class="nav nav-tabs">
+          <li class="nav-item"><a href="" data-target="#testmethod" data-toggle="tab" class="nav-link small text-uppercase active">Test Methods</a></li>
+          <li class="nav-item"><a href="" data-target="#importcases" data-toggle="tab" class="nav-link small text-uppercase">Import Test Cases</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="tabsContent" class="tab-content">
+      <div id="testmethod" class="tab-pane fade active show">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+                <!--Page subtitle-->
+                <!-- <label class="subtitle">Test Methods</label> -->
+                <!--Delete row-->
+                <a href=""><button class="btn btn-primary float-right buttonlink" id="deleteRow"><img src="img/delete-24-px.png">DELETE</button></a>
+                <a href="#" class="addusetbtn addRowBtn"><button class="btn btn-primary float-right buttonlink"><img src="img/add-24-px-2.png">ADD</button></a>
+              </div>
+            </div>
+
+            <div class="row addRowData" style="display: none;">
+              <div class="col-md-4 rowadjust">
+                <label>Company</label>
+                <select class="form-control border" name="company_name" id="company_name">
+                  <option value="Select Company Name">Select Company Name</option>
+                  <option value="SocioMotif LLC">SocioMotif LLC</option>
+                  <option value="Sagitech Solution">Sagitech Solution</option>
+                  <option value="Infosys">Infosys</option>
+                  <option value="Test Pvt Ltd">Test Pvt Ltd</option>
+                </select>
+              </div>
+              <div class="col-md-4 rowadjust">
+                <label>Application</label>
+                <select class="form-control border" name="application" id="application">
+                  <option value="Select Application">Select Application</option>
+                  <option value="SmartIT">SmartIT</option>
+                  <option value="IYSM">IYSM</option>
+                </select>
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Test Method</label>
+                <input type="text" class="form-control border" name="test_method" id="test_method" placeholder="Enter Test Method">
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Class Name</label>
+                <input type="text" class="form-control border" name="class_name" id="class_name" placeholder="Enter Class Name">
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Description</label>
+                <textarea class="form-control border" name="description" id="description" rows="1" placeholder="Description Here" required></textarea>
+              </div>
+              <div class="col-md-3 mb-2 buttonlink1 btnpadding">
+                <button class="btn btn-primary buttonlink1 addtestmethodBtn"><img src="img/add-24-px-2.png">ADD</button>
+                <button class="btn btn-primary buttonlink1 btn-dark cancelRow"><img src="img/close-24-px.png">CANCEL</button>
+              </div>
+            </div>
+
+            <div class="row updateRowData" style="display: none;">
+              <input type="hidden" name="uprowid" id="uprowid">
+              <div class="col-md-4 rowadjust">
+                <label>Company</label>
+                <select class="form-control border" name="company_name1" id="company_name1">
+                  <option value="Select Company Name">Select Company Name</option>
+                  <option value="SocioMotif LLC">SocioMotif LLC</option>
+                  <option value="Sagitech Solution">Sagitech Solution</option>
+                  <option value="Infosys">Infosys</option>
+                  <option value="Test Pvt Ltd">Test Pvt Ltd</option>
+                </select>
+              </div>
+              <div class="col-md-4 rowadjust">
+                <label>Application</label>
+                <select class="form-control border" name="application1" id="application1">
+                  <option value="Select Application">Select Application</option>
+                  <option value="SmartIT">SmartIT</option>
+                  <option value="IYSM">IYSM</option>
+                </select>
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Test Method</label>
+                <input type="text" class="form-control border" name="test_method1" id="test_method1" placeholder="Enter Test Method">
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Class Name</label>
+                <input type="text" class="form-control border" name="class_name1" id="class_name1" placeholder="Enter Class Name">
+              </div>
+              <div class="col-md-4 mb-2 rowadjust">
+                <label>Description</label>
+                <textarea class="form-control border" name="description1" id="description1" rows="1" placeholder="Description Here" required></textarea>
+              </div>
+              <div class="col-md-3 mb-2 buttonlink1 btnpadding">
+                <button class="btn btn-primary buttonlink1 updatetestmtdBtn"><img src="img/save-24-px-1.png">SAVE</button>
+                <button class="btn btn-primary buttonlink1 btn-dark updatecancelRow"><img src="img/close-24-px.png">CANCEL</button>
+              </div>
+            </div>
+
+            <div class="row selectdiv" style="overflow-x: auto;">
+              <table id="bucketList" class="Testmethodtable table selectdiv1">
+                <thead>
+                  <tr>
+                    <th scope="col" class="bucketcheck">
+                      <label class="main mainCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </th>
+                    <th scope="col" class="Username">COMPANY <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+                    <th scope="col">APPLICATION</th>
+                    <th scope="col">TEST METHOD</th>
+                    <th scope="col">STATUS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="col" class="bucketcheck">
+                      <label class="main subCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </td>
+                    <td >Sagitech Solution</td>
+                    <td >IYSM</td>
+                    <td ><span class="updtRow">testmethod-01</span></td>
+                    <td class="complete">Complete</td>
+                  </tr>
+                  <tr>
+                    <td scope="col" class="bucketcheck">
+                      <label class="main subCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </td>
+                    <td >Infosys</td>
+                    <td >SmartIT</td>
+                    <td ><span class="updtRow">testmethod-02</span></td>
+                    <td class="running">Running</td>
+                  </tr>
+                  <tr>
+                    <td scope="col" class="bucketcheck">
+                      <label class="main subCB">
+                        <input type="checkbox"> 
+                        <span class="geekmark"></span> 
+                      </label>
+                    </td>
+                    <td >Test Pvt Ltd</td>
+                    <td >IYSM</td>
+                    <td ><span class="updtRow">testmethod-03</span></td>
+                    <td class="running">Running</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="row paginate">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="pagination">
+                  <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+                  <a href="#"><strong>Previous</strong></a>
+                  <a href="#" class="active">1</a>
+                  <a href="#">2</a>
+                  <a href="#">3</a>
+                  <a href="#">4</a>
+                  <a href="#">5</a>
+                  <a href="#">...</a>
+                  <a href="#">10</a>
+                  <a href="#"><strong>Next</strong></a>
+                  <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="importcases" class="tab-pane fade">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+                <!--Page subtitle-->
+                <!-- <label class="subtitle">Import Test Cases</label> -->
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4 buttonlink1 btnpadding">
+                <button id="filedownload" class="btn btn-primary"><i class="fa fa-download"></i>  Download .xslx</button>
+              </div>
+              <div class="col-md-4 buttonlink1 btnpadding">
+                <button id="OpenxlsUpload" class="btn btn-primary"><i class="fa fa-upload"></i>  Upload .xslx</button>
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-4">
+                <p id="fdmsg" style="display:none"><i class="fa fa-check-circle"></i>. xls file downloaded successfully.</p>
+              </div>
+              <div class="col-md-4">
+                <input type="file" id="xlsupload" style="display:none"/> 
+                <p id="fumsg" style="display:none"><i class="fa fa-check-circle"></i>. xls file uploaded successfully.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <!--for Table-->
+    
+
+    <!-- The Row Delete Test Methods Modal-->
+    <div class="modal fade model1" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body model_body">
+           <h4>Delete Test Methods</h4>
+           <p>Do you want to delete Test Methods?</p>
+           <p id="deletedItem"></p>
+         </div>
+
+         <!-- Modal footer -->
+         <div class="modal-footer btnfooter">
+          <button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+          <button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess">YES</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End of Row Delete Modal -->
+
+
+  <!-- The Row Delete Modal Test Methods Success -->
+  <div class="modal fade" id="myModalSucess">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header model_head">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body model_body">
+          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+          <p>Test Methods deleted Successfully.</p>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer btnfooter">
+          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End of Row Delete Modal Success -->
+
+</div>
+<!--Main Content End-->
+
+<!--Footer Start-->
+  <footer id="footer" class="container-fluid pull-right">
+    <div class="pull-left footer-logo"><img src="img/logo-11.png"></div>
+    <div class="pull-right footer-text">
+      <!-- &copy <script>document.write((new Date()).getFullYear());</script>   -->
+      Copyright @ 2020 UInium(“UI automation Studio”). All Rights Reserved.
+    </div>
+  </footer>
+<!--Footer End-->
+<!-- For sidebar toggle -->
+<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+
+<!--Scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/custom.js"></script>
+<script>
+  $(function(){
+
+    /*---Jquery for Add row---*/
+
+    $("a.addRowBtn").click(function(e){
+      e.preventDefault();
+
+      $(this).closest(".card-body").find(".addRowData").slideToggle();
+
+      $(this).css("pointer-events", "none");
+      $(this).css("opacity", ".65");
+      $("#deleteRow").attr("disabled", true);
+    });
+   
+    /*---Jquery for Update Test Method---*/
+
+    $("table.Testmethodtable span.updtRow").click(function(){
+      $(this).closest(".card-body").find(".updateRowData").slideToggle();
+
+      $(".updateRowData #uprowid").val($(this).closest("tr").index()+1);
+      $(".updateRowData #company_name1").val($(this).closest("tr").find("td:nth-child(2)").text());
+      $(".updateRowData #application1").val($(this).closest("tr").find("td:nth-child(3)").text());  
+      $(".updateRowData #test_method1").val($(this).closest("tr").find("td:nth-child(4)").text());    
+
+      $("a.addRowBtn").css("pointer-events", "none");
+      $("a.addRowBtn").css("opacity", ".65");
+      $("#deleteRow").attr("disabled", true);
+      $("#deleteRow1").attr("disabled", true);
+    });
+    
+    /*---Jquery for Save Test Method---*/
+
+    $("button.addtestmethodBtn").click(function(){
+      var dataCompany_name = $("#company_name").val();
+      var dataApplication = $("#application").val();
+      var dataTest_method = $("#test_method").val();
+
+      var str = `<tr>
+      <td scope="col" class="bucketcheck">
+      <label class="main subCB">
+      <input type="checkbox"> 
+      <span class="geekmark"></span> 
+      </label>
+      </td>
+      <td >`+dataCompany_name+`</td>
+      <td >`+dataApplication+`</td>
+      <td >`+dataTest_method+`</td>
+      <td class="running">Running</td>
+      </tr>`;
+
+      $("table.Testmethodtable tbody").prepend(str);
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow").attr("disabled", false);
+      $(this).closest(".addRowData").slideUp();
+    });
+    
+    /*---Jquery for Update Test Method---*/
+    
+    $("button.updatetestmtdBtn").click(function(){
+      var rowIndx = $("#uprowid").val();
+      var dataCompanynm = $("#company_name1").val();
+      var dataAppname = $("#application1").val();
+      var dataTestmtd = $("#test_method1").val();
+
+      $(".Testmethodtable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(2)").html('<span class="updtRow">'+dataCompanynm+'</span>');
+      $(".Testmethodtable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(3)").text(dataAppname);
+      $(".Testmethodtable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(4)").text(dataTestmtd);
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow1").attr("disabled", false);
+      $("#deleteRow").attr("disabled", false);
+      $(this).closest(".updateRowData").slideUp();
+    });
+
+    $('#OpenxlsUpload').click(function(){ $('#xlsupload').trigger('click'); });
+
+    $("#filedownload").click(function(){
+      $("#fdmsg").show();
+    });
+
+    $("#OpenxlsUpload").click(function(){
+      $("#fumsg").show();
+    });
+
+    /*---Jquery for Cancel row---*/
+
+    $("button.cancelRow").click(function(){
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow").attr("disabled", false);
+      $(this).closest(".addRowData").slideUp();
+    });
+
+    $("button.updatecancelRow").click(function(){
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow").attr("disabled", false);
+      $("#deleteRow1").attr("disabled", false);
+      $(this).closest(".updateRowData").slideUp();
+    });
+
+
+    $(".mainCB input[type=checkbox]").click(function(){
+      if($(this).prop("checked")==true)
+        { $(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", true); }
+      else
+        { $(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", false);  }
+    });
+
+    /*---Jquery for delete Test Methods row---*/
+
+    $("#deleteRow").click(function(e){
+      e.preventDefault();
+      var str = '';
+      $("table tbody .subCB input:checked").each(function(){
+        if(str!='')
+          str += ", "+$(this).closest("tr").find("td:nth-child(2)").text();
+        else
+          str += $(this).closest("tr").find("td:nth-child(2)").text();
+      });
+
+      $("#deletedItem").text(str);
+      $("#myModal").modal();
+    });
+
+    $(document).on("click", "#yesbtn", function(){
+      $("table tbody .subCB input:checked").each(function(){
+        $(this).closest("tr").remove();
+      });     
+    });
+
+    /*---Jquery for toggle section on click caret-down icon---*/
+
+    $(".submaindiv i.showbtndiv").click(function(){
+      $(this).closest("li").find(".hidediv").slideToggle();
+      $(this).toggleClass("caret-rev");
+    });
+
+    $("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+
+    $(window).resize(function(){
+      $("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+    });
+
+      // For sidebar toggle
+      if($(window).width() < 730)
+      {
+        $("#sidebarToggle").click(function(e){
+          e.preventDefault();
+          $("aside.sidebar").toggleClass("showSB");
+          $(this).toggleClass("toggleIcon");
+        });
+      }
+    });
+  </script>
+</body>
+</html>

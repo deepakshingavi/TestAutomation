@@ -1,0 +1,179 @@
+#loginbox 
+{
+	    max-width: 630px;
+	    margin: 0 auto !important;
+	    width: 100%;
+	    padding: 10px !important;
+	    top: 50% !important;
+}
+
+.card {
+	padding: 0px 15px;
+}
+
+.card-body {
+    padding: 0px;
+}
+
+/*form {
+	padding: 10px 20px;
+}*/
+
+html, body {
+	/*background-image: url('../img/loginbackground.jpg');*/
+	background-color: #051e34;
+	height: 100vh;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.buttonlink p a {
+	color: #212529 !important;
+	text-decoration: underline;
+	font-weight: 500;
+}
+.buttonlink p a:hover {
+	color: #212529 !important;
+	font-weight: 500;
+}
+
+/*.datepick img {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    height: 20px;
+    text-align: center;
+    color: #5c8cd6;
+    font-size: 20px;
+}*/
+
+.datepick input {
+    display: inline-block;
+    width: 100%;
+}
+
+.buttonlink button {
+    width: 200px;
+    text-align: center;
+}
+
+/*.form-group {
+  position:relative;  
+
+  & + .form-group {
+    margin-top: 30px;
+  }
+}*/
+
+.form-label {
+  position: absolute;
+  left: 15;
+  top: 10px;
+  color: #999;
+  background-color: #fff;
+  z-index: 10;
+  transition: transform 150ms ease-out, font-size 150ms ease-out;
+}
+
+.focused .form-label {
+  transform: translateY(-125%);
+  font-size: .75em;
+}
+
+.form-input {
+  position: relative;
+  padding: 12px 0px 5px 0;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  box-shadow: 0 1px 0 0 #e5e5e5;
+  transition: box-shadow 150ms ease-out;
+  
+  &:focus {
+    box-shadow: 0 2px 0 0 blue;
+  }
+}
+
+#footer {
+	padding: 15px 0;
+}
+
+#loginbox {
+	height: calc(100vh - 81px);
+}
+#loginbox .card {
+	margin: calc(50vh - 239px) 0;
+}
+
+
+/*-------New Style-----*/
+
+.login-header {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.login-header p {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.side_img {
+	padding: 0px;
+	padding-left: 0px !important;
+}
+
+.sign_btn a button {
+	width: 100%;
+}
+
+.forgotpass_link {
+	padding: 10px 5px;
+    background-color: #f3f3f3;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.datepick {
+	position: relative;
+}
+
+.datepick img {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    height: 16px;
+    text-align: center;
+    color: #5c8cd6;
+    font-size: 20px;
+}
+
+footer#footer {
+    color: #999999;
+    font-size: 14px;
+    /* margin-top: 31px; */
+}
+
+.login-section {
+	padding: 30px !important;
+}
+
+.footer-logo img {
+    margin-right: 15px !important;
+}
+
+.footer-text {
+    margin-top: 0px;
+    margin-right: 0px;
+    line-height: 51px;
+}
+
+#main-content, footer#footer {
+    width: calc(100% - 55px);
+}
+
+#footer {
+    padding: 15px 0;
+}

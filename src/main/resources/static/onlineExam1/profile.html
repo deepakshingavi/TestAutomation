@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UInium</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Favicon-->
+	<link rel="icon" href="img/favicon-16x16.png">
+
+	<!--Styles-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--Custom style link-->
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+	<!--Header Start-->
+	<header class="navbar navbar-expand-lg">
+		<!--Logo Start-->
+		<a id="logo" class="navbar-brand text-center" href="#">
+			<img src="img/4317-converted.png">
+		</a>
+		<!--Logo End-->
+		<!--Navbar Toggle Start-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa fa-bars"></span>
+		</button>
+		<!--Navbar Toggle End-->
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="dashboard.html"><img src="img/insert-chart-outlined-24-px.png"> Monitor App</a></li>
+				<li class="nav-item"><a class="nav-link" href="users.html"><img src="img/person-outline-24-px-1.png"> Subscribers</a></li>
+				<li class="nav-item"><a class="nav-link" href="setup.html"><img src="img/settings-24-px.png"> AppSettings</a></li>
+				<li class="nav-item"><a class="nav-link" href="testmanagement.html"><img src="img/assignment-24-px.png"> Test Management</a></li>
+				<li class="nav-item"><a class="nav-link" href="runtest.html"><img src="img/play-arrow-24-px.png"> Run Tests</a></li>
+				<li class="nav-item"><a class="nav-link" href="testbucketenviroment.html"><img src="img/subtitles-24-px.png"> Test Bucket</a></li>
+				<li class="nav-item"><a class="nav-link" href="reports.html"><img src="img/pie-chart-24-px.png"> Reports</a></li>
+				<!-- <li class="nav-item"><a class="nav-link" href="subscription.html">Subscriptions</a></li> -->
+			</ul>
+
+			<!--User Menu Start-->
+			<div id="userMenu" class="dropdown">
+					<!-- <a href="#"><i class="fa fa-user-o"></i> User</a> -->
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/account-circle-24-px.png"> <span>User</span></a>
+					<div class="dropdown-menu">
+				      <a class="dropdown-item" href="profile.html">Profile</a>
+				      <a class="dropdown-item" href="login.html">Logout</a>
+				    </div>
+				</div>
+			<!--User Menu End-->
+		</div>
+	</header>
+	<!--Header End-->
+
+	<!--Sidebar Start-->
+	<aside class="sidebar pull-left">
+		<ul>
+			<!-- <li><a href="#"><img src="img/add-24-px.png"></a></li>
+			<li><a href="#"><i class="fa fa-plus"></i></a></li> -->
+			<li><a href="#"><img src="img/apps-24-px.png"></a></li>
+			<li><a href="#"><img src="img/add-24-px.png"></a></li>
+		</ul>
+	</aside>
+	<!--Sidebar End-->
+
+	<!--Main Contebt Start-->
+	<div id="main-content" class="container-fluid pull-right">
+		<!--Page Title-->
+		<!-- <h1 id="page-title">Profile</h1> -->
+        
+        <!--for Table-->
+		<div class="card">
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+						<!--Page subtitle-->
+						<!-- <label class="subtitle">Profile</label> -->
+
+						<a href="#" class="addusetbtn" data-toggle="modal" data-target="#editmyModal1"><button class="btn btn-primary float-right buttonlink">EDIT PROFILE</button></a>
+					</div>
+				</div>
+				<form id="profileform">
+						<div class="form-group form-inline pb-2">
+						    <label class="col-md-2">Name</label>
+						    <input type="text" class="form-control col-md-10" name="name" id="name" value="Ashish Sunon">
+						</div>
+
+						<div class="form-group form-inline pb-2">
+						    <label class="col-md-2">USERNAME</label>
+						    <input type="text" class="form-control col-md-10" name="username" id="username" value="ashishsunon1991" readonly>
+						</div>
+
+						<div class="form-group form-inline pb-2">
+						    <label class="col-md-2">EMAIL</label>
+						    <input type="email" class="form-control col-md-10" name="email" id="email" value="ashishsunon1991@gmail.com">
+						</div>
+
+						<div class="form-group form-inline pb-2">
+						    <label class="col-md-2">PASSWORD</label>
+						    <input type="password" class="form-control col-md-10" name="password" id="password" value="12345678">
+						</div>
+
+						<div class="form-group form-inline pb-2">
+						    <label class="col-md-2">ROLE</label>
+						    <input type="text" class="form-control col-md-10" name="role" id="role" value="NewTest_Automation2-StandaredSupportStaff">
+						</div>
+
+						<!-- <div class="form-group form-inline pb-2 mb-5 radiobtn">
+						      <label class="col-md-2">THEME</label>
+	                    	  <input type="radio" id="light" name="gender" value="light" checked="checked">
+							  <label for="light">Light</label>
+							  <input type="radio" id="dark" name="gender" value="dark">
+							  <label for="dark">Dark</label>
+						</div> -->
+				</form>
+			</div>
+		</div>
+
+			<!-- The Edit Modal 1-->
+			  <div class="modal fade model1" id="editmyModal1">
+			    <div class="modal-dialog">
+			      <div class="modal-content">
+			      
+			        <!-- Modal Header -->
+			        <div class="modal-header">
+			          <h4 class="modal-title pl-3">Edit Profile</h4>
+			          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+			        </div>
+			        
+			        <!-- Modal body -->
+			        <div class="modal-body">
+			          	<div class="col-md-12 updateusermodel">
+			          		<form>
+			          			<div class="row">
+			          				<div class="col-md-2 mb-4 imgupload">
+										<img src="img/user-icon.png">
+									</div>
+									<div class="col-md-10 mb-4 imgupload">
+										<input type="file" id="myImage" class="form-control border" accept="image/x-png,image/gif,image/jpeg" name="file" placeholder="upload profile photo">
+										<i class="fa fa-folder-open"></i>
+									</div>
+								</div>
+			          			<div class="row">
+									<div class="col-md-6 mb-4">
+										<label class="required">First Name</label>
+										<input type="text" id="f1" class="form-control border" name="firstname" value="Ashish">
+									</div>
+									<div class="col-md-6 mb-4">
+										<label class="required">Last Name</label>
+										<input type="text" class="form-control border" name="lastname" value="Sunon">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 mb-4">
+										<label class="required" >Username</label>
+										<input type="text" id="f2" class="form-control border" name="username" value="ashishsunon1991" readonly>
+									</div>
+									<div class="col-md-6 mb-4">
+										<label class="required" >Email</label>
+										<input type="email" id="f3" class="form-control border" name="email" value="ashishsunon1991@gmail.com">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 mb-4">
+										<label class="required" >Password</label>
+										<input type="password" class="form-control border" name="password" value="12345678">
+									</div>
+									<div class="col-md-6 mb-4">
+										<label class="required" >Confirm Password</label>
+										<input type="password" class="form-control border" name="confirmpassword" value="12345678">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<label class="required" >Role</label>
+										<input type="text" id="f4" class="form-control border" name="role" value="NewTest_Automation2-StandaredSupportStaff">
+									</div>
+								</div>
+								<div class="row radiobtn mt-4">
+									<label class="col-md-2">THEME</label>
+			                    	  <input type="radio" id="light" name="gender" value="light" checked="checked">
+									  <label for="light">Light</label>
+									  <input type="radio" id="dark" name="gender" value="dark">
+									  <label for="dark">Dark</label>
+								</div>
+			          		</form>
+			          	</div>
+			        </div>
+			        
+			        <!-- Modal footer -->
+			        <div class="modal-footer btnfooter">
+			        	<button type="button" class="btn btn-dark" data-dismiss="modal"><img src="img/close-24-px.png">CANCEL</button>
+			            <button type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#editmyModalSucess1"><img src="img/save-24-px-1.png">SAVE</button>
+			        </div>
+			        
+			      </div>
+			    </div>
+			  </div>
+			  <!-- End of Modal 2-->
+
+			  <!-- The Row Delete Modal Success 1-->
+			  <div class="modal fade" id="editmyModalSucess1">
+			    <div class="modal-dialog modal-dialog-centered">
+			      <div class="modal-content">
+			      
+			        <!-- Modal Header -->
+			        <div class="modal-header model_head">
+			          <h4 class="modal-title"></h4>
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+			        
+			        <!-- Modal body -->
+			        <div class="modal-body model_body">
+			          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+			          <p>The User Profile Updated Successfully.</p>
+			        </div>
+			        
+			        <!-- Modal footer -->
+			        <div class="modal-footer btnfooter">
+			          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+			        </div>
+			        
+			      </div>
+			    </div>
+			  </div>
+			<!-- End of Row Delete Modal Success 1-->
+
+	</div>
+	<!--Main Content End-->
+
+	<!--Footer Start-->
+	<footer id="footer" class="container-fluid pull-right">
+		<div class="pull-left footer-logo"><img src="img/logo-11.png"></div>
+		<div class="pull-right footer-text">
+			<!-- &copy <script>document.write((new Date()).getFullYear());</script>   -->
+			Copyright @ 2020 UInium(“UI automation Studio”). All Rights Reserved.
+		</div>
+	</footer>
+    <!--Footer End-->
+	<!-- For sidebar toggle -->
+	<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+
+	<!--Scripts-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+		$(function(){
+
+			
+            /*---Jquery for toggle section on click caret-down icon---*/
+
+			$(".submaindiv i.showbtndiv").click(function(){
+				$(this).closest("li").find(".hidediv").slideToggle();
+				$(this).toggleClass("caret-rev");
+			});
+
+			$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+
+			$(window).resize(function(){
+				$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+			});
+
+			// For sidebar toggle
+			if($(window).width() < 730)
+			{
+				$("#sidebarToggle").click(function(e){
+					e.preventDefault();
+					$("aside.sidebar").toggleClass("showSB");
+					$(this).toggleClass("toggleIcon");
+				});
+			}
+		});
+	</script>
+</body>
+</html>

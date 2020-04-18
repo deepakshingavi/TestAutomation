@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UInium</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Favicon-->
+	<link rel="icon" href="img/favicon-16x16.png">
+
+	<!--Styles-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--Custom style link-->
+	<link rel="stylesheet" href="css/custom.css">
+	<style>
+		.bucketcheck label {
+			    padding-left: 5px;
+                margin-bottom: 15px;
+		}
+	</style>
+</head>
+<body>
+	<!--Header Start-->
+	<header class="navbar navbar-expand-lg">
+		<!--Logo Start-->
+		<a id="logo" class="navbar-brand text-center" href="#">
+			<img src="img/4317-converted.png">
+		</a>
+		<!--Logo End-->
+		<!--Navbar Toggle Start-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="fa fa-bars"></span>
+		</button>
+		<!--Navbar Toggle End-->
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="dashboard.html"><img src="img/insert-chart-outlined-24-px.png"> Monitor App</a></li>
+				<li class="nav-item active"><a class="nav-link" href="users.html"><img src="img/person-outline-24-px-1.png"> Subscribers</a></li>
+				<li class="nav-item"><a class="nav-link" href="setup.html"><img src="img/settings-24-px.png"> AppSettings</a></li>
+				<li class="nav-item"><a class="nav-link" href="testmanagement.html"><img src="img/assignment-24-px.png"> Test Management</a></li>
+				<li class="nav-item"><a class="nav-link" href="runtest.html"><img src="img/play-arrow-24-px.png"> Run Tests</a></li>
+				<li class="nav-item"><a class="nav-link" href="testbucketenviroment.html"><img src="img/subtitles-24-px.png"> Test Bucket</a></li>
+				<li class="nav-item"><a class="nav-link" href="reports.html"><img src="img/pie-chart-24-px.png"> Reports</a></li>
+				<!-- <li class="nav-item"><a class="nav-link" href="subscription.html">Subscriptions</a></li> -->
+			</ul>
+
+			<!--User Menu Start-->
+			<div id="userMenu" class="dropdown">
+				<!-- <a href="#"><i class="fa fa-user-o"></i> User</a> -->
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/account-circle-24-px.png"> <span>User</span></a>
+				<div class="dropdown-menu">
+			      <a class="dropdown-item" href="profile.html">Profile</a>
+			      <a class="dropdown-item" href="login.html">Logout</a>
+			    </div>
+			</div>
+			<!--User Menu End-->
+		</div>
+	</header>
+	<!--Header End-->
+
+	<!--Sidebar Start-->
+	<aside class="sidebar pull-left">
+		<ul>
+			<!-- <li><a href="#"><img src="img/add-24-px.png"></a></li>
+			<li><a href="#"><i class="fa fa-plus"></i></a></li> -->
+			<li><a href="#"><img src="img/apps-24-px.png"></a></li>
+			<li><a href="#"><img src="img/add-24-px.png"></a></li>
+		</ul>
+	</aside>
+	<!--Sidebar End-->
+
+	<!--Main Contebt Start-->
+	<div id="main-content" class="container-fluid pull-right">
+		<!--Page Title-->
+		<!-- <h1 id="page-title">Users</h1> -->
+        
+        <!--for Table-->
+		<div class="card">
+			<div class="card-body">
+				<form>
+					<div class="row">
+						<div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+							<!--Page subtitle-->
+							<!-- <label class="subtitle">Users</label> -->
+							<!--Delete row-->
+							<button class="btn btn-primary float-right buttonlink" id="deleteRow"><img src="img/delete-24-px.png">DELETE</button>
+							<a href="#" class="addusetbtn" data-toggle="modal" data-target="#myModal1"><button class="btn btn-primary float-right buttonlink"><img src="img/add-24-px-2.png">ADD</button></a>
+						</div>
+					</div>
+					<div class="row selectdiv" style="overflow-x: auto;">
+						<table id="bucketList" class="table selectdiv1 usertable">
+						  <thead>
+						    <tr>
+						      <th scope="col" class="bucketcheck">
+						      	<label class="main mainCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </th>
+						      <th scope="col" class="Username">NAME <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+						      <th scope="col">USERNAME</th>
+						      <th scope="col">EMAIL</th>
+						      <th scope="col">ADDED DATE</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+						      <td >Ashish Kadam</td>
+						      <td >ashishkadam45</td>
+						      <td >ashishkadam45@gmail.com</td>
+						      <td >17-02-2020 21:40</td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+						      <td >Rahul Upadhya</td>
+						      <td >rahulupadhya987657</td>
+						      <td >rahul.upadhya21@gmail.com</td>
+						      <td >10-02-2020 12:40</td>
+						    </tr>
+						    <tr>
+						      <td scope="col" class="bucketcheck">
+						      	<label class="main subCB">
+							        <input type="checkbox"> 
+							        <span class="geekmark"></span> 
+							    </label>
+					          </td>
+						      <td >Amit Singh</td>
+						      <td >amitsingh25091991</td>
+						      <td >singh.amit54@gmail.com</td>
+						      <td >08-02-2020 20:50</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+					<div class="row paginate">
+						<div class="col-md-12 col-sm-12 col-xs-12">
+							<div class="pagination">
+								  <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+								  <a href="#"><strong>Previous</strong></a>
+								  <a href="#" class="active">1</a>
+								  <a href="#">2</a>
+								  <a href="#">3</a>
+								  <a href="#">4</a>
+								  <a href="#">5</a>
+								  <a href="#">...</a>
+								  <a href="#">10</a>
+								  <a href="#"><strong>Next</strong></a>
+								  <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+								</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- The Modal 2-->
+		  <div class="modal fade model1" id="myModal1">
+		    <div class="modal-dialog">
+		      <div class="modal-content">
+		      
+		        <!-- Modal Header -->
+		        <div class="modal-header">
+		          <h4 class="modal-title pl-3">Add</h4>
+		          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+		        </div>
+		        
+		        <!-- Modal body -->
+		        <div class="modal-body">
+		          	<div class="col-md-12 addusermodel">
+		          		<form>
+		          			<div class="row">
+								<div class="col-md-6 mb-2">
+									<label class="required">First Name</label>
+									<input type="text" id="f1" class="form-control border" name="firstname" placeholder="Enter First Name" required>
+								</div>
+								<div class="col-md-6 mb-2">
+									<label class="required">Last Name</label>
+									<input type="text" class="form-control border" name="lastname" placeholder="Last Name" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 mb-2">
+									<label class="required" >Username</label>
+									<input type="text" id="f2" class="form-control border" name="username" placeholder="Enter Username" required>
+								</div>
+								<div class="col-md-6 mb-2">
+									<label class="required" >Email</label>
+									<input type="email" id="f3" class="form-control border" name="email" placeholder="Enter Email" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6 mb-2">
+									<label class="required" >Password</label>
+									<input type="password" class="form-control border" name="password" placeholder="Enter Password" required>
+								</div>
+								<div class="col-md-6 mb-2">
+									<label class="required" >Confirm Password</label>
+									<input type="password" class="form-control border" name="confirmpassword" placeholder="Enter Confirm Password" required>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12">
+									<label class="required" >Role</label>
+									<input type="text" id="f4" class="form-control border" name="role" placeholder="Enter Role" required>
+								</div>
+							</div>
+		          		</form>
+		          	</div>
+		        </div>
+		        
+		        <!-- Modal footer -->
+		        <div class="modal-footer btnfooter">
+		        	<button type="button" class="btn btn-dark" data-dismiss="modal"><img src="img/close-24-px.png">CANCEL</button>
+		            <button type="button" id="saveRec" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess1"><img src="img/save-24-px-1.png">SAVE</button>
+		        </div>
+		        
+		      </div>
+		    </div>
+		  </div>
+		  <!-- End of Modal 2-->
+
+		  <!-- The Row Delete Modal Success 1-->
+			  <div class="modal fade" id="myModalSucess1">
+			    <div class="modal-dialog modal-dialog-centered">
+			      <div class="modal-content">
+			      
+			        <!-- Modal Header -->
+			        <div class="modal-header model_head">
+			          <h4 class="modal-title"></h4>
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+			        
+			        <!-- Modal body -->
+			        <div class="modal-body model_body">
+			          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+			          <p>The User Added Successfully.</p>
+			        </div>
+			        
+			        <!-- Modal footer -->
+			        <div class="modal-footer btnfooter">
+			          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+			        </div>
+			        
+			      </div>
+			    </div>
+			  </div>
+			<!-- End of Row Delete Modal Success 1-->
+
+			<!-- The Edit Modal 1-->
+			  <div class="modal fade model1" id="editmyModal1">
+			    <div class="modal-dialog">
+			      <div class="modal-content">
+			      
+			        <!-- Modal Header -->
+			        <div class="modal-header">
+			          <h4 class="modal-title pl-3">Edit</h4>
+			          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+			        </div>
+			        
+			        <!-- Modal body -->
+			        <div class="modal-body">
+			          	<div class="col-md-12 updateusermodel">
+			          		<form>
+			          			<div class="row">
+			          				<input type="hidden" name="uprowid" id="uprowid">
+									<div class="col-md-6 mb-2">
+										<label class="required">First Name</label>
+										<input type="text" id="firstname1" class="form-control border" name="firstname1"  required>
+									</div>
+									<div class="col-md-6 mb-2">
+										<label class="required">Last Name</label>
+										<input type="text" class="form-control border" name="lastname1" id="lastname1" value="Sunon" required>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 mb-2">
+										<label class="required" >Username</label>
+										<input type="text" id="username1" class="form-control border" name="username1" readonly>
+									</div>
+									<div class="col-md-6 mb-2">
+										<label class="required" >Email</label>
+										<input type="email" id="email1" class="form-control border" name="email1" required>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-6 mb-2">
+										<label class="required" >Password</label>
+										<input type="password" class="form-control border" name="password1" id="password1" value="******" required>
+									</div>
+									<div class="col-md-6 mb-2">
+										<label class="required" >Confirm Password</label>
+										<input type="password" class="form-control border" name="confirmpassword1" id="confirmpassword1" value="******" required>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<label class="required" >Role</label>
+										<input type="text" id="role1" class="form-control border" name="role1" value="NewUInium_Automation2-StandaredSupportStaff" required>
+									</div>
+								</div>
+			          		</form>
+			          	</div>
+			        </div>
+			        
+			        <!-- Modal footer -->
+			        <div class="modal-footer btnfooter">
+			        	<button type="button" class="btn btn-dark" data-dismiss="modal"><img src="img/close-24-px.png">CANCEL</button>
+			            <button type="button" class="btn btn-primary updateuserBtn" data-toggle="modal" data-dismiss="modal" data-target="#editmyModalSucess1"><img src="img/save-24-px-1.png">SAVE</button>
+			        </div>
+			        
+			      </div>
+			    </div>
+			  </div>
+			  <!-- End of Modal 2-->
+
+			  <!-- The Row Delete Modal Success 1-->
+			  <div class="modal fade" id="editmyModalSucess1">
+			    <div class="modal-dialog modal-dialog-centered">
+			      <div class="modal-content">
+			      
+			        <!-- Modal Header -->
+			        <div class="modal-header model_head">
+			          <h4 class="modal-title"></h4>
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+			        
+			        <!-- Modal body -->
+			        <div class="modal-body model_body">
+			          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+			          <p>The User Updated Successfully.</p>
+			        </div>
+			        
+			        <!-- Modal footer -->
+			        <div class="modal-footer btnfooter">
+			          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+			        </div>
+			        
+			      </div>
+			    </div>
+			  </div>
+			<!-- End of Row Delete Modal Success 1-->
+
+		  <!-- The Row Delete Modal 1-->
+			<div class="modal fade model1" id="myModal">
+			    <div class="modal-dialog">
+			      <div class="modal-content">
+			      
+			        <!-- Modal Header -->
+			        <div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+			        
+			        <!-- Modal body -->
+			        <div class="modal-body model_body">
+			          	 <h4>Delete User</h4>
+			             <p>Do you want to delete User?</p>
+			             <p id="deletedItem"></p>
+			        </div>
+			        
+			        <!-- Modal footer -->
+			        <div class="modal-footer btnfooter">
+			        	<button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+			        	<button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess">YES</button>
+			        </div>
+					        
+			      </div>
+			    </div>
+			</div>
+			<!-- End of Row Delete Modal 1-->
+
+			<!-- The Row Delete Modal Success 1-->
+			  <div class="modal fade" id="myModalSucess">
+			    <div class="modal-dialog modal-dialog-centered">
+			      <div class="modal-content">
+			      
+			        <!-- Modal Header -->
+			        <div class="modal-header model_head">
+			          <h4 class="modal-title"></h4>
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        </div>
+			        
+			        <!-- Modal body -->
+			        <div class="modal-body model_body">
+			          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+			          <p>The User deleted Successfully.</p>
+			        </div>
+			        
+			        <!-- Modal footer -->
+			        <div class="modal-footer btnfooter">
+			          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+			        </div>
+			        
+			      </div>
+			    </div>
+			  </div>
+			<!-- End of Row Delete Modal Success 1-->
+
+	</div>
+	<!--Main Content End-->
+
+	<!--Footer Start-->
+	<footer id="footer" class="container-fluid pull-right">
+		<div class="pull-left footer-logo"><img src="img/logo-11.png"></div>
+		<div class="pull-right footer-text">
+			<!-- &copy <script>document.write((new Date()).getFullYear());</script>   -->
+			Copyright @ 2020 UInium(“UI automation Studio”). All Rights Reserved.
+		</div>
+	</footer>
+    <!--Footer End-->
+	<!-- For sidebar toggle -->
+	<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+
+	<!--Scripts-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+		$(function(){
+
+			$(".mainCB input[type=checkbox]").click(function(){
+				if($(this).prop("checked")==true)
+				{	$(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", true);	}
+				else
+				{	$(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", false);	}
+			});
+
+			/*---Jquery for save row---*/
+			$(document).on("click", "#saveRec", function(){
+				var dt = new Date();
+		        var date = dt.getDate()+"-"+('0'+(dt.getMonth()+1)).slice(-2)+"-"+dt.getFullYear();
+		        var time = dt.getHours()+":"+dt.getMinutes();
+				var savestr = `<tr>
+			      <td scope="col" class="bucketcheck">
+			      	<label class="main subCB">
+				        <input type="checkbox"> 
+				        <span class="geekmark"></span> 
+				    </label>
+		          </td>
+			      <td>`+$("#f1").val()+`</td>
+			      <td>`+$("#f2").val()+`</td>
+			      <td>`+$("#f3").val()+`</td>
+			      <td >`+date+` `+time+`</td>
+			    </tr>`;
+			    // $("#bucketList tbody tr:first-child").before();
+			    $("#bucketList tbody tr:first-child").before(savestr);				    
+			});
+
+			/*---Jquery for update row---*/
+
+			$("table.usertable tbody tr td:nth-child(3)").click(function(){
+			$("#editmyModal1").modal();
+
+		      $(".updateusermodel #uprowid").val($(this).closest("tr").index()+1);
+		      $(".updateusermodel #firstname1").val($(this).closest("tr").find("td:nth-child(2)").text()); 
+		      $(".updateusermodel #username1").val($(this).closest("tr").find("td:nth-child(3)").text());
+		      $(".updateusermodel #email1").val($(this).closest("tr").find("td:nth-child(4)").text());    
+
+		    });
+
+		    /*---Jquery for Update Save---*/
+
+		    $("button.updateuserBtn").click(function(){
+		      var rowIndx = $("#uprowid").val();
+		      var dataFname = $("#firstname1").val();
+		      var dataUsername = $("#username1").val();
+		      var dataEmail = $("#email1").val();
+
+		      var dt = new Date();
+		      var date = ('0'+dt.getDate()).slice(-2)+"-"+('0'+(dt.getMonth()+1)).slice(-2)+"-"+dt.getFullYear();
+		      var time = dt.getHours()+":"+dt.getMinutes();
+
+		      $(".usertable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(2)").html('<span class="updtRow">'+dataFname+'</span>');
+		      $(".usertable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(3)").text(dataUsername);
+		      $(".usertable tbody tr:nth-child("+rowIndx+")").find("td:nth-child(4)").text(dataEmail);
+		      $(".usertable tbody tr:nth-child("+rowIndx+")").find("td:last-child").text(date+" "+time);
+
+		      $("#editmyModal1").modal();
+		    });
+
+			/*---Jquery for delete row---*/
+
+			$("#deleteRow").click(function(e){
+				e.preventDefault();
+				var str = '';
+				$("table tbody .subCB input:checked").each(function(){
+				if(str!='')
+					str += ", "+$(this).closest("tr").find("td:nth-child(2)").text();
+				else
+					str += $(this).closest("tr").find("td:nth-child(2)").text();
+				});
+
+				$("#deletedItem").text(str);
+				$("#myModal").modal();
+			});
+
+			$(document).on("click", "#yesbtn", function(){
+				$("table tbody .subCB input:checked").each(function(){
+					$(this).closest("tr").remove();
+				});	    
+			});
+            
+            /*---Jquery for toggle section on click caret-down icon---*/
+
+			$(".submaindiv i.showbtndiv").click(function(){
+				$(this).closest("li").find(".hidediv").slideToggle();
+				$(this).toggleClass("caret-rev");
+			});
+
+			$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+
+			$(window).resize(function(){
+				$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+			});
+
+			// For sidebar toggle
+			if($(window).width() < 730)
+			{
+				$("#sidebarToggle").click(function(e){
+					e.preventDefault();
+					$("aside.sidebar").toggleClass("showSB");
+					$(this).toggleClass("toggleIcon");
+				});
+			}
+		});
+	</script>
+</body>
+</html>

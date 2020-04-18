@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UInium</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--Favicon-->
+	<link rel="icon" href="img/favicon-16x16.png">
+
+	<!--Styles-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--Datepicker style link-->
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<!--Timepicker style link-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+	<!--Custom style link-->
+	<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+	<!--Header Start-->
+	<header class="navbar navbar-expand-lg">
+		<!--Logo Start-->
+		<a id="logo" class="navbar-brand text-center" href="#">
+			<img src="img/4317-converted.png">
+		</a>
+		<!--Logo End-->
+		<!--Navbar Toggle Start-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="fa fa-bars"></span>
+		</button>
+		<!--Navbar Toggle End-->
+		<div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item"><a class="nav-link" href="dashboard.html"><img src="img/insert-chart-outlined-24-px.png"> Monitor App</a></li>
+				<li class="nav-item"><a class="nav-link" href="users.html"><img src="img/person-outline-24-px-1.png"> Subscribers</a></li>
+				<li class="nav-item"><a class="nav-link" href="setup.html"><img src="img/settings-24-px.png"> AppSettings</a></li>
+				<li class="nav-item"><a class="nav-link" href="testmanagement.html"><img src="img/assignment-24-px.png"> Test Management</a></li>
+				<li class="nav-item"><a class="nav-link" href="runtest.html"><img src="img/play-arrow-24-px.png"> Run Tests</a></li>
+				<li class="nav-item active"><a class="nav-link" href="testbucketenviroment.html"><img src="img/subtitles-24-px.png"> Test Bucket</a></li>
+				<li class="nav-item"><a class="nav-link" href="reports.html"><img src="img/pie-chart-24-px.png"> Reports</a></li>
+				<!-- <li class="nav-item"><a class="nav-link" href="subscription.html">Subscriptions</a></li> -->
+			</ul>
+
+			<!--User Menu Start-->
+			<div id="userMenu" class="dropdown">
+				<!-- <a href="#"><i class="fa fa-user-o"></i> User</a> -->
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="img/account-circle-24-px.png"> <span>User</span></a>
+				<div class="dropdown-menu">
+			      <a class="dropdown-item" href="profile.html">Profile</a>
+			      <a class="dropdown-item" href="login.html">Logout</a>
+			    </div>
+			</div>
+			<!--User Menu End-->
+		</div>
+	</header>
+	<!--Header End-->
+
+	<!--Sidebar Start-->
+	<aside class="sidebar pull-left">
+		<ul>
+			<!-- <li><a href="#"><img src="img/add-24-px.png"></a></li>
+			<li><a href="#"><i class="fa fa-plus"></i></a></li> -->
+			<li><a href="#"><img src="img/apps-24-px.png"></a></li>
+			<li><a href="#"><img src="img/add-24-px.png"></a></li>
+		</ul>
+	</aside>
+	<!--Sidebar End-->
+
+	<!--Main Contebt Start-->
+	<div id="main-content" class="container-fluid pull-right">
+		<!--Page Title-->
+		<!-- <h1 id="page-title">Test Bucket</h1> -->
+		
+		<!--Pages Tabs-->
+		<div class="card">
+			<div class="card-body tabsHeader">
+				<span class="active activetab"><i>1</i> Select Environment</span>
+				<span><i>2</i> Select Test Bucket</span>
+				<span><i>3</i> Finalize</span>
+			</div>
+		</div>
+
+        <!--Section for fill information-->
+		<div class="card">
+			<div class="card-body">
+				<form>
+					<div class="row">
+						<div class="col-md-6 mb-4">
+							<label class="required" >Execution Name</label>
+							<input type="text" class="form-control border" name="execution_name" id="execution_name" placeholder="Enter Execution Name" required>
+						</div>
+						<div class="col-md-6 mb-4">
+							<label class="required" >Testing Environment</label>
+							<select class="form-control border" name="testing_environment" id="testing_environment" required>
+								<option value="Select Testing Environment">Select Testing Environment</option>
+								<option value="Internet Explorer">Internet Explorer</option>
+							</select>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 mb-4 datepick">
+							<label>Schedule Tests</label>
+							<!--Datepicker for select date-->
+							<input type="text" class="form-control datePicker border" name="date" id="date" placeholder="Select a date"><img src="img/shape.png" alt="1">
+							<!--Timepicker for select time-->
+							<input type="text" class="form-control timePicker border" name="time" id="time" placeholder="Select time">
+							<span>hh:mm</span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="row btn-div">
+			<div class="col-md-12 col-sm-12 col-xs-12 text-center buttonlink">
+				<!--Back Button for go to previous page-->
+				<button class="btn btn-dark" disabled>BACK</button>
+				<!--Next Button for go to next page-->
+				<a href="selecttestbucket.html"><button class="btn btn-primary nextbtn">NEXT</button></a>
+			</div>
+		</div>
+	</div>
+	<!--Main Content End-->
+
+	<!--Footer Start-->
+	<footer id="footer" class="container-fluid pull-right">
+		<div class="pull-left footer-logo"><img src="img/logo-11.png"></div>
+		<div class="pull-right footer-text">
+			<!-- &copy <script>document.write((new Date()).getFullYear());</script>   -->
+			Copyright @ 2020 UInium(“UI automation Studio”). All Rights Reserved.
+		</div>
+	</footer>
+    <!--Footer End-->
+	<!-- For sidebar toggle -->
+	<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+	<!--Footer End-->
+
+	<!--Scripts-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!--Datepicker js link-->
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  	<!--Timepicker js link-->
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+	<script src="js/moment.js"></script>
+	<script src="js/custom.js"></script>
+	<script>
+		$(function(){
+
+		  /*---Jquery for datepicker---*/
+
+			$("input.datePicker").datepicker({
+				dateFormat: 'dd-mm-yy'
+			});
+          
+          /*---Jquery for timepicker---*/
+
+			$('input.timePicker').timepicker({
+			    timeFormat: 'h:mm p',
+			    interval: 15,   
+			    /*minTime: '10',
+			    maxTime: '6:00pm',
+			    defaultTime: '11',
+			    startTime: '10:00',*/
+			    dynamic: true,
+			    dropdown: true,
+			    scrollbar: true
+			});
+
+			$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+
+			$(window).resize(function(){
+				$("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+			});
+
+			// For sidebar toggle
+			if($(window).width() < 730)
+			{
+				$("#sidebarToggle").click(function(e){
+					e.preventDefault();
+					$("aside.sidebar").toggleClass("showSB");
+					$(this).toggleClass("toggleIcon");
+				});
+			}
+		});
+	</script>
+</body>
+</html>

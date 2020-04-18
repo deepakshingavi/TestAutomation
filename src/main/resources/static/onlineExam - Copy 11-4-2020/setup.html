@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!--Styles-->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!--Custom style link-->
+  <link rel="stylesheet" href="css/custom.css">
+  <style>
+    .bucketcheck label {
+      padding-left: 5px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+	<!--Header Start-->
+	<header class="navbar navbar-expand-lg"></header>
+	<!--Header End-->
+
+  <!--Sidebar Start-->
+  <aside class="sidebar pull-left">
+    <ul>
+      <!-- <li><a href="#"><img src="img/add-24-px.png"></a></li>
+        <li><a href="#"><i class="fa fa-plus"></i></a></li> -->
+        <li><a href="#"><img src="img/apps-24-px.png"></a></li>
+        <li><a href="#"><img src="img/add-24-px.png"></a></li>
+      </ul>
+    </aside>
+    <!--Sidebar End-->
+
+    <!--Main Contebt Start-->
+    <div id="main-content" class="container-fluid pull-right">
+      <!--Page Title-->
+      <!-- <h1 id="page-title">Setup</h1> -->
+
+      <div class="card border_card">
+        <div class="card-body tabs">
+         <ul id="tabs" class="nav nav-tabs">
+          <li class="nav-item"><a href="" data-target="#environment" data-toggle="tab" class="nav-link small text-uppercase active">Execution Environment</a></li>
+          <li class="nav-item"><a href="" data-target="#urls" data-toggle="tab" class="nav-link small text-uppercase">Environment URL's</a></li>
+          <li class="nav-item"><a href="" data-target="#roles" data-toggle="tab" class="nav-link small text-uppercase">Access Role</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="tabsContent" class="tab-content">
+      <div id="environment" class="tab-pane fade active show">
+        <div class="card">
+          <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+                  <!--Page subtitle-->
+                  <!-- <label class="subtitle">Execution Environment</label> -->
+                  <!--Delete row-->
+                  <a href=""><button class="btn btn-primary float-right buttonlink" id="deleteRow">DELETE</button></a>
+                  <a href="#" class="addusetbtn addRowBtn"><button class="btn btn-primary float-right buttonlink">ADD</button></a>
+                </div>
+              </div>
+
+              <div class="row addRowData" style="display: none;">
+                  <div class="col-md-5 rowadjust">
+                    <label>Execution Environment</label>
+                    <input type="text" class="form-control border" name="execution_environment" id="execution_environment" placeholder="Enter Execution Environment">
+                  </div>
+                  <div class="col-md-6 buttonlink1 btnpadding">
+                    <button class="btn btn-primary buttonlink1 addEnvBtn">ADD</button>
+                    <button class="btn btn-primary buttonlink1 btn-dark cancelRow">CANCEL</button>
+                  </div>
+              </div>
+
+              <div class="row selectdiv" style="overflow-x: auto;">
+                <table id="bucketList" class="envTable table selectdiv1">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="bucketcheck">
+                        <label class="main mainCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </th>
+                      <th scope="col" class="Username">ENVIRONMENT <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+                      <th scope="col">ADDED DATE</th>
+                      <th scope="col">ADDED BY</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="col" class="bucketcheck">
+                        <label class="main subCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </td>
+                      <td >Production</td>
+                      <td >17-02-2020 21:40</td>
+                      <td >cbowen@partneritsm</td>
+                    </tr>
+                    <tr>
+                      <td scope="col" class="bucketcheck">
+                        <label class="main subCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </td>
+                      <td >QA</td>
+                      <td >10-02-2020 12:40</td>
+                      <td >cbowen@partneritsm</td>
+                    </tr>
+                    <tr>
+                      <td scope="col" class="bucketcheck">
+                        <label class="main subCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </td>
+                      <td >DEV</td>
+                      <td >08-02-2020 20:50</td>
+                      <td >cbowen@partneritsm</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row paginate">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="pagination">
+                      <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+                      <a href="#"><strong>Previous</strong></a>
+                      <a href="#" class="active">1</a>
+                      <a href="#">2</a>
+                      <a href="#">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="#">...</a>
+                      <a href="#">10</a>
+                      <a href="#"><strong>Next</strong></a>
+                      <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div id="urls" class="tab-pane fade">
+        <div class="card">
+          <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+                  <!--Page subtitle-->
+                  <!-- <label class="subtitle">Environment URL's</label> -->
+                  <!--Delete row-->
+                  <button class="btn btn-primary float-right buttonlink" id="deleteRow1">DELETE</button>
+                  <a href="#" class="addusetbtn addRowBtn"><button class="btn btn-primary float-right buttonlink">ADD</button></a>
+                </div>
+              </div>
+
+              <div class="row addRowData" style="display: none;">
+                <div class="col-md-2 rowadjust">
+                    <label>Application</label>
+                    <select class="form-control border" name="application" id="application">
+                      <option value="Select Application">Select Application</option>
+                      <option value="ITSM">ITSM</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2 rowadjust">
+                    <label>Environment</label>
+                    <select class="form-control border" name="url_environment" id="url_environment">
+                      <option value="Select Environment">Select Environment</option>
+                      <option value="Production">Production</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 rowadjust">
+                    <label>URL</label>
+                    <input type="text" class="form-control border" name="url" id="url" placeholder="Enter URL">
+                  </div>
+                  <div class="col-md-3 buttonlink1 btnpadding">
+                    <button class="btn btn-primary buttonlink1 addUrlBtn">ADD</button>
+                    <button class="btn btn-primary buttonlink1 btn-dark cancelRow">CANCEL</button>
+                  </div>
+              </div>
+
+              <div class="row selectdiv" style="overflow-x: auto;">
+                <table id="bucketList" class="table selectdiv1 Urltable">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="bucketcheck">
+                        <label class="main mainCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </th>
+                      <th scope="col" class="Username">APPLICATION <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+                      <th scope="col">ENVIRONMENT</th>
+                      <th scope="col">URL</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="col" class="bucketcheck">
+                        <label class="main subCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </td>
+                      <td >ITSM</td>
+                      <td >QA</td>
+                      <td >https://ahs-dev.onbmc.com/rsso/start?bypass-auth=true&tenant=*&got…</td>
+                    </tr>
+                    <tr>
+                      <td scope="col" class="bucketcheck">
+                        <label class="main subCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </td>
+                      <td >SmartIT</td>
+                      <td >QA</td>
+                      <td >https://ahs-dev.onbmc.com/rsso/start?bypass-auth=true&tenant=*&got…</td>
+                    </tr>
+                    <tr>
+                      <td scope="col" class="bucketcheck">
+                        <label class="main subCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </td>
+                      <td >ITSM</td>
+                      <td >DEV</td>
+                      <td >https://ahs-dev.onbmc.com/rsso/start?bypass-auth=true&tenant=*&got…</td>
+                    </tr>
+                    <tr>
+                      <td scope="col" class="bucketcheck">
+                        <label class="main subCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </td>
+                      <td >SmartIT</td>
+                      <td >Production</td>
+                      <td >https://ahs-dev.onbmc.com/rsso/start?bypass-auth=true&tenant=*&got…</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row paginate">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="pagination">
+                      <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+                      <a href="#"><strong>Previous</strong></a>
+                      <a href="#" class="active">1</a>
+                      <a href="#">2</a>
+                      <a href="#">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="#">...</a>
+                      <a href="#">10</a>
+                      <a href="#"><strong>Next</strong></a>
+                      <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div id="roles" class="tab-pane fade">
+        <div class="card">
+          <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 mb-2 buttonlink">
+                  <!--Page subtitle-->
+                  <!-- <label class="subtitle">Access Role</label> -->
+                  <!--Delete row-->
+                  <button class="btn btn-primary float-right buttonlink" id="deleteRow2">DELETE</button>
+                  <a href="#" class="addusetbtn addRowBtn"><button class="btn btn-primary float-right buttonlink">ADD</button></a>
+                </div>
+              </div>
+
+              <div class="row addRowData" style="display: none;">
+                <div class="col-md-2 rowadjust">
+                    <label>Username</label>
+                    <input type="text" class="form-control border" name="username" id="username" placeholder="Enter Username">
+                  </div>
+                  <div class="col-md-2 rowadjust">
+                      <label>Password</label>
+                      <input type="password" class="form-control border" name="password" id="password" placeholder="Enter Password">
+                  </div>
+                  <div class="col-md-2 rowadjust">
+                    <label>Confirm Password</label>
+                    <input type="password" class="form-control border" name="confirm_password" id="confirm_password" placeholder="Enter Confirm Password">
+                  </div>
+                  <div class="col-md-3 rowadjust">
+                    <label>Role</label>
+                    <input type="text" class="form-control border" name="role" id="role" placeholder="Enter Role">
+                  </div>
+                  <div class="col-md-3 buttonlink1 btnpadding">
+                    <button class="btn btn-primary buttonlink1 addroleBtn">ADD</button>
+                    <button class="btn btn-primary buttonlink1 btn-dark cancelRow">CANCEL</button>
+                  </div>
+              </div>
+
+              <div class="row selectdiv" style="overflow-x: auto;">
+                <table id="bucketList" class="table selectdiv1 Roletable">
+                  <thead>
+                    <tr>
+                      <th scope="col" class="bucketcheck">
+                        <label class="main mainCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </th>
+                      <th scope="col" class="Username">USERNAME <i class="fa fa-angle-down" aria-hidden="true"></i></th>
+                      <th scope="col">ROLE</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="col" class="bucketcheck">
+                        <label class="main subCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </td>
+                      <td >cbowen@partneritsm</td>
+                      <td >Test_Automation2-StanderedSupportStaff</td>
+                    </tr>
+                    <tr>
+                      <td scope="col" class="bucketcheck">
+                        <label class="main subCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </td>
+                      <td >cbowen@partneritsm</td>
+                      <td >Test_Automation2-StanderedSupportStaff</td>
+                    </tr>
+                    <tr>
+                      <td scope="col" class="bucketcheck">
+                        <label class="main subCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </td>
+                      <td >cbowen@partneritsm</td>
+                      <td >Test_Automation2-StanderedSupportStaff</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="row paginate">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="pagination">
+                      <a href="#"><img src="img/last-page-24-px.png" alt="Imgprev"></a>
+                      <a href="#"><strong>Previous</strong></a>
+                      <a href="#" class="active">1</a>
+                      <a href="#">2</a>
+                      <a href="#">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                      <a href="#">...</a>
+                      <a href="#">10</a>
+                      <a href="#"><strong>Next</strong></a>
+                      <a href="#"><img src="img/last-page-next-24-px.png" alt="Imgnext"></a>
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <!--for Table-->
+    
+
+    <!-- The Row Delete Execution Environment Modal 1-->
+    <div class="modal fade model1" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body model_body">
+           <h4>Delete Execution Environment</h4>
+           <p>Do you want to delete Execution Environment?</p>
+           <p id="deletedItem"></p>
+         </div>
+
+         <!-- Modal footer -->
+         <div class="modal-footer btnfooter">
+          <button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+          <button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess">YES</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End of Row Delete Modal 1-->
+
+
+  <!-- The Row Delete Modal Execution Environment Success -->
+  <div class="modal fade" id="myModalSucess">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header model_head">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body model_body">
+          <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+          <p>Execution Environment deleted Successfully.</p>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer btnfooter">
+          <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- End of Row Delete Modal Success -->
+
+  <!-- The Row Delete Environment URL's Modal 1-->
+  <div class="modal fade model1" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body model_body">
+         <h4>Delete Environment URL's</h4>
+         <p>Do you want to delete Environment URL's?</p>
+         <p id="deletedItem1"></p>
+       </div>
+
+       <!-- Modal footer -->
+       <div class="modal-footer btnfooter">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+        <button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess1">YES</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- End of Row Delete Modal 1-->
+
+<!-- The Row Delete Modal Environment URL's Success 1-->
+<div class="modal fade" id="myModalSucess1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header model_head">
+        <h4 class="modal-title"></h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body model_body">
+        <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+        <p>Environment URL's deleted Successfully.</p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer btnfooter">
+        <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- End of Row Delete Modal Success 1-->
+
+ <!-- The Row Delete Access Role Modal 1-->
+  <div class="modal fade model1" id="myModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body model_body">
+         <h4>Delete Access Role</h4>
+         <p>Do you want to delete Access Role?</p>
+         <p id="deletedItem2"></p>
+       </div>
+       
+       <!-- Modal footer -->
+       <div class="modal-footer btnfooter">
+        <button type="button" class="btn btn-dark" data-dismiss="modal">NO</button>
+        <button type="button" id="yesbtn" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#myModalSucess2">YES</button>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<!-- End of Row Delete Modal 1-->
+
+<!-- The Row Delete Modal Access Role Success 1-->
+<div class="modal fade" id="myModalSucess2">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header model_head">
+        <h4 class="modal-title"></h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body model_body">
+        <i class="fa fa-check-circle"></i><span><strong>Success</strong></span><br>
+        <p>Access Role deleted Successfully.</p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer btnfooter">
+        <button type="button" class="btn btn-dark btnclose" data-dismiss="modal">CLOSE</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- End of Row Delete Modal Success 1-->
+
+
+
+
+
+
+</div>
+<!--Main Content End-->
+
+<!--Footer Start-->
+<footer id="footer" class="container-fluid pull-right">
+  <div class="pull-left footer-logo"><img src="img/1.png"></div>
+  <div class="pull-right footer-text">
+    &copy <script>document.write((new Date()).getFullYear());</script> Test App Application
+  </div>
+</footer>
+<!--Footer End-->
+<!-- For sidebar toggle -->
+<a href="#" id="sidebarToggle"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></a>
+
+<!--Scripts-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/custom.js"></script>
+<script>
+  $(function(){
+    $("a.addRowBtn").click(function(e){
+      e.preventDefault();
+
+      $(this).closest(".card-body").find(".addRowData").slideToggle();
+
+      $(this).css("pointer-events", "none");
+      $(this).css("opacity", ".65");
+      $("#deleteRow").attr("disabled", true);
+      $("#deleteRow1").attr("disabled", true);
+      $("#deleteRow2").attr("disabled", true);
+    });
+
+    $("button.addEnvBtn").click(function(){
+        var dataVal = $("#execution_environment").val();
+        var dt = new Date();
+        var date = dt.getDate()+"-"+('0'+(dt.getMonth()+1)).slice(-2)+"-"+dt.getFullYear();
+        var time = dt.getHours()+":"+dt.getMinutes();
+
+        var str = '<tr>
+                      <td scope="col" class="bucketcheck">
+                        <label class="main subCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </td>
+                      <td >'+dataVal+'</td>
+                      <td >'+date+' '+time+'</td>
+                      <td >cbowen@partneritsm</td>
+                    </tr>';
+
+        $("table.envTable tbody").prepend(str);
+
+        $("a.addRowBtn").css("pointer-events", "");
+        $("a.addRowBtn").css("opacity", "");
+        $("#deleteRow").attr("disabled", false);
+        $(this).closest(".addRowData").slideUp();
+    });
+
+
+    $("button.addUrlBtn").click(function(){
+        var dataAppl = $("#application").val();
+        var dataEnv = $("#url_environment").val();
+        var dataUrl = $("#url").val();
+
+        var str = '<tr>
+                      <td scope="col" class="bucketcheck">
+                        <label class="main subCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </td>
+                      <td >'+dataAppl+'</td>
+                      <td >'+dataEnv+'</td>
+                      <td >'+dataUrl+'</td>
+                    </tr>';
+
+        $("table.Urltable tbody").prepend(str);
+
+        $("a.addRowBtn").css("pointer-events", "");
+        $("a.addRowBtn").css("opacity", "");
+        $("#deleteRow1").attr("disabled", false);
+        $(this).closest(".addRowData").slideUp();
+    });
+
+    $("button.addroleBtn").click(function(){
+        var dataUsername     = $("#username").val();
+        var dataRole         = $("#role").val();
+
+        var str = '<tr>
+                      <td scope="col" class="bucketcheck">
+                        <label class="main subCB">
+                          <input type="checkbox"> 
+                          <span class="geekmark"></span> 
+                        </label>
+                      </td>
+                      <td >'+dataUsername+'</td>
+                      <td >'+dataRole+'</td>
+                    </tr>';
+
+        $("table.Roletable tbody").prepend(str);
+
+        $("a.addRowBtn").css("pointer-events", "");
+        $("a.addRowBtn").css("opacity", "");
+        $("#deleteRow2").attr("disabled", false);
+        $(this).closest(".addRowData").slideUp();
+    });
+
+
+   
+
+    
+    /*---Jquery for Cancel row---*/
+
+    $("button.cancelRow").click(function(){
+      $("#execution_environment").val("");
+      $("#url_environment").val("");
+      $("#application").val("");
+      $("#url").val("");
+      $("#username").val("");
+      $("#password").val("");
+      $("#confirm_password").val("");
+      $("#role").val("");
+
+      $("a.addRowBtn").css("pointer-events", "");
+      $("a.addRowBtn").css("opacity", "");
+      $("#deleteRow").attr("disabled", false);
+      $("#deleteRow1").attr("disabled", false);
+      $("#deleteRow2").attr("disabled", false);
+      $(this).closest(".addRowData").slideUp();
+    });
+
+
+    $(".mainCB input[type=checkbox]").click(function(){
+      if($(this).prop("checked")==true)
+        { $(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", true); }
+      else
+        { $(this).closest(".selectdiv1").find(".subCB input[type=checkbox]").prop("checked", false);  }
+    });
+
+    /*---Jquery for delete Exicution Environment row---*/
+
+    $("#deleteRow").click(function(e){
+      e.preventDefault();
+      var str = '';
+      $("table tbody .subCB input:checked").each(function(){
+        if(str!='')
+          str += ", "+$(this).closest("tr").find("td:nth-child(2)").text();
+        else
+          str += $(this).closest("tr").find("td:nth-child(2)").text();
+      });
+
+      $("#deletedItem").text(str);
+      $("#myModal").modal();
+    });
+
+    $(document).on("click", "#yesbtn", function(){
+      $("table tbody .subCB input:checked").each(function(){
+        $(this).closest("tr").remove();
+      });     
+    });
+
+    /*---Jquery for delete Environment URL's row---*/
+
+    $("#deleteRow1").click(function(e){
+      e.preventDefault();
+      var str = '';
+      $("table tbody .subCB input:checked").each(function(){
+        if(str!='')
+          str += ", "+$(this).closest("tr").find("td:nth-child(2)").text();
+        else
+          str += $(this).closest("tr").find("td:nth-child(2)").text();
+      });
+
+      $("#deletedItem1").text(str);
+      $("#myModal1").modal();
+    });
+
+    $(document).on("click", "#yesbtn", function(){
+      $("table tbody .subCB input:checked").each(function(){
+        $(this).closest("tr").remove();
+      });     
+    });
+
+    /*---Jquery for delete Access Role row---*/
+
+    $("#deleteRow2").click(function(e){
+      e.preventDefault();
+      var str = '';
+      $("table tbody .subCB input:checked").each(function(){
+        if(str!='')
+          str += ", "+$(this).closest("tr").find("td:nth-child(2)").text();
+        else
+          str += $(this).closest("tr").find("td:nth-child(2)").text();
+      });
+
+      $("#deletedItem2").text(str);
+      $("#myModal2").modal();
+    });
+
+    $(document).on("click", "#yesbtn", function(){
+      $("table tbody .subCB input:checked").each(function(){
+        $(this).closest("tr").remove();
+      });     
+    });
+
+    /*---Jquery for toggle section on click caret-down icon---*/
+
+    $(".submaindiv i.showbtndiv").click(function(){
+      $(this).closest("li").find(".hidediv").slideToggle();
+      $(this).toggleClass("caret-rev");
+    });
+
+    $("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+
+    $(window).resize(function(){
+      $("aside.sidebar").height($("#main-content").height() + $("#footer").height() + 30);
+    });
+
+      // For sidebar toggle
+      if($(window).width() < 730)
+      {
+        $("#sidebarToggle").click(function(e){
+          e.preventDefault();
+          $("aside.sidebar").toggleClass("showSB");
+          $(this).toggleClass("toggleIcon");
+        });
+      }
+    });
+  </script>
+</body>
+</html>
